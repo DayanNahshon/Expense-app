@@ -6,7 +6,17 @@
 
 body {
   font-family: sans-serif;
-  background-color: gold;
+  background-color: #eed546;
+}
+body .container {
+  display: flex;
+}
+body .container #logo {
+  color: white;
+  padding: 5px 20px;
+}
+body .container #splogo {
+  color: palevioletred;
 }
 body .login {
   width: 300px;
@@ -17,10 +27,13 @@ body .login {
   background-color: rgba(0, 0, 0, 0.8);
   text-align: center;
   transform: translate(-50%, -50%);
+  border-radius: 39px 39px 39px 39px;
 }
 body .login:hover {
   background-color: rgba(0, 0, 0, 0.9);
   border: 3px solid palevioletred;
+  width: 330px;
+  transition: 0.8s;
 }
 body #fhead {
   color: white;
