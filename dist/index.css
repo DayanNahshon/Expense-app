@@ -6,6 +6,7 @@
 
 body {
   font-family: sans-serif;
+  background-color: gold;
 }
 body .login {
   width: 300px;
@@ -13,9 +14,13 @@ body .login {
   position: absolute;
   top: 50%;
   left: 50%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.8);
   text-align: center;
   transform: translate(-50%, -50%);
+}
+body .login:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 3px solid palevioletred;
 }
 body #fhead {
   color: white;
@@ -38,4 +43,20 @@ body #userName, body #password {
 body #userName:focus, body #password:focus {
   border-color: goldenrod;
   width: 220px;
+}
+body #sub {
+  border: 0;
+  background: none;
+  margin: 20px auto;
+  text-align: center;
+  border: 3px solid palevioletred;
+  padding: 14px 10px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25px;
+  cursor: pointer;
+}
+body #sub:hover {
+  background: goldenrod;
 }
