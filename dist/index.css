@@ -22,7 +22,7 @@ body #fhead {
   text-transform: uppercase;
   font-weight: 650;
 }
-body .login, body #userName, body #password {
+body #userName, body #password {
   border: 0;
   background: none;
   display: block;
@@ -34,4 +34,8 @@ body .login, body #userName, body #password {
   color: white;
   border-radius: 24px;
   transition: 0.25px;
+}
+body #userName:focus, body #password:focus {
+  border-color: goldenrod;
+  width: 220px;
 }
