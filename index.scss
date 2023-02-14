@@ -12,18 +12,34 @@ background-color: rgb(238, 213, 70);
 
 .container{
     display: flex;
+    background-color: black;
+    height: 60px;
 
 
 #logo{
     color: white;
-    padding: 5px 20px;
+    padding: 12px 25px;
 }
 #splogo{
     color: palevioletred;
 }
 
 nav{
+    width:69%;
     display: flex;
+     justify-content: center;
+
+    li{
+        list-style: none;
+        padding: 15px 40px;
+        margin-right: 30px;
+        font-size: 24px;
+        color: palevioletred;
+        }
+
+        li:hover{
+
+        }
 }
 
 }

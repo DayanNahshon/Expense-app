@@ -10,16 +10,27 @@ body {
 }
 body .container {
   display: flex;
+  background-color: black;
+  height: 60px;
 }
 body .container #logo {
   color: white;
-  padding: 5px 20px;
+  padding: 12px 25px;
 }
 body .container #splogo {
   color: palevioletred;
 }
 body .container nav {
+  width: 69%;
   display: flex;
+  justify-content: center;
+}
+body .container nav li {
+  list-style: none;
+  padding: 15px 40px;
+  margin-right: 30px;
+  font-size: 24px;
+  color: palevioletred;
 }
 body .login {
   width: 300px;
