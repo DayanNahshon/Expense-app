@@ -13,26 +13,27 @@ body .container {
   background-color: black;
   height: 60px;
 }
-body .container #logo {
+body .container__logo {
   color: white;
   padding: 12px 25px;
 }
-body .container #splogo {
+body .container__logo__spanlogo {
   color: palevioletred;
 }
-body .container nav {
+body .container .navbar {
   width: 69%;
   display: flex;
   justify-content: center;
 }
-body .container nav li {
+body .container .navbar__li {
   list-style: none;
   padding: 15px 40px;
   margin-right: 30px;
   font-size: 24px;
   color: palevioletred;
 }
-body .login {
+
+.login {
   width: 300px;
   padding: 30px;
   position: absolute;
@@ -43,18 +44,18 @@ body .login {
   transform: translate(-50%, -50%);
   border-radius: 39px 39px 39px 39px;
 }
-body .login:hover {
+.login.login:hover {
   background-color: rgba(0, 0, 0, 0.9);
   border: 3px solid palevioletred;
   width: 330px;
   transition: 0.8s;
 }
-body #fhead {
+.login__h1 {
   color: white;
   text-transform: uppercase;
   font-weight: 650;
 }
-body #userName, body #password {
+.login__userName, .login__password {
   border: 0;
   background: none;
   display: block;
@@ -67,11 +68,11 @@ body #userName, body #password {
   border-radius: 24px;
   transition: 0.25px;
 }
-body #userName:focus, body #password:focus {
+.login__userName:focus, .login__password:focus {
   border-color: goldenrod;
   width: 220px;
 }
-body #sub {
+.login__submit {
   border: 0;
   background: none;
   margin: 20px auto;
@@ -84,6 +85,6 @@ body #sub {
   transition: 0.25px;
   cursor: pointer;
 }
-body #sub:hover {
+.login__submit:hover {
   background: goldenrod;
 }

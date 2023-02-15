@@ -16,38 +16,33 @@ background-color: rgb(238, 213, 70);
     height: 60px;
 
 
-#logo{
+&__logo{
     color: white;
     padding: 12px 25px;
-}
-#splogo{
-    color: palevioletred;
-}
 
-nav{
+    &__spanlogo{
+        color: palevioletred;
+    }
+}
+.navbar{
     width:69%;
     display: flex;
      justify-content: center;
 
-    li{
+    &__li{
         list-style: none;
         padding: 15px 40px;
         margin-right: 30px;
         font-size: 24px;
         color: palevioletred;
-        }
+        
+        // &__li{
 
-        li:hover{
-
-        }
-}
-
-}
-
-
-
-
-
+        // }
+    }
+    }
+        
+}}
 
 
 // login
@@ -63,59 +58,71 @@ nav{
     transform: translate(-50%, -50%);
     border-radius: 39px 39px 39px 39px;
     
-}
+    &.login:hover{
+        background-color: rgb(0,0,0,0.9);
+        border:3px solid palevioletred ; 
+        width: 330px;
+        transition: 0.8s;
+    }
 
-.login:hover{
-    background-color: rgb(0,0,0,0.9);
-    border:3px solid palevioletred ; 
-    width: 330px;
-    transition: 0.8s;
-}
+    &__h1{
 
-#fhead{
+        color: white;
+        text-transform: uppercase;
+        font-weight: 650;
+    }
 
-    color: white;
-    text-transform: uppercase;
-    font-weight: 650;
-}
+   &__userName, &__password{
 
- #userName, #password{
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border:3px solid palevioletred;
+        padding: 14px 10px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25px;
+    }
 
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border:3px solid palevioletred;
-    padding: 14px 10px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25px;
-}
+    &__userName:focus, &__password:focus{
+        border-color: goldenrod;
+        width: 220px;
+        }
 
-#userName:focus, #password:focus{
-border-color: goldenrod;
-width: 220px;
-}
+   &__submit{
+            border: 0;
+            background: none;
+            margin: 20px auto;
+            text-align: center;
+            border:3px solid palevioletred;
+            padding: 14px 10px;
+            outline: none;
+            color: white;
+            border-radius: 24px;
+            transition: 0.25px;
+            cursor: pointer;
+            }
 
-#sub{
-border: 0;
-background: none;
-margin: 20px auto;
-text-align: center;
-border:3px solid palevioletred;
-padding: 14px 10px;
-outline: none;
-color: white;
-border-radius: 24px;
-transition: 0.25px;
-cursor: pointer;
-}
-
-#sub:hover{
-    background:goldenrod ;
-}
+            &__submit:hover{
+                background:goldenrod;
+            }
+    }
 
 
-}
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
