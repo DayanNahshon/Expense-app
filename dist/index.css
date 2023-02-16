@@ -57,27 +57,31 @@ body .container .navbar__li:hover {
 }
 .inFormer__showUs {
   margin-bottom: 150px;
-  width: 400px;
+  width: 420px;
   height: 400px;
-  background-color: antiquewhite;
+  background-color: black;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
 }
 .inFormer__showUs__itsik {
-  width: 150px;
-  height: 120px;
-  background-color: red;
+  width: 420px;
+  height: 133px;
+  background-color: green;
+}
+.inFormer__showUs__itsik__image {
+  width: 120px;
+  height: 133px;
 }
 .inFormer__showUs .InFormer__showUs__dyan {
-  width: 150px;
-  height: 120px;
-  background-color: red;
+  width: 420px;
+  height: 133px;
+  background-color: #00c3ff;
 }
 .inFormer__showUs .InFormer__showUs__shili {
-  width: 150px;
-  height: 120px;
-  background-color: red;
+  width: 420px;
+  height: 133px;
+  background-color: #d400ff;
 }
 .inFormer__showContact {
   border-radius: 52% 48% 63% 37%/39% 45% 55% 61%;
