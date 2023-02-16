@@ -21,7 +21,7 @@ body .container__logo__spanlogo {
   color: palevioletred;
 }
 body .container .navbar {
-  width: 69%;
+  width: 85%;
   display: flex;
   justify-content: center;
 }
