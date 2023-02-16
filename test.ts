@@ -23,12 +23,12 @@ const showContact = document.querySelector(".inFormer__showContact")as HTMLDivEl
     function showTheInfo(){
       form.style.display = "none"  
       showInfo.style.display = "block"
-    }
+      }
 
     function hideTheInfo(){
       form.style.display = "block"  
       showInfo.style.display = "none"
-    }
+      }
 
     //  us
     function showTheUs(){
@@ -43,7 +43,7 @@ const showContact = document.querySelector(".inFormer__showContact")as HTMLDivEl
     function showTheContact(){
       form.style.display = "none"  
       showContact.style.display = "block"
-    }
+      }
 
     function hideTheContact(){
       form.style.display = "block"  
