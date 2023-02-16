@@ -85,6 +85,13 @@ body .container .navbar__li {
   align-items: center;
   color: white;
 }
+.inFormer__showContact__h2, .inFormer__showContact__h3 {
+  color: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 50px;
+}
 
 .login {
   width: 300px;
