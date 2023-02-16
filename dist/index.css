@@ -21,7 +21,7 @@ body .container__logo__spanlogo {
   color: palevioletred;
 }
 body .container .navbar {
-  width: 85%;
+  width: 75%;
   display: flex;
   justify-content: center;
 }
@@ -31,6 +31,59 @@ body .container .navbar__li {
   margin-right: 30px;
   font-size: 24px;
   color: palevioletred;
+  cursor: pointer;
+}
+
+.inFormer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inFormer__showinfo {
+  width: 350px;
+  height: 350px;
+  background-color: #2f2e2e;
+  border-radius: 50px 80px/20px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.inFormer__showUs {
+  margin-bottom: 150px;
+  width: 400px;
+  height: 400px;
+  background-color: antiquewhite;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.inFormer__showUs__itsik {
+  width: 150px;
+  height: 120px;
+  background-color: red;
+}
+.inFormer__showUs .InFormer__showUs__dyan {
+  width: 150px;
+  height: 120px;
+  background-color: red;
+}
+.inFormer__showUs .InFormer__showUs__shili {
+  width: 150px;
+  height: 120px;
+  background-color: red;
+}
+.inFormer__showContact {
+  border-radius: 52% 48% 63% 37%/39% 45% 55% 61%;
+  width: 350px;
+  height: 350px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 .login {
