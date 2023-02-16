@@ -37,6 +37,11 @@ background-color: rgb(238, 213, 70);
         color: palevioletred;
         cursor: pointer;
         }
+
+        &__li:hover{
+           font-size: 26px;
+           color: white;
+        }
     }
         
 }}
@@ -111,9 +116,12 @@ background-color: rgb(238, 213, 70);
        align-items: center;
        justify-content: center;
        display: flex;
-      margin-top: 50px;
+      margin-top:90px;
+      font-size: 1.5rem;
+    
       }
-
+      
+      
 
 
      }
