@@ -6,10 +6,8 @@
 }
 
 body {
-  font-family: sans-serif;
   background-color: #eed546;
   font-family: "Poppins", sans-serif;
-  font-weight: 5000;
 }
 body .container {
   display: flex;
@@ -40,15 +38,14 @@ body .container .navbar__li:hover {
   font-size: 26px;
   color: white;
 }
-
-.inFormer {
+body .inFormer {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.inFormer__showinfo {
+body .inFormer__showinfo {
   width: 350px;
   height: 350px;
   background-color: #2f2e2e;
@@ -58,50 +55,37 @@ body .container .navbar__li:hover {
   align-items: center;
   color: white;
 }
-.inFormer__showUs {
-  margin-bottom: 150px;
-  width: 420px;
-  height: 450px;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-}
-.inFormer__showUs__itsik {
-  width: 420px;
-  height: 133px;
-  margin: 10px 0px;
+body .inFormer__showUs__itsik {
   display: flex;
 }
-.inFormer__showUs__itsik__image {
-  width: 120px;
-  height: 133px;
-  border-radius: 25px;
-  border: 2px solid black;
+body .inFormer__showUs__itsik__image {
+  width: 150px;
+  height: 120px;
+  border-radius: 20px;
+  position: relative;
 }
-.inFormer__showUs__itsik__par {
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  padding: 0px 20px;
-  color: black;
-  font-size: 22px;
-  display: none;
+body .inFormer__showUs__itsik__h3 {
+  position: absolute;
+  padding: 120px 40px;
 }
-.inFormer__showUs .InFormer__showUs__dayan {
-  width: 420px;
-  height: 133px;
-  margin: 12px 0px;
-  margin: 10px 0px;
+body .inFormer__showUs__itsik__par {
+  padding: 50px 20px;
+  font-size: 20px;
+}
+body .inFormer__showUs__dayan {
   display: flex;
 }
-.inFormer__showUs .InFormer__showUs__shili {
-  width: 420px;
-  height: 133px;
-  background-color: #d400ff;
-  margin: 10px 0px;
+body .inFormer__showUs__dayan__image {
+  width: 150px;
+  height: 120px;
+  border-radius: 20px;
+  position: relative;
+}
+body .inFormer__showUs__dayan__h3 {
+  position: absolute;
   display: flex;
 }
-.inFormer__showContact {
+body .inFormer__showContact {
   border-radius: 52% 48% 63% 37%/39% 45% 55% 61%;
   width: 350px;
   height: 350px;
@@ -111,7 +95,7 @@ body .container .navbar__li:hover {
   align-items: center;
   color: white;
 }
-.inFormer__showContact__h2, .inFormer__showContact__h3 {
+body .inFormer__showContact__h2, body .inFormer__showContact__h3 {
   color: white;
   align-items: center;
   justify-content: center;
@@ -119,8 +103,7 @@ body .container .navbar__li:hover {
   margin-top: 90px;
   font-size: 1.5rem;
 }
-
-.login {
+body .login {
   width: 300px;
   padding: 30px;
   position: absolute;
@@ -131,18 +114,18 @@ body .container .navbar__li:hover {
   transform: translate(-50%, -50%);
   border-radius: 39px 39px 39px 39px;
 }
-.login.login:hover {
+body .login.login:hover {
   background-color: rgba(0, 0, 0, 0.9);
   border: 3px solid palevioletred;
   width: 330px;
   transition: 0.8s;
 }
-.login__h1 {
+body .login__h1 {
   color: white;
   text-transform: uppercase;
   font-weight: 650;
 }
-.login__userName, .login__password {
+body .login__userName, body .login__password {
   border: 0;
   background: none;
   display: block;
@@ -155,11 +138,11 @@ body .container .navbar__li:hover {
   border-radius: 24px;
   transition: 0.25px;
 }
-.login__userName:focus, .login__password:focus {
+body .login__userName:focus, body .login__password:focus {
   border-color: goldenrod;
   width: 220px;
 }
-.login__submit {
+body .login__submit {
   border: 0;
   background: none;
   margin: 20px auto;
@@ -172,6 +155,6 @@ body .container .navbar__li:hover {
   transition: 0.25px;
   cursor: pointer;
 }
-.login__submit:hover {
+body .login__submit:hover {
   background: goldenrod;
 }
