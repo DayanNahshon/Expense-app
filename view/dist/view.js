@@ -23,14 +23,15 @@ var inputCalc = document.querySelector("#inputSum");
 var inputTitle = document.querySelector("#inputTitle");
 var buttonClear = document.querySelector("#clear");
 var buttonAddToTotal = document.querySelector("#addToTotal");
-// window.onload = () => {
-//     inputCalc.value = ""
-//     inputTitle.value = ""
-// }
+window.onload = function () {
+    inputCalc.value = "";
+    inputTitle.value = "";
+};
 // events
 buttonInput.forEach(function (button) {
     button.addEventListener("click", function () {
         //display value of each button
+        console.log("click");
         inputCalc.value += button.value;
     });
 });
