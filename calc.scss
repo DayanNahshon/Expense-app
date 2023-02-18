@@ -50,6 +50,7 @@ body{
             background-color: transparent;
             font-size: 25px;
             position: relative;
+            color: rgb(238, 213, 70);
 
             &::placeholder{
                 color: rgb(238, 213, 70);
@@ -63,7 +64,7 @@ body{
         grid-gap: 20px;
         margin-top: 40px;
 
-        &__button{
+        &__button, &__button-clear, &__button-add{
             font-size: 20px;
             padding: 10px;
             border: none;
@@ -73,11 +74,11 @@ body{
             border-radius: 5px;
         }
 
-        &__button:hover{
+        &__button:hover, &__button-clear:hover, &__button-add:hover{
             box-shadow: 0 5px 25px  #ffffff;
         }
 
-        #addToTotal{
+        &__button-add{
             grid-column: span 3;
         }
     }
