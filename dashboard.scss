@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: rgb(238, 213, 70);
+}
+
+//-----Nav Bar - Logo
+.container{
+    display: flex;
+    background-color: black;
+    height: 60px;
+    
+    &__logo{
+        color: white;
+        padding: 12px 25px;
+        
+        &__spanlogo{
+            color: palevioletred;
+        }
+    }
+}
+
