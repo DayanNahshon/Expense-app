@@ -13,14 +13,13 @@ const showInfo = document.querySelector(".inFormer__showinfo")as HTMLDivElement;
 const showUS = document.querySelector(".inFormer__showUs")as HTMLDivElement;
 const showContact = document.querySelector(".inFormer__showContact")as HTMLDivElement;
 
-    // events
-
-    info.addEventListener("mouseover", showTheInfo)
-    info.addEventListener("mouseout", hideTheInfo)
-    us.addEventListener("mouseover", showTheUs)
-    us.addEventListener("mouseout", hideTheUs)
-    contact.addEventListener("mouseover", showTheContact)
-    contact.addEventListener("mouseout", hideTheContact)
+// events
+// info.addEventListener("mouseover", showTheInfo)
+// info.addEventListener("mouseout", hideTheInfo)
+// us.addEventListener("mouseover", showTheUs)
+// us.addEventListener("mouseout", hideTheUs)
+// contact.addEventListener("mouseover", showTheContact)
+// contact.addEventListener("mouseout", hideTheContact)
 
 
 //-----Calc. Page
