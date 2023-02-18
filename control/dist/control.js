@@ -1,3 +1,4 @@
+//-----Login Page
 // info
 function showTheInfo() {
     form.style.display = "none";
@@ -24,3 +25,4 @@ function hideTheContact() {
     form.style.display = "block";
     showContact.style.display = "none";
 }
+//-----Calc. Page
