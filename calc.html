@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+    <!--Style-->
+    <link rel="stylesheet" href="./dist/calc.css">
+
+    <!--Script-->
+    <script src="./view/dist/view.js" defer></script>
+    <script src="./control/dist/control.js" defer></script>
+    <script src="./dist/index.js" defer></script>
+
+    <title>Calculator</title>
+</head>
+<body>
+
+    <!--Nav Bar - Logo-->
+    <div class="container">
+        <h1 class="container__logo">EXP<span class="container__logo__spanlogo">ense</span></h1>
+    </div>
+
+    <!--Expense Calc.-->
+
+    <div class="calculator">
+        <div class="calculator__display">
+            <input type="text" placeholder="0" id="input" disabled>
+            <input type="text" placeholder="Add Title" id="input">
+        </div>
+        <div class="calculator__buttons">
+
+            <input type="button" value="7" class="calculator__buttons__button">
+            <input type="button" value="8" class="calculator__buttons__button">
+            <input type="button" value="9" class="calculator__buttons__button">
+
+            <input type="button" value="6" class="calculator__buttons__button">
+            <input type="button" value="5" class="calculator__buttons__button">
+            <input type="button" value="4" class="calculator__buttons__button">
+
+            <input type="button" value="1" class="calculator__buttons__button">
+            <input type="button" value="2" class="calculator__buttons__button">
+            <input type="button" value="3" class="calculator__buttons__button">
+
+            
+            <input type="button" value="0" class="calculator__buttons__button">
+            <input type="button" value="." class="calculator__buttons__button">
+            <!--Full Erase-->
+            <input type="button" value="AC" class="calculator__buttons__button" id="clear">
+
+            <input type="button" value="Add to Total" class="calculator__buttons__button" id="addToTotal">
+
+        </div>
+    </div>
+
+</body>
+</html>
