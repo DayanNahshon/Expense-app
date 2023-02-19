@@ -3,20 +3,18 @@ var form = document.querySelector(".login");
 var info = document.querySelector("#li-Info");
 var us = document.querySelector("#li-Us");
 var contact = document.querySelector("#li-Contact");
-var itsik_par = document.querySelector(".inFormer__showUs__itsik__par");
-var dayan_par = document.querySelector(".inFormer__showUs__dayan__par");
-var shili_par = document.querySelector(".inFormer__showUs__shili__par");
+console.log(form);
 // the divs
 var showInfo = document.querySelector(".inFormer__showinfo");
 var showUS = document.querySelector(".inFormer__showUs");
 var showContact = document.querySelector(".inFormer__showContact");
 // events
-// info.addEventListener("mouseover", showTheInfo)
-// info.addEventListener("mouseout", hideTheInfo)
-// us.addEventListener("mouseover", showTheUs)
-// us.addEventListener("mouseout", hideTheUs)
-// contact.addEventListener("mouseover", showTheContact)
-// contact.addEventListener("mouseout", hideTheContact)
+info.addEventListener("mouseover", showTheInfo);
+info.addEventListener("mouseout", hideTheInfo);
+us.addEventListener("mouseover", showTheUs);
+us.addEventListener("mouseout", hideTheUs);
+contact.addEventListener("mouseover", showTheContact);
+contact.addEventListener("mouseout", hideTheContact);
 //-----Calc. Page
 var buttonInput = document.querySelectorAll(".calculator__buttons__button");
 var inputCalc = document.querySelector("#inputSum");
