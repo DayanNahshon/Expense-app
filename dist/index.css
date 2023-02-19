@@ -55,35 +55,31 @@ body .inFormer__showinfo {
   align-items: center;
   color: white;
 }
-body .inFormer__showUs__itsik {
+body .inFormer__mainUs {
   display: flex;
+  text-align: center;
 }
-body .inFormer__showUs__itsik__image {
-  width: 150px;
+body .inFormer__mainUs__box {
+  width: 220px;
+  height: 250px;
+  background-color: palevioletred;
+  border-radius: 10%;
+  margin: 0px 12px;
+  padding: 4px 0px;
+}
+body .inFormer__mainUs__box__img {
+  width: 120px;
   height: 120px;
-  border-radius: 20px;
-  position: relative;
+  border-radius: 50%;
 }
-body .inFormer__showUs__itsik__h3 {
-  position: absolute;
-  padding: 120px 40px;
+body .inFormer__mainUs__box__h3Us {
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
 }
-body .inFormer__showUs__itsik__par {
-  padding: 50px 20px;
-  font-size: 20px;
-}
-body .inFormer__showUs__dayan {
-  display: flex;
-}
-body .inFormer__showUs__dayan__image {
-  width: 150px;
-  height: 120px;
-  border-radius: 20px;
-  position: relative;
-}
-body .inFormer__showUs__dayan__h3 {
-  position: absolute;
-  display: flex;
+body .inFormer__mainUs__box__parUs {
+  color: white;
+  padding: 15px 0px;
 }
 body .inFormer__showContact {
   border-radius: 52% 48% 63% 37%/39% 45% 55% 61%;

@@ -77,68 +77,56 @@ font-family: 'Poppins', sans-serif;
 
         //  showus
          
-         &__showUs{
+       &__mainUs{
+        display: flex;
+        text-align: center;
 
-            &__itsik{
-                  display: flex;
+        &__box{
+            
+        width: 220px;
+        height: 250px;
+        background-color: palevioletred;
+        border-radius: 10%;
+        margin: 0px 12px;
+        padding: 4px 0px;
+        
+        
+         &__img{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
 
-
-               &__image{
-                  width: 150px;
-                  height: 120px;
-                  border-radius: 20px;
-                  position: relative;
-               }    
- 
-                &__h3{
-                  position: absolute; 
-                  padding: 120px 40px;
-                 
-                }  
-               
-                 &__par{
-                  padding: 50px 20px;
-                  font-size: 20px;
-                 }
-
-            }  
-
-            &__dayan{
-               display: flex;
-               
-               &__image{
-                width: 150px;
-                height: 120px;
-                border-radius: 20px;
-                position: relative;
-               }
-
-
-             &__h3{
-                position: absolute; 
-                  display: flex;
-             }
-                
-
-              &__par{
-
-
-              }
-
-
-
-
-            }
-
-
-
-
-
-
-
-
+            
+         
 
          }
+
+         &__h3Us{
+            color: white;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            
+         }
+
+         &__parUs{
+            color: white;
+            padding: 15px 0px;
+         }
+        }
+
+
+
+       }  
+
+
+
+
+
+
+
+
+
+        
   
         
     
@@ -260,6 +248,7 @@ font-family: 'Poppins', sans-serif;
             }
     
 
-}}
+}
+}
 
 
