@@ -58,6 +58,7 @@ body .inFormer__showinfo {
 body .inFormer__mainUs {
   display: flex;
   text-align: center;
+  flex-direction: row;
 }
 body .inFormer__mainUs__box {
   width: 220px;

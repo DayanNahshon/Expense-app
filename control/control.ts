@@ -4,7 +4,8 @@ function showTheInfo(){
     form.style.display = "none"  
     showInfo.style.display = "block"
 
-    }
+   
+}
 
   function hideTheInfo(){
     form.style.display = "block"  
