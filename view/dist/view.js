@@ -5,9 +5,11 @@ var us = document.querySelector("#li-Us");
 var contact = document.querySelector("#li-Contact");
 // the divs
 var showInfo = document.querySelector(".inFormer__showinfo");
+showInfo.style.display = "none";
 var showUS = document.querySelector(".inFormer__mainUs");
+showUS.style.display = "none";
 var showContact = document.querySelector(".inFormer__showContact");
-console.log(showUS);
+showContact.style.display = "none";
 // events
 info.addEventListener("mouseover", showTheInfo);
 info.addEventListener("mouseout", hideTheInfo);

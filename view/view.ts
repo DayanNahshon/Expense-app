@@ -9,9 +9,12 @@ const contact = document.querySelector("#li-Contact")as HTMLElement;
 
 // the divs
 const showInfo = document.querySelector(".inFormer__showinfo")as HTMLDivElement;
+showInfo.style.display ="none"
 const showUS = document.querySelector(".inFormer__mainUs")as HTMLDivElement;
+showUS.style.display ="none"
 const showContact = document.querySelector(".inFormer__showContact")as HTMLDivElement;
-console.log(showUS)
+showContact.style.display ="none"
+
 
 // events
 info.addEventListener("mouseover", showTheInfo)

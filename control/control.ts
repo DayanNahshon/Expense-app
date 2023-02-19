@@ -1,11 +1,9 @@
 //-----Login Page
 // info
 function showTheInfo(){
-    form.style.display = "none"  
-    showInfo.style.display = "block"
-
-   
-}
+  showInfo.style.display = "block" 
+  form.style.display = "none"  
+  }
 
   function hideTheInfo(){
     form.style.display = "block"  
@@ -15,7 +13,10 @@ function showTheInfo(){
   //  us
   function showTheUs(){
     form.style.display = "none"  
-    showUS.style.display = "block"
+    showUS.style.display = "flex"
+    showUS.style.flexDirection = "row"
+    showUS.style.flexWrap ="wrap"
+    showUS.style.gap = "10px"
   }
 
   function hideTheUs(){
