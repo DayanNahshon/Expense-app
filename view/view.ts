@@ -5,7 +5,7 @@ const us = document.querySelector("#li-Us")as HTMLElement;
 const contact = document.querySelector("#li-Contact")as HTMLElement;
 const itsik_par = document.querySelector(".inFormer__showUs__itsik__par")as HTMLParagraphElement;
 const dayan_par = document.querySelector(".inFormer__showUs__dayan__par")as HTMLParagraphElement;
-const shili_par = document.querySelector(".inFormer__showUs__shili__par")as HTMLParagraphElement;
+const shaili_par = document.querySelector(".inFormer__showUs__shaili__par")as HTMLParagraphElement;
 
 
 // the divs

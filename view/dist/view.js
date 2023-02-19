@@ -5,7 +5,7 @@ var us = document.querySelector("#li-Us");
 var contact = document.querySelector("#li-Contact");
 var itsik_par = document.querySelector(".inFormer__showUs__itsik__par");
 var dayan_par = document.querySelector(".inFormer__showUs__dayan__par");
-var shili_par = document.querySelector(".inFormer__showUs__shili__par");
+var shaili_par = document.querySelector(".inFormer__showUs__shaili__par");
 // the divs
 var showInfo = document.querySelector(".inFormer__showinfo");
 var showUS = document.querySelector(".inFormer__showUs");
