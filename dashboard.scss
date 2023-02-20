@@ -26,3 +26,36 @@ body{
     }
 }
 
+.sidebar{
+    width: 8%;
+    height: 100vh;;
+    background-color: palevioletred;
+
+
+    &__sideicons{
+       
+
+      &__ul{
+       padding:40px 0px;
+
+
+       &__li{
+       padding: 30px 5px;
+       list-style: none;
+
+       &__image{
+        width: 40px;
+        height: 50px;
+        
+        
+       }
+
+       }
+
+      }
+
+
+
+
+    }
+}
