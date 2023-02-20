@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -40,7 +41,7 @@ body .container .navbar__li:hover {
 }
 body .inFormer {
   width: 100vw;
-  height: 100vh;
+  height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,12 +49,19 @@ body .inFormer {
 body .inFormer__showinfo {
   width: 350px;
   height: 350px;
-  background-color: #2f2e2e;
+  background-color: #181818;
   border-radius: 50px 80px/20px 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+body .inFormer__showinfo__h3info {
   color: white;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  font-size: 22px;
+  padding: 3px 3px;
+  width: 350px;
+  height: 350px;
 }
 body .inFormer__mainUs {
   display: flex;
@@ -154,4 +162,11 @@ body .login__submit {
 }
 body .login__submit:hover {
   background: goldenrod;
+}
+
+.bottom {
+  border-top: 4px solid palevioletred;
+  width: 100%;
+  height: 90px;
+  background-color: black;
 }
