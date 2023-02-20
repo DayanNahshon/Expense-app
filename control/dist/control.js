@@ -1,9 +1,4 @@
 //-----Login Page
-function runForm(e) {
-    e.preventDefault();
-    console.log("sdfsdf");
-    location.href = "dashboard.html";
-}
 // info
 function showTheInfo() {
     showInfo.style.display = "block";
