@@ -33,6 +33,7 @@ body{
     background-color: palevioletred;
     border: 2px solid black;
     border-radius: 15px;
+    float: left;
     
 
     &__sideicons{
@@ -66,6 +67,8 @@ body{
 
 .main{
     display: flex;
-    width: 70%;
+    width: 75%;
+    height: 100vh;
     border: 3px solid purple;
+    float: right;
 }

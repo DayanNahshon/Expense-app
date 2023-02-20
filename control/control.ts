@@ -1,4 +1,11 @@
 //-----Login Page
+function runForm(e){
+  
+}
+
+
+
+
 // info
 function showTheInfo(){
   showInfo.style.display = "block" 

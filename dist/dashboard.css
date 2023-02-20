@@ -29,6 +29,7 @@ body {
   background-color: palevioletred;
   border: 2px solid black;
   border-radius: 15px;
+  float: left;
 }
 .sidebar__sideicons__ul {
   padding: 20px 0px;
@@ -47,6 +48,8 @@ body {
 
 .main {
   display: flex;
-  width: 70%;
+  width: 75%;
+  height: 100vh;
   border: 3px solid purple;
+  float: right;
 }

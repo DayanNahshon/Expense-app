@@ -1,10 +1,9 @@
 //-----Login Page
 const form = document.querySelector(".login")as HTMLFormElement;
-
 const info = document.querySelector("#li-Info")as HTMLElement;
 const us = document.querySelector("#li-Us")as HTMLElement;
 const contact = document.querySelector("#li-Contact")as HTMLElement;
-
+const button = document.querySelector(".login__submit")as HTMLButtonElement;
 
 
 // the divs
@@ -23,7 +22,7 @@ us.addEventListener("mouseover", showTheUs)
 us.addEventListener("mouseout", hideTheUs)
 contact.addEventListener("mouseover", showTheContact)
 contact.addEventListener("mouseout", hideTheContact)
-
+button.addEventListener("click", runForm)
 
 
 
