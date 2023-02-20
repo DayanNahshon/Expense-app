@@ -22,7 +22,7 @@ us.addEventListener("mouseover", showTheUs)
 us.addEventListener("mouseout", hideTheUs)
 contact.addEventListener("mouseover", showTheContact)
 contact.addEventListener("mouseout", hideTheContact)
-button.addEventListener("click", runForm)
+form.addEventListener("submit", runForm)
 
 
 

@@ -18,7 +18,7 @@ us.addEventListener("mouseover", showTheUs);
 us.addEventListener("mouseout", hideTheUs);
 contact.addEventListener("mouseover", showTheContact);
 contact.addEventListener("mouseout", hideTheContact);
-button.addEventListener("click", runForm);
+form.addEventListener("submit", runForm);
 //-----Calc. Page
 var buttonInput = document.querySelectorAll(".calculator__buttons__button");
 var inputCalc = document.querySelector("#inputSum");
