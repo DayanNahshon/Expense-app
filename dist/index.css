@@ -27,7 +27,7 @@ body .container .navbar {
   display: flex;
   justify-content: center;
 }
-body .container .navbar__li {
+body .container .navbar__li-Info, body .container .navbar__li-Us, body .container .navbar__li-Contact {
   list-style: none;
   padding: 15px 40px;
   margin-right: 30px;
@@ -35,7 +35,7 @@ body .container .navbar__li {
   color: palevioletred;
   cursor: pointer;
 }
-body .container .navbar__li:hover {
+body .container .navbar__li-Info:hover, body .container .navbar__li-Us:hover, body .container .navbar__li-Contact:hover {
   font-size: 26px;
   color: white;
 }

@@ -1,8 +1,8 @@
 //-----Login Page
 var form = document.querySelector(".login");
-var info = document.querySelector("#li-Info");
-var us = document.querySelector("#li-Us");
-var contact = document.querySelector("#li-Contact");
+var info = document.querySelector(".navbar__li-Info");
+var us = document.querySelector(".navbar__li-Us");
+var contact = document.querySelector(".navbar__li-Contact");
 var button = document.querySelector(".login__submit");
 // the divs
 var showInfo = document.querySelector(".inFormer__showinfo");
@@ -18,4 +18,39 @@ us.addEventListener("mouseover", showTheUs);
 us.addEventListener("mouseout", hideTheUs);
 contact.addEventListener("mouseover", showTheContact);
 contact.addEventListener("mouseout", hideTheContact);
-form.addEventListener("submit", runForm);
+button.addEventListener("click", runForm);
+// run the function
+// info
+function showTheInfo() {
+    showInfo.style.display = "block";
+    form.style.display = "none";
+}
+function hideTheInfo() {
+    form.style.display = "block";
+    showInfo.style.display = "none";
+}
+//  us
+function showTheUs() {
+    form.style.display = "none";
+    showUS.style.display = "flex";
+    showUS.style.flexDirection = "row";
+    showUS.style.flexWrap = "wrap";
+    showUS.style.gap = "10px";
+}
+function hideTheUs() {
+    form.style.display = "block";
+    showUS.style.display = "none";
+}
+function showTheContact() {
+    form.style.display = "none";
+    showContact.style.display = "block";
+}
+function hideTheContact() {
+    form.style.display = "block";
+    showContact.style.display = "none";
+}
+// runForm
+function runForm(e) {
+    e.preventDefault();
+    location.href = "dashboard.html";
+}

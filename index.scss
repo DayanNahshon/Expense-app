@@ -35,7 +35,7 @@ font-family: 'Poppins', sans-serif;
     display: flex;
      justify-content: center;
 
-    &__li{
+    &__li-Info, &__li-Us, &__li-Contact {
         list-style: none;
         padding: 15px 40px;
         margin-right: 30px;
@@ -44,7 +44,7 @@ font-family: 'Poppins', sans-serif;
         cursor: pointer;
         }
 
-        &__li:hover{
+        &__li-Info:hover ,&__li-Us:hover ,&__li-Contact:hover{
            font-size: 26px;
            color: white;
         }
