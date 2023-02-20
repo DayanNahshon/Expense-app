@@ -4,6 +4,7 @@ var info = document.querySelector(".navbar__li-Info");
 var us = document.querySelector(".navbar__li-Us");
 var contact = document.querySelector(".navbar__li-Contact");
 var button = document.querySelector(".login__submit");
+var userName = document.querySelector(".login__userName");
 // the divs
 var showInfo = document.querySelector(".inFormer__showinfo");
 showInfo.style.display = "none";
@@ -52,5 +53,6 @@ function hideTheContact() {
 // runForm
 function runForm(e) {
     e.preventDefault();
+    localStorage.setItem("user", userName.value);
     location.href = "dashboard.html";
 }

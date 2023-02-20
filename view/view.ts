@@ -4,6 +4,7 @@ const info = document.querySelector(".navbar__li-Info")as HTMLElement;
 const us = document.querySelector(".navbar__li-Us")as HTMLElement;
 const contact = document.querySelector(".navbar__li-Contact")as HTMLElement;
 const button = document.querySelector(".login__submit")as HTMLButtonElement;
+const userName = document.querySelector(".login__userName")as HTMLInputElement;
 
 
 // the divs
@@ -68,7 +69,7 @@ function showTheInfo(){
 
 function runForm(e){
 e.preventDefault()
-
+localStorage.setItem("user",userName.value)
 
 
 location.href = "dashboard.html"
