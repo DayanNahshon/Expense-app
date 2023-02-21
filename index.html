@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense-App</title>
     <link rel="stylesheet" href="./dist/index.css">
-    
+    <script src="./model/dist/model.js" defer></script>
     <script src="./view/dist/view.js" defer></script>
     <script src="./control/dist/control.js" defer></script>
     <script src="./dist/index.js" defer></script>
@@ -15,53 +15,60 @@
     <div class="container">
         <h1 class="container__logo">EXP<span class="container__logo__spanlogo">ense</span></h1>
     <nav class="navbar">
-      <li class="navbar__li" id="li-Info">Info</li>
-      <li class="navbar__li" id="li-Us">Us</li>
-      <li class="navbar__li" id="li-Contact">Contact</li>
+      <li class="navbar__li-Info">Info</li>
+      <li class="navbar__li-Us">Us</li>
+      <li class="navbar__li-Contact">Contact</li>
     </nav>
 </div>
 
 <div class="inFormer">
     <!-- info -->
-    <div class="inFormer__showinfo" style="display:none;">
-        dsddsgsgsgsfsdbxcb
+    <div class="inFormer__showinfo">
+       <h3 class="inFormer__showinfo__h3info">Let Expense Halp You. <br>
+        We Got You!!! <br>
+        If you often spend, You have come to the right place, Here you can track your daily expenses regularly,
+        So what are you waiting for let's get going.</h3>
     </div>
     
     <!-- us -->
-             <!-- itsik -->
-    <div class="inFormer__showUs" style="display:block;">
-       <div class="inFormer__showUs__itsik">
-         <img src="./images/itsik.jpg" alt="itsik image" class="inFormer__showUs__itsik__image">
-         <h3 class="inFormer__showUs__itsik__h3">Itsik</h3>
-         <p class="inFormer__showUs__itsik__par">Im All-About New App, Give Me A Challenge</p>
-       </div>
-
-                <!-- dayan -->
-        <div class="InFormer__showUs__dayan">
-            <img src="./images/dayan.jpeg" alt="dayan image" class="inFormer__showUs__dayan__image">
-            <h3 class="inFormer__showUs__dayan__h3">Dayan</h3>
-            <p class="inFormer__showUs__dayan__par">dfsdfsdfsdfsdf</p>
+   
+    <div class="inFormer__mainUs">
+        <div class="inFormer__mainUs__box">
+       <img src="./images/itsik.jpg"
+        alt="" class="inFormer__mainUs__box__img">
+         <h3 class="inFormer__mainUs__box__h3Us">ITSIK</h3>
+         <p class="inFormer__mainUs__box__parUs">FrontEnd, BackEnd Im All Over End</p>
         </div>
-        <!-- <div class="InFormer__showUs__shili">
-            <img src="./images/dayan.jpeg" alt="shili image" class="inFormer__showUs__itsik__image">
-            <h3>Itsik_B</h3>
-            <p class="inFormer__showUs__shaili__par">dfsdfsdfsdfsdf</p>
-        </div>  -->
-    </div>
-
-    <!-- contact -->
-    <div class="inFormer__showContact" style="display:none ;">
+        <div class="inFormer__mainUs__box">
+       <img src="./images/dayan.jpeg"
+        alt="" class="inFormer__mainUs__box__img">
+         <h3 class="inFormer__mainUs__box__h3Us">DAYAN</h3>
+         <p class="inFormer__mainUs__box__parUs">info</p>
+        </div>
+        <div class="inFormer__mainUs__box">
+       <img src="./images/dayan.jpeg"
+        alt="" class="inFormer__mainUs__box__img">
+         <h3 class="inFormer__mainUs__box__h3Us">Shili</h3>
+         <p class="inFormer__mainUs__box__parUs">info</p>
+        </div>
+    </div> 
+<!-- contact -->
+    <div class="inFormer__showContact">
        <h2 class="inFormer__showContact__h2">Contact us at:</h2>
         <h3 class="inFormer__showContact__h3">www.expense.gmail.com</h3>  
     </div>
 
 </div>
 
-    <form class="login" style="display:none;">
+    <form class="login"> 
        <h1 class="login__h1">login</h1>
         <input type="text" placeholder="UserName" class="login__userName" name="" required>
         <input type="password" placeholder="Password" class="login__password" name="" required>
         <input type="submit" value="Login" name="" class="login__submit">
     </form>
+    
+    <div class="bottom">
+        fghfhfghf
+    </div>
 </body>
 </html>

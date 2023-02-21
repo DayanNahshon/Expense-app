@@ -26,3 +26,49 @@ body{
     }
 }
 
+// dashboard
+.sidebar{
+    width: 5%;
+    height: 100vh;;
+    background-color: palevioletred;
+    border: 2px solid black;
+    border-radius: 15px;
+    float: left;
+    
+
+    &__sideicons{
+       
+
+      &__ul{
+       padding:20px 0px;
+
+
+       &__li{
+       padding: 30px 0px;
+       list-style: none;
+        text-align: center;
+       &__image{
+        width: 35px;
+        height:40px;
+        border-radius: 30%;
+        border: 2px solid black;
+        }
+
+        
+       }
+
+      }
+
+
+
+
+    }
+}
+
+.main{
+    display: flex;
+    width: 90%;
+    height: 100vh;
+    border: 3px solid purple;
+    float: right;
+}

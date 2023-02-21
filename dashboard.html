@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="./dist/dashboard.css">
 
     <!--Script-->
-    <script src="./view/dist/view.js" defer></script>
-    <script src="./control/dist/control.js" defer></script>
+    <script src="./model/dist/model.js" defer></script>
+    <script src="./view/dist/dashboardView.js" defer></script>
+    <script src="./control/dist/dashboardControl.js" defer></script>
     <script src="./dist/index.js" defer></script>
 
     <title>Budget management dashboard</title>
@@ -26,9 +27,28 @@
     <div class="container">
         <h1 class="container__logo">EXP<span class="container__logo__spanlogo">ense</span></h1>
     </div>
-
-    <!--Dashboard-->
     
+    <!--Dashboard-->
+    <div class="main">
+        <div class="main__show"></div>
+
+    </div>      
+    <div class="sidebar">
+      <div class="sidebar__sideicons">
+       <ul class="sidebar__sideicons__ul"  >
+        <li class="sidebar__sideicons__ul__li"><img src="./images/monitoring.png" alt="monitoring image" class="sidebar__sideicons__ul__li__image"></li>
+        
+       <li class="sidebar__sideicons__ul__li"><img src="./images/calculator.png" alt="monitoring image" class="sidebar__sideicons__ul__li__image"></li>
+        <li class="sidebar__sideicons__ul__li"><img src="./images/balance.png" alt="monitoring image" class="sidebar__sideicons__ul__li__image"></li>
+        <li class="sidebar__sideicons__ul__li"><img src="./images/payments.png" alt="monitoring image" class="sidebar__sideicons__ul__li__image"></li>
+        <li class="sidebar__sideicons__ul__li"><img src="./images/monitoring.png" alt="monitoring image" class="sidebar__sideicons__ul__li__image"></li>
+       </ul>
+      </div>
+
+      
+
+    </div>
+
     
 </body>
 </html>
