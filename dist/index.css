@@ -55,38 +55,6 @@ body .inFormer__showinfo {
   align-items: center;
   color: white;
 }
-body .inFormer__showUs__itsik {
-  display: flex;
-  margin: 30px 0px;
-}
-body .inFormer__showUs__itsik__image {
-  width: 150px;
-  height: 120px;
-  border-radius: 20px;
-  position: relative;
-}
-body .inFormer__showUs__itsik__h3 {
-  position: absolute;
-  padding: 120px 40px;
-}
-body .inFormer__showUs__itsik__par {
-  padding: 50px 20px;
-  font-size: 20px;
-}
-body .inFormer__showUs__dayan {
-  display: flex;
-  margin: 120px 10px;
-}
-body .inFormer__showUs__dayan__image {
-  width: 150px;
-  height: 120px;
-  border-radius: 20px;
-  position: relative;
-}
-body .inFormer__showUs__dayan__h3 {
-  position: absolute;
-  display: flex;
-}
 body .inFormer__showContact {
   border-radius: 52% 48% 63% 37%/39% 45% 55% 61%;
   width: 350px;
