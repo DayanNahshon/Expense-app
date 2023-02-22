@@ -71,7 +71,6 @@ function runForm(e){
 e.preventDefault()
 localStorage.setItem("user",userName.value)
 location.href = "dashboard.html";
-spanWelcome()
 }
     
 

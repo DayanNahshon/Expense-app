@@ -1,3 +1,4 @@
+window.onload = spanWelcome;
 var spanWel = document.querySelector(".container__h2Welcome__spanWelcome");
 var showMonitor = document.querySelector(".showMonitor");
 var showCalc = document.querySelector(".showCalculator");
@@ -9,6 +10,6 @@ if (sideBar) {
     });
 }
 function spanWelcome() {
-    localStorage.getItem("user");
-    spanWel.innerHTML = userName.value;
+    var newUser = localStorage.getItem("user");
+    spanWel.innerHTML = newUser;
 }

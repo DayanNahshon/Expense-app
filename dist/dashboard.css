@@ -32,7 +32,8 @@ body {
 }
 .container__h2Welcome__spanWelcome {
   padding: 0px 30px;
-  color: white;
+  color: palevioletred;
+  text-transform: capitalize;
 }
 
 .sidebar {

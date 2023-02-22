@@ -1,4 +1,5 @@
-const spanWel = document.querySelector(".container__h2Welcome__spanWelcome")as HTMLSpanElement;
+window.onload = spanWelcome
+let spanWel = document.querySelector(".container__h2Welcome__spanWelcome")as HTMLSpanElement;
 
 const showMonitor = document.querySelector(".showMonitor")as HTMLDivElement
 const showCalc = document.querySelector(".showCalculator")as HTMLDivElement
@@ -24,8 +25,12 @@ if(sideBar){
 
 
 function spanWelcome(){
-   localStorage.getItem("user")
-   spanWel.innerHTML = userName.value
+   let newUser = localStorage.getItem("user")!;
+        
+        spanWel.innerHTML = newUser
+        
+ 
+  
 }
 
 
