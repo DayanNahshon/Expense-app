@@ -22,17 +22,29 @@ body {
 .container__logo__spanlogo {
   color: palevioletred;
 }
+.container__h2Welcome {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0px;
+  margin: 0 auto;
+  letter-spacing: 0.1cm;
+  text-transform: uppercase;
+}
+.container__h2Welcome__spanWelcome {
+  padding: 0px 30px;
+  color: white;
+}
 
 .sidebar {
   width: 8%;
-  height: 100vh;
+  height: 100dvh;
   background-color: palevioletred;
   border: 2px solid black;
   border-radius: 15px;
   float: left;
 }
 .sidebar__sideicons__ul__li {
-  margin: 40px 0px;
+  margin: 70px 0px;
   list-style: none;
   text-align: center;
 }
