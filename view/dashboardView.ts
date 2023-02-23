@@ -50,7 +50,7 @@ const spanWel = document.querySelector(".container__h2Welcome__spanWelcome")as H
 
 // memo
 const memoButton = document.querySelector("#memoButton")as HTMLButtonElement;
-const memoInput = document.querySelector("#memoInput")as HTMLInputElement;
+let memoInput = document.querySelector("#memoInput")as HTMLInputElement;
 const memoPar = document.querySelector("#memoPar")as HTMLDivElement;
 
 memoButton.addEventListener("click", runMemoTask)
@@ -58,11 +58,13 @@ memoButton.addEventListener("click", runMemoTask)
 function runMemoTask(e){
   e.preventDefault()
   try {
-    if()
-     console.log("dsfsdf") 
+    if(memoInput.value != ""){
+      console.log("dsfsdf") 
+    }
+    
     
   } catch (error) {
-    
+    return alert("field is empty")
   }
 }
 

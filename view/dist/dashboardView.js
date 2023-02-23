@@ -35,10 +35,12 @@ memoButton.addEventListener("click", runMemoTask);
 function runMemoTask(e) {
     e.preventDefault();
     try {
-        if ()
+        if (memoInput.value != "") {
             console.log("dsfsdf");
+        }
     }
     catch (error) {
+        return alert("field is empty");
     }
 }
 // ----------------------------------
