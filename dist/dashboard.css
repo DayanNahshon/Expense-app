@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +8,7 @@
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   background-color: #eed546;
 }
 
@@ -21,4 +23,59 @@ body {
 }
 .container__logo__spanlogo {
   color: palevioletred;
+}
+.container__h2Welcome {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0px;
+  margin: 0 auto;
+  letter-spacing: 0.1cm;
+  text-transform: uppercase;
+}
+.container__h2Welcome__spanWelcome {
+  padding: 0px 30px;
+  color: palevioletred;
+  text-transform: capitalize;
+}
+
+.sidebar {
+  width: 10%;
+  height: 100vh;
+  background-color: palevioletred;
+  border: 2px solid black;
+  border-radius: 15px;
+  float: left;
+  cursor: pointer;
+}
+.sidebar__sideicons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar__sideicons__ul__li {
+  margin: 40px 0px;
+  list-style: none;
+  text-align: center;
+}
+.sidebar__sideicons__ul__li__image {
+  width: 40px;
+  height: 40px;
+  border-radius: 30%;
+  border: 2px solid black;
+}
+.sidebar__sideicons__ul__li__image:hover {
+  width: 48px;
+  transition: 0.5s;
+  background-color: #ede911;
+}
+.sidebar__sideicons__ul__li #infoOnBar {
+  color: white;
+}
+
+.main {
+  display: flex;
+  width: 90%;
+  height: 100vh;
+  border: 3px solid purple;
+  float: right;
 }
