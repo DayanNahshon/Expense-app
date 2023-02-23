@@ -1,4 +1,5 @@
 window.onload = spanWelcome;
+var spanWel = document.querySelector(".container__h2Welcome__spanWelcome");
 // all sidebar stuff
 var sideMonitoring = document.querySelector("#sideBarMonitor");
 var sidecalc = document.querySelector("#sideBarCalc");
@@ -19,7 +20,6 @@ sideMemo.addEventListener("click", runMemo);
 sideMoney.addEventListener("click", runMoney);
 // ------------------------------
 // all localstorage here
-var spanWel = document.querySelector(".container__h2Welcome__spanWelcome");
 // --------------------------------
 // <!--Dashboard-->
 // memo

@@ -1,5 +1,7 @@
 window.onload = spanWelcome;
-
+const spanWel = document.querySelector(
+  ".container__h2Welcome__spanWelcome"
+) as HTMLSpanElement;
 // all sidebar stuff
 const sideMonitoring = document.querySelector("#sideBarMonitor")as HTMLImageElement;
 const sidecalc = document.querySelector("#sideBarCalc")as HTMLImageElement;
@@ -34,9 +36,7 @@ const showMoney = document.querySelector(".showMoney")as HTMLDivElement;
 // ------------------------------
 
 // all localstorage here
-const spanWel = document.querySelector(
-  ".container__h2Welcome__spanWelcome"
-) as HTMLSpanElement;
+
 
 // --------------------------------
 
@@ -71,6 +71,5 @@ function runMemoTask(e) {
 // get localstorage.
 function spanWelcome() {
   let newUser = localStorage.getItem("user")!;
-
-  spanWel.innerHTML = newUser;
+     spanWel.innerHTML = newUser;
 }
