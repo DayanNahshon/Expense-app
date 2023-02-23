@@ -8,7 +8,7 @@
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   background-color: #eed546;
 }
 
@@ -45,6 +45,11 @@ body {
   border: 2px solid black;
   border-radius: 15px;
   float: left;
+}
+.sidebar__sideicons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .sidebar__sideicons__ul__li {
   margin: 40px 0px;
