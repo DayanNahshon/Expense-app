@@ -1,43 +1,35 @@
 window.onload = spanWelcome;
 
 // all sidebar stuff
+const sideMonitoring = document.querySelector("#sideBarMonitor")as HTMLImageElement;
+const sidecalc = document.querySelector("#sideBarCalc")as HTMLImageElement;
+const sideCurrency = document.querySelector("#sideBarCurrency")as HTMLImageElement;
+const sideMemo = document.querySelector("#sideBarMemo")as HTMLImageElement;
+const sideMoney = document.querySelector("#sideBarMoney")as HTMLImageElement;
 
-const sideBar = document.querySelectorAll("#sideBar")!;
+// main dashboard
 
-function sidebarListen() {
-  try {
-    const sideBarElement = document.querySelectorAll("#sideBar");
-    if (sideBarElement) {
-      sideBarElement.forEach((bar, index) => {
-        bar.addEventListener("click", () => {
-          renderSideBarNav(index);
-        });
-      });
-    }
-  } catch (error) {
-    console.error(error);
-  }
-}
+const showMonitor = document.querySelector(".showMonitor")as HTMLDivElement;
+const showCalculator = document.querySelector(".showCalculator")as HTMLDivElement;
+const showCurrency = document.querySelector(".showCurrency")as HTMLDivElement;
+const showMemo = document.querySelector(".main__show__showMemo")as HTMLDivElement;
+const showMoney = document.querySelector(".showMoney")as HTMLDivElement;
+    
 
-sidebarListen();
 
-function renderSideBarNav(index: number): void {
-  try {
-    console.log(index);
-    const sideBarElements = document.querySelectorAll("#sideBar");
-    console.log(sideBarElements);
 
-    sideBarElements.forEach((bar, i) => {
-      if (i === index) {
-        bar.style.display = "block";
-      } else {
-        bar.style.display = "none";
-      }
-    });
-  } catch (error) {
-    console.error(error);
-  }
-}
+
+
+// sidebar button events
+ sideMonitoring.addEventListener("click", runMonitoring);
+ sidecalc.addEventListener("click", runCalculator);
+ sideCurrency.addEventListener("click", runCurrency);
+ sideMemo.addEventListener("click", runMemo);
+ sideMoney.addEventListener("click", runMoney);
+
+
+
+
 
 // ------------------------------
 

@@ -1,40 +1,22 @@
 window.onload = spanWelcome;
 // all sidebar stuff
-var sideBar = document.querySelectorAll("#sideBar");
-function sidebarListen() {
-    try {
-        var sideBarElement = document.querySelectorAll("#sideBar");
-        if (sideBarElement) {
-            sideBarElement.forEach(function (bar, index) {
-                bar.addEventListener("click", function () {
-                    renderSideBarNav(index);
-                });
-            });
-        }
-    }
-    catch (error) {
-        console.error(error);
-    }
-}
-sidebarListen();
-function renderSideBarNav(index) {
-    try {
-        console.log(index);
-        var sideBarElements = document.querySelectorAll("#sideBar");
-        console.log(sideBarElements);
-        sideBarElements.forEach(function (bar, i) {
-            if (i === index) {
-                bar.style.display = "block";
-            }
-            else {
-                bar.style.display = "none";
-            }
-        });
-    }
-    catch (error) {
-        console.error(error);
-    }
-}
+var sideMonitoring = document.querySelector("#sideBarMonitor");
+var sidecalc = document.querySelector("#sideBarCalc");
+var sideCurrency = document.querySelector("#sideBarCurrency");
+var sideMemo = document.querySelector("#sideBarMemo");
+var sideMoney = document.querySelector("#sideBarMoney");
+// main dashboard
+var showMonitor = document.querySelector(".showMonitor");
+var showCalculator = document.querySelector(".showCalculator");
+var showCurrency = document.querySelector(".showCurrency");
+var showMemo = document.querySelector(".main__show__showMemo");
+var showMoney = document.querySelector(".showMoney");
+// sidebar button events
+sideMonitoring.addEventListener("click", runMonitoring);
+sidecalc.addEventListener("click", runCalculator);
+sideCurrency.addEventListener("click", runCurrency);
+sideMemo.addEventListener("click", runMemo);
+sideMoney.addEventListener("click", runMoney);
 // ------------------------------
 // all localstorage here
 var spanWel = document.querySelector(".container__h2Welcome__spanWelcome");
