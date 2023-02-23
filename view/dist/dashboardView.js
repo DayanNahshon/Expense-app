@@ -1,25 +1,38 @@
 window.onload = spanWelcome;
 // all sidebar stuff
 var sideBar = document.querySelectorAll("#sideBar");
-if (sideBar) {
-    sideBar.forEach(function (bar, index) {
-        bar.addEventListener("click", function () {
-            renderSideBarNav(index);
-        });
-    });
-}
-function renderSideBarNav(index) {
+function sidebarListen() {
     try {
-        for (var i = 0; i < 4; i++) {
-            if (i == index) {
-                document.getElementById("sideBar")[i].style.display = "block";
-            }
-            else if (i != index) {
-                document.getElementById("sideBar")[i].style.display = "none";
-            }
+        var sideBarElement = document.querySelectorAll("#sideBar");
+        if (sideBarElement) {
+            sideBarElement.forEach(function (bar, index) {
+                bar.addEventListener("click", function () {
+                    renderSideBarNav(index);
+                });
+            });
         }
     }
     catch (error) {
+        console.error(error);
+    }
+}
+sidebarListen();
+function renderSideBarNav(index) {
+    try {
+        console.log(index);
+        var sideBarElements = document.querySelectorAll("#sideBar");
+        console.log(sideBarElements);
+        sideBarElements.forEach(function (bar, i) {
+            if (i === index) {
+                bar.style.display = "block";
+            }
+            else {
+                bar.style.display = "none";
+            }
+        });
+    }
+    catch (error) {
+        console.error(error);
     }
 }
 // ------------------------------
