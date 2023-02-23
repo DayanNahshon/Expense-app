@@ -53,10 +53,17 @@ const memoButton = document.querySelector("#memoButton")as HTMLButtonElement;
 const memoInput = document.querySelector("#memoInput")as HTMLInputElement;
 const memoPar = document.querySelector("#memoPar")as HTMLDivElement;
 
-memoButton.addEventListener("submit", runMemoTask)
+memoButton.addEventListener("click", runMemoTask)
 
 function runMemoTask(e){
   e.preventDefault()
+  try {
+    if()
+     console.log("dsfsdf") 
+    
+  } catch (error) {
+    
+  }
 }
 
 // ----------------------------------

@@ -31,9 +31,15 @@ var spanWel = document.querySelector(".container__h2Welcome__spanWelcome");
 var memoButton = document.querySelector("#memoButton");
 var memoInput = document.querySelector("#memoInput");
 var memoPar = document.querySelector("#memoPar");
-memoButton.addEventListener("submit", runMemoTask);
+memoButton.addEventListener("click", runMemoTask);
 function runMemoTask(e) {
     e.preventDefault();
+    try {
+        if ()
+            console.log("dsfsdf");
+    }
+    catch (error) {
+    }
 }
 // ----------------------------------
 // get localstorage.
