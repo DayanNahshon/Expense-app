@@ -1,6 +1,6 @@
 window.onload = spanWelcome
-let spanWel = document.querySelector(".container__h2Welcome__spanWelcome")as HTMLSpanElement;
-let sideBar = document.querySelectorAll("#sideBar")!;
+const spanWel = document.querySelector(".container__h2Welcome__spanWelcome")as HTMLSpanElement;
+const sideBar = document.querySelectorAll("#sideBar")!;
 
  
 if(sideBar){
@@ -10,12 +10,22 @@ if(sideBar){
       })
     })
  }
-   
-
+     
+    
   function renderSideBarNav(index:number):void{
     try {
-        console.log("sdfsdfsdf")
-      for(let i=0; i < sideBar.length; i++);
+     
+        for(let i=0; i<4; i++){
+            
+           
+           if(i == index){
+            document.getElementById("sideBar")![i].style.display = "block"
+         
+           } else if(i != index){
+            document.getElementById("sideBar")![i].style.display = "none"
+           }
+        }
+     
 
     } catch (error) {
         

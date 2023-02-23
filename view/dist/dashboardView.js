@@ -10,9 +10,14 @@ if (sideBar) {
 }
 function renderSideBarNav(index) {
     try {
-        console.log("sdfsdfsdf");
-        for (var i = 0; i < sideBar.length; i++)
-            ;
+        for (var i = 0; i < 4; i++) {
+            if (i == index) {
+                document.getElementById("sideBar")[i].style.display = "block";
+            }
+            else if (i != index) {
+                document.getElementById("sideBar")[i].style.display = "none";
+            }
+        }
     }
     catch (error) {
     }
