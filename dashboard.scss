@@ -48,12 +48,13 @@ background-color: rgb(238, 213, 70);
 
 // dashboard
 .sidebar{
-    width: 8%;
+    width: 10%;
     height: 100vh;;
     background-color: palevioletred;
     border: 2px solid black;
     border-radius: 15px;
     float: left;
+    cursor:pointer;
 
     
 
@@ -72,14 +73,23 @@ background-color: rgb(238, 213, 70);
         list-style: none;
         text-align: center;
         
-       
+        
        
         &__image{
         width: 40px;
         height:40px;
         border-radius: 30%;
         border: 2px solid black;
+         }
+         
+         
+         &__image:hover{
+            width: 48px;
+            transition: 0.5s;
+            background-color: rgb(237, 233, 17);
         }
+
+
 
          #infoOnBar{
             color: white;

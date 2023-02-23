@@ -39,12 +39,13 @@ body {
 }
 
 .sidebar {
-  width: 8%;
+  width: 10%;
   height: 100vh;
   background-color: palevioletred;
   border: 2px solid black;
   border-radius: 15px;
   float: left;
+  cursor: pointer;
 }
 .sidebar__sideicons {
   display: flex;
@@ -61,6 +62,11 @@ body {
   height: 40px;
   border-radius: 30%;
   border: 2px solid black;
+}
+.sidebar__sideicons__ul__li__image:hover {
+  width: 48px;
+  transition: 0.5s;
+  background-color: #ede911;
 }
 .sidebar__sideicons__ul__li #infoOnBar {
   color: white;
