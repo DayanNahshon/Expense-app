@@ -74,8 +74,41 @@ body {
 
 .main {
   display: flex;
-  width: 90%;
+  width: 80%;
   height: 100vh;
   border: 3px solid purple;
   float: right;
+}
+.main__show {
+  width: 100%;
+  height: 100vh;
+}
+.main__show__showMemo {
+  margin: 50px 0px;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+.main__show__showMemo__h1 {
+  color: palevioletred;
+}
+.main__show__showMemo__showMemoMain {
+  margin: 50px 0px;
+}
+.main__show__showMemo__showMemoMain__input {
+  border-radius: 1rem;
+  font-size: 23px;
+  padding: 1px 5px;
+  margin: 0 5px;
+  color: palevioletred;
+  background-color: black;
+  outline: none;
+}
+.main__show__showMemo__showMemoMain__button {
+  border-radius: 50%;
+  width: 44px;
+  height: 37px;
+  background-color: palevioletred;
+  font-size: 20px;
+  border: 1px solid black;
 }

@@ -1,6 +1,8 @@
 window.onload = spanWelcome
-let spanWel = document.querySelector(".container__h2Welcome__spanWelcome")as HTMLSpanElement;
-let sideBar = document.querySelectorAll("#sideBar")!;
+
+// all sidebar stuff
+
+const sideBar = document.querySelectorAll("#sideBar")!;
 
  
 if(sideBar){
@@ -10,17 +12,61 @@ if(sideBar){
       })
     })
  }
-   
-
+     
+    
   function renderSideBarNav(index:number):void{
     try {
-        console.log("sdfsdfsdf")
-      for(let i=0; i < sideBar.length; i++);
+     
+        for(let i=0; i<4; i++){
+            
+           
+           if(i == index){
+            document.getElementById("sideBar")![i].style.display = "block"
+         
+           } else if(i != index){
+            document.getElementById("sideBar")![i].style.display = "none"
+           }
+        }
+     
 
     } catch (error) {
         
     }
   }
+
+// ------------------------------
+
+
+
+// all localstorage here
+const spanWel = document.querySelector(".container__h2Welcome__spanWelcome")as HTMLSpanElement;
+
+
+// --------------------------------
+
+
+// <!--Dashboard-->
+
+
+// memo
+const memoButton = document.querySelector("#memoButton")as HTMLButtonElement;
+const memoInput = document.querySelector("#memoInput")as HTMLInputElement;
+const memoPar = document.querySelector("#memoPar")as HTMLDivElement;
+
+memoButton.addEventListener("click", runMemoTask)
+
+function runMemoTask(e){
+  e.preventDefault()
+  try {
+    if()
+     console.log("dsfsdf") 
+    
+  } catch (error) {
+    
+  }
+}
+
+// ----------------------------------
 
 
 
