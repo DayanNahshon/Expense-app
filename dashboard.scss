@@ -9,8 +9,8 @@
 }
 
 body{
-    height: 100vh;
-    background-color: rgb(238, 213, 70);
+ height: 100%;   
+background-color: rgb(238, 213, 70);
 }
 
 //-----Nav Bar - Logo
@@ -58,18 +58,23 @@ body{
     
 
     &__sideicons{
-       
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       &__ul{
       
+        
 
 
        &__li{
         margin:40px 0px;
         list-style: none;
         text-align: center;
-
-       &__image{
+        
+       
+       
+        &__image{
         width: 40px;
         height:40px;
         border-radius: 30%;
