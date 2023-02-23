@@ -59,12 +59,18 @@ function runMemoTask(e){
   e.preventDefault()
   try {
     if(memoInput.value != ""){
-      console.log("dsfsdf") 
+      const newpar = document.createElement("p")as HTMLParagraphElement;
+      const toilet = document.createElement("image")as HTMLParagraphElement;
+      const verified = document.createElement("image")as HTMLParagraphElement;
+      memoPar.appendChild(newpar);
+      memoPar.appendChild(toilet);
+      memoPar.appendChild(verified);
+      newpar.innerHTML = memoInput.value;
     }
     
     
   } catch (error) {
-    return alert("field is empty")
+    return memoInput.required
   }
 }
 

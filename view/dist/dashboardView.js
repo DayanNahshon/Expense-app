@@ -36,11 +36,17 @@ function runMemoTask(e) {
     e.preventDefault();
     try {
         if (memoInput.value != "") {
-            console.log("dsfsdf");
+            var newpar = document.createElement("p");
+            var toilet = document.createElement("image");
+            var verified = document.createElement("image");
+            memoPar.appendChild(newpar);
+            memoPar.appendChild(toilet);
+            memoPar.appendChild(verified);
+            newpar.innerHTML = memoInput.value;
         }
     }
     catch (error) {
-        return alert("field is empty");
+        return memoInput.required;
     }
 }
 // ----------------------------------
