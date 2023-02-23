@@ -1,5 +1,5 @@
 window.onload = spanWelcome;
-var spanWel = document.querySelector(".container__h2Welcome__spanWelcome");
+// all sidebar stuff
 var sideBar = document.querySelectorAll("#sideBar");
 if (sideBar) {
     sideBar.forEach(function (bar, index) {
@@ -22,6 +22,20 @@ function renderSideBarNav(index) {
     catch (error) {
     }
 }
+// ------------------------------
+// all localstorage here
+var spanWel = document.querySelector(".container__h2Welcome__spanWelcome");
+// --------------------------------
+// <!--Dashboard-->
+// memo
+var memoButton = document.querySelector("#memoButton");
+var memoInput = document.querySelector("#memoInput");
+var memoPar = document.querySelector("#memoPar");
+memoButton.addEventListener("submit", runMemoTask);
+function runMemoTask(e) {
+    e.preventDefault();
+}
+// ----------------------------------
 // get localstorage.
 function spanWelcome() {
     var newUser = localStorage.getItem("user");

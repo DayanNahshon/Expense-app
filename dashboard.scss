@@ -9,7 +9,7 @@
 }
 
 body{
- height: 100%;   
+ height:100%;   
 background-color: rgb(238, 213, 70);
 }
 
@@ -108,7 +108,7 @@ background-color: rgb(238, 213, 70);
 
 .main{
     display: flex;
-    width: 90%;
+    width: 80%;
     height: 100vh;
     border: 3px solid purple;
     float: right;
@@ -134,18 +134,27 @@ height: 100vh;
 
 &__showMemoMain{
  margin: 50px 0px;
+ 
 
     &__input{
+     border-radius: 1rem;
+     font-size: 23px;
+     padding: 1px 5px;
+     margin: 0 5px;
+     color: palevioletred;
+     background-color: black;
+     outline: none;
      
      
     }
 
     &__button{
         border-radius: 50%;
-        width: 40px;
-        height: 30px;
+        width: 44px;
+        height: 37px;
         background-color: palevioletred;
         font-size: 20px;
+        border: 1px solid black;
     }
 
     

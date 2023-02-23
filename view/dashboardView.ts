@@ -1,5 +1,7 @@
 window.onload = spanWelcome
-const spanWel = document.querySelector(".container__h2Welcome__spanWelcome")as HTMLSpanElement;
+
+// all sidebar stuff
+
 const sideBar = document.querySelectorAll("#sideBar")!;
 
  
@@ -31,6 +33,33 @@ if(sideBar){
         
     }
   }
+
+// ------------------------------
+
+
+
+// all localstorage here
+const spanWel = document.querySelector(".container__h2Welcome__spanWelcome")as HTMLSpanElement;
+
+
+// --------------------------------
+
+
+// <!--Dashboard-->
+
+
+// memo
+const memoButton = document.querySelector("#memoButton")as HTMLButtonElement;
+const memoInput = document.querySelector("#memoInput")as HTMLInputElement;
+const memoPar = document.querySelector("#memoPar")as HTMLDivElement;
+
+memoButton.addEventListener("submit", runMemoTask)
+
+function runMemoTask(e){
+  e.preventDefault()
+}
+
+// ----------------------------------
 
 
 
