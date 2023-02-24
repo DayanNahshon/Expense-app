@@ -93,11 +93,11 @@ function runMemoTask(e) {
       newpar.innerHTML = memoInput.value;
     }
   } catch (error) {
+    console.log("error")
     return memoInput.required;
   }
 }
 // ----------------------------------
-
 
 
 //-----Get LocalStorage.

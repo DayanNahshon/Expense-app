@@ -74,6 +74,7 @@ function runMemoTask(e) {
         }
     }
     catch (error) {
+        console.log("error");
         return memoInput.required;
     }
 }

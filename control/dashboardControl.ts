@@ -44,6 +44,3 @@ function runMoney(){
     showMemo.style.display = "none"
     showMoney.style.display = "block"
 }
-
-
-
