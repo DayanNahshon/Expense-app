@@ -74,17 +74,26 @@ buttonClear.addEventListener("click", () => {
 //-----Memo
 //--Memo Stuff
 const memoButton = document.querySelector("#memoButton") as HTMLButtonElement;
-let memoInput = document.querySelector("#memoInput") as HTMLInputElement;
-const memoPar = document.querySelector("#memoPar") as HTMLDivElement;
+
+
 
 //--Memo Events
 memoButton.addEventListener("click", runMemoTask);
 
-function runMemoTask(e) {
-  e.preventDefault();
+function runMemoTask(ev) {
+  
   try {
-    if (memoInput.value != "") {
+    
+    const memoInput = document.querySelector("#memoInput") as HTMLInputElement;
+     if(!memoInput) throw new Error("couldent find memeo input")
+
+    if (memoInput.value != ""){
+      const memoPar = document.querySelector("#memoPar") as HTMLDivElement; 
+      
+
+      if(!memoPar) throw new Error("couldent find memeo par")
       const newpar = document.createElement("p") as HTMLParagraphElement;
+        console.log(newpar)
       const toilet = document.createElement("image") as HTMLParagraphElement;
       const verified = document.createElement("image") as HTMLParagraphElement;
       memoPar.appendChild(newpar);
@@ -93,8 +102,7 @@ function runMemoTask(e) {
       newpar.innerHTML = memoInput.value;
     }
   } catch (error) {
-    console.log("error")
-    return memoInput.required;
+    console.error(error)
   }
 }
 // ----------------------------------
@@ -105,4 +113,3 @@ function spanWelcome() {
   let newUser = localStorage.getItem("user")!;
      spanWel.innerHTML = newUser;
 }
-
