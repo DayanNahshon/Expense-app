@@ -24,14 +24,18 @@ sideMoney.addEventListener("click", runMoney);
 // <!--Dashboard-->
 // memo
 var memoButton = document.querySelector("#memoButton");
-var memoInput = document.querySelector("#memoInput");
-var memoPar = document.querySelector("#memoPar");
 memoButton.addEventListener("click", runMemoTask);
-function runMemoTask(e) {
-    e.preventDefault();
+function runMemoTask(ev) {
     try {
+        var memoInput = document.querySelector("#memoInput");
+        if (!memoInput)
+            throw new Error("couldent find memeo input");
         if (memoInput.value != "") {
+            var memoPar = document.querySelector("#memoPar");
+            if (!memoPar)
+                throw new Error("couldent find memeo par");
             var newpar = document.createElement("p");
+            console.log(newpar);
             var toilet = document.createElement("image");
             var verified = document.createElement("image");
             memoPar.appendChild(newpar);
@@ -41,7 +45,7 @@ function runMemoTask(e) {
         }
     }
     catch (error) {
-        return memoInput.required;
+        console.error(error);
     }
 }
 // ----------------------------------
