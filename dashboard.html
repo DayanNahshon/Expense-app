@@ -8,10 +8,7 @@
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
     <!--Style-->
     <link rel="stylesheet" href="./dist/dashboard.css" />
 
@@ -35,23 +32,81 @@
       </h2>
     </div>
 
+    <!-- sidebar -->
+    <div class="sidebar">
+      <div class="sidebar__sideicons">
+        <ul class="sidebar__sideicons__ul">
+          <li class="sidebar__sideicons__ul__li">
+            <img src="./images/monitoring.png" alt="monitoring image" class="sidebar__sideicons__ul__li__image moniTor" id="sideBarMonitor"/>
+            <h3 id="infoOnBar">Monitoring</h3>
+          </li>
+          <li class="sidebar__sideicons__ul__li">
+            <img src="./images/calculator.png" alt="monitoring image" class="sidebar__sideicons__ul__li__image calC" id="sideBarCalc"/>
+            <h3 id="infoOnBar">Calculate</h3>
+          </li>
+          <li class="sidebar__sideicons__ul__li">
+            <img src="./images/balance.png" alt="monitoring image" class="sidebar__sideicons__ul__li__image balAnce" id="sideBarCurrency"/>
+            <h3 id="infoOnBar">Currency</h3>
+          </li>
+          <li class="sidebar__sideicons__ul__li"> 
+            <img src="./images/memo.png" alt="monitoring image" class="sidebar__sideicons__ul__li__image payMent" id="sideBarMemo"/>
+            <h3 id="infoOnBar">memo</h3>
+          </li>
+          <li class="sidebar__sideicons__ul__li">
+            <img src="./images/save.png" alt="monitoring image" class="sidebar__sideicons__ul__li__image whatsT" id="sideBarMoney"/>
+            <h3 id="infoOnBar">Save Money</h3>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <!--Dashboard-->
     <div class="main">
       <div class="main__show">
-        <div class="showMonitor"  style="display:none">
+
+        <!--Monitor-->
+        <div class="showMonitor"  style="display:none;">
           mdakhfncksdjfvkdfgvjdhgnvdhfgvkdjfvg
         </div>
 
-        <div class="showCalculator" style="display: none">
+        <!--Expense Calc.-->
+        <div class="showCalculator" style="display:none;">
+          <div class="calculator">
+            <div class="calculator__display">
+                <input type="text" placeholder="0" id="inputSum" disabled>
+                <input type="text" placeholder="Add Title" id="inputTitle">
+            </div>
+            <div class="calculator__buttons">
+    
+                <input type="button" value="7" class="calculator__buttons__button">
+                <input type="button" value="8" class="calculator__buttons__button">
+                <input type="button" value="9" class="calculator__buttons__button">
+    
+                <input type="button" value="6" class="calculator__buttons__button">
+                <input type="button" value="5" class="calculator__buttons__button">
+                <input type="button" value="4" class="calculator__buttons__button">
+    
+                <input type="button" value="1" class="calculator__buttons__button">
+                <input type="button" value="2" class="calculator__buttons__button">
+                <input type="button" value="3" class="calculator__buttons__button">
+    
+                
+                <input type="button" value="0" class="calculator__buttons__button">
+                <input type="button" value="." class="calculator__buttons__button">
+                <!--Full Erase-->
+                <input type="button" value="AC" class="calculator__buttons__button-clear" id="clear">
+    
+                <input type="button" value="Add to Total" class="calculator__buttons__button-add" id="addToTotal">
+    
+            </div>
+        </div>
+
+        <div class="showCurrency" style="display:none;">
           342342342423442342342342342423423424
         </div>
 
-        <div class="showCurrency" style="display: none">
-          342342342423442342342342342423423424
-        </div>
-
-<!-- memo -->
-        <div class="main__show__showMemo" style="display:none ;">
+        <!-- memo -->
+        <div class="main__show__showMemo" style="display:none;">
           <h1 class="main__show__showMemo__h1">Memo Myself</h1>
           <div class="main__show__showMemo__showMemoMain">
             <input type="text" class="main__show__showMemo__showMemoMain__input" id="memoInput"><button class="main__show__showMemo__showMemoMain__button" id="memoButton">+</button>
@@ -63,71 +118,14 @@
 
        <!-- money -->
         <div class="showMoney" style="display:none;">
-          
           <div class="">
             adjfgakghafjkghadlkghadfklg
           </div>
-       
         </div>
 
+        
       </div>
     </div>
 
-    <!-- sidebar -->
-    <div class="sidebar">
-      <div class="sidebar__sideicons">
-        <ul class="sidebar__sideicons__ul">
-          <li class="sidebar__sideicons__ul__li">
-            <img
-              src="./images/monitoring.png"
-              alt="monitoring image"
-              class="sidebar__sideicons__ul__li__image moniTor"
-              id="sideBarMonitor"
-            />
-            <h3 id="infoOnBar">Monitoring</h3>
-          </li>
-
-          <li class="sidebar__sideicons__ul__li">
-            <img
-              src="./images/calculator.png"
-              alt="monitoring image"
-              class="sidebar__sideicons__ul__li__image calC"
-              id="sideBarCalc"
-            />
-            <h3 id="infoOnBar">Calculate</h3>
-          </li>
-
-          <li class="sidebar__sideicons__ul__li">
-            <img
-              src="./images/balance.png"
-              alt="monitoring image"
-              class="sidebar__sideicons__ul__li__image balAnce"
-              id="sideBarCurrency"
-            />
-            <h3 id="infoOnBar">Currency</h3>
-          </li>
-
-          <li class="sidebar__sideicons__ul__li">
-            <img
-              src="./images/memo.png"
-              alt="monitoring image"
-              class="sidebar__sideicons__ul__li__image payMent"
-              id="sideBarMemo"
-            />
-            <h3 id="infoOnBar">memo</h3>
-          </li>
-
-          <li class="sidebar__sideicons__ul__li">
-            <img
-              src="./images/save.png"
-              alt="monitoring image"
-              class="sidebar__sideicons__ul__li__image whatsT"
-              id="sideBarMoney"
-            />
-            <h3 id="infoOnBar">Save Money</h3>
-          </li>
-        </ul>
-      </div>
-    </div>
   </body>
 </html>
