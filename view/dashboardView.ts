@@ -6,6 +6,7 @@ const spanWel = document.querySelector(
 ) as HTMLSpanElement;
 // ------------------------------
 
+
 //-----SideBar
 
 //--SideBar Stuff
@@ -16,6 +17,7 @@ const sideMemo = document.querySelector("#sideBarMemo")as HTMLImageElement;
 const sideMoney = document.querySelector("#sideBarMoney")as HTMLImageElement;
 // ------------------------------
 
+
 //--Sidebar Button Events
 sideMonitoring.addEventListener("click", runMonitoring);
 sidecalc.addEventListener("click", runCalculator);
@@ -23,6 +25,7 @@ sideCurrency.addEventListener("click", runCurrency);
 sideMemo.addEventListener("click", runMemo);
 sideMoney.addEventListener("click", runMoney);
 // ------------------------------
+
 
 //-----Main
 
@@ -34,48 +37,146 @@ const showMemo = document.querySelector(".main__show__showMemo")as HTMLDivElemen
 const showMoney = document.querySelector(".showMoney")as HTMLDivElement;
 // ------------------------------
 
-
 //-----Monitoring
 
 //--Monitoring Stuff
 
 // ------------------------------
 
+
 //-----Calc.
 
 //--Calc. Stuff
-const buttonInput = document.querySelectorAll(".calculator__buttons__button") as NodeListOf<HTMLInputElement>
-const inputCalc = document.querySelector("#inputSum") as HTMLInputElement
-const inputTitle = document.querySelector("#inputTitle") as HTMLInputElement
-const buttonClear = document.querySelector("#clear") as HTMLButtonElement
-const buttonAddToTotal = document.querySelector("#addToTotal") as HTMLButtonElement
-
-window.onload = () => {
-  inputCalc.value = ""
-  inputTitle.value = ""
-}
-
-//--Calc. Events
-buttonInput.forEach((button) => {
-  button.addEventListener("click", () => {
-      //display value of each button
-      console.log("click")
-      inputCalc.value += button.value
-  })
+const totalAmount = document.querySelector("#total-amount") as HTMLInputElement
+const userAmount = document.querySelector("#user-amount") as HTMLInputElement
+const checkAmountBtn = document.querySelector("#check-amount") as HTMLButtonElement
+const totalAmountBtn = document.querySelector("#total-amount-button") as HTMLButtonElement
+const productTitle = document.querySelector("#product-title") as HTMLInputElement
+const errorMsg = document.querySelector("#budget-error") as HTMLElement
+const productTitleError = document.querySelector("#product-title-error") as HTMLElement
+const amount = document.querySelector("#amount") as HTMLSpanElement
+const expenditureValue = document.querySelector("#expenditure-value") as HTMLSpanElement
+const balanceAmount = document.querySelector("#balance-amount") as HTMLSpanElement
+const list = document.querySelector("#list") as HTMLElement
+// ------------------------------
+//--Calc. Functions
+let tempAmount:number = 0
+//--Function To Set Budget
+totalAmountBtn.addEventListener("click", () => {
+    try{
+        tempAmount = Number(totalAmount.value)
+        //empty or negative input
+        if(tempAmount === null || tempAmount < 0){
+            errorMsg.classList.remove("hide")
+        }
+        else{
+            errorMsg.classList.add("hide")
+            //Set Budget
+            amount.innerHTML = tempAmount.toString()
+            //Set Balance
+            balanceAmount.innerText = (tempAmount - Number(expenditureValue.innerText)).toString()
+            //Clear Input Box
+            totalAmount.value = ""
+        }   
+    }catch(error){
+        console.error(error)
+    }
 })
 
-//Clear the inputs
-buttonClear.addEventListener("click", () => {
-  inputCalc.value = ""
-  inputTitle.value = ""
-});
+//--Function To Disable 'Edit' & 'Delete' Button
+const disableButtons = (bool:boolean) => {
+    let editButtons = document.getElementsByClassName("edit")
+    Array.from(editButtons).forEach((element) => {
+        element.disabled = bool
+    })
+}
+
+//--Function To Modify List Elements
+const modifyElement = (element, edit = false) => {
+    try{
+        let parentDiv = element.parentElement
+        let currentBalance = balanceAmount.innerText
+        let currentExpense = expenditureValue.innerText
+        let parentAmount = parentDiv.querySelector(".amount").innerText
+        if(edit){
+            let parentText = parentDiv.querySelector(".product").innerText
+            productTitle.value = parentText
+            userAmount.value = parentAmount
+            disableButtons(true)
+        }
+        balanceAmount.innerText = (parseInt(currentBalance) + parseInt(parentAmount)).toString()
+        expenditureValue.innerText = (parseInt(currentExpense) - parseInt(parentAmount)).toString()
+        parentDiv.remove()
+
+    }catch(error){
+        console.error(error)
+    }
+}
+
+//--Function To Create Expenses List
+const listCreator = (expenseName, expenseValue) => {
+    try{
+        let sublistContent = document.createElement("div")
+        sublistContent.classList.add("sublist-content", "flex-space")
+        list.appendChild(sublistContent)
+        sublistContent.innerHTML = 
+            `<p class = "product">${expenseName}</p>
+            <p class = "amount">${expenseValue}</p>`
+        let editBtn = document.createElement("button")
+        editBtn.classList.add("fa-solid", "fa-pen-to-square", "edit")
+        editBtn.style.fontSize = "20px"
+        editBtn.addEventListener("click", () => {
+            modifyElement(editBtn, true)
+        })
+        let deleteBtn = document.createElement("button")
+        deleteBtn.classList.add("fa-solid", "fa-trash-can", "delete")
+        deleteBtn.style.fontSize = "20px"
+        deleteBtn.addEventListener("click", () => {
+            modifyElement(deleteBtn)
+        })
+        sublistContent.appendChild(editBtn)
+        sublistContent.appendChild(deleteBtn)
+        list.appendChild(sublistContent)
+
+    }catch(error){
+        console.error(error)
+    }
+}
+
+//--Function To Calculate Expensess & Balance
+checkAmountBtn.addEventListener("click", () => {
+    try{
+        //empty checks
+        if(!userAmount.value || !productTitle.value){
+            productTitleError.classList.remove("hide")
+            return false
+        }
+        //Enable buttons
+        disableButtons(false)
+        //Expense
+        let expenditure = parseInt(userAmount.value)
+        //Total expense (existing + new)
+        let sum = parseInt(expenditureValue.innerText) + expenditure
+        expenditureValue.innerText = sum.toString()
+        //Total balance (budget - total expense)
+        const totalBalance = tempAmount - sum
+        balanceAmount.innerText = totalBalance.toString()
+        //Create list
+        listCreator(productTitle.value, userAmount.value)
+        //Empty inputs
+        productTitle.value = ""
+        userAmount.value = ""
+
+    }catch(error){
+        console.error(error)
+    }
+})
 // ------------------------------
+
 
 //-----Memo
 //--Memo Stuff
 const memoButton = document.querySelector("#memoButton") as HTMLButtonElement;
-
-
 
 //--Memo Events
 memoButton.addEventListener("click", runMemoTask);

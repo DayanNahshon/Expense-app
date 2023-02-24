@@ -30,33 +30,131 @@ var showMoney = document.querySelector(".showMoney");
 // ------------------------------
 //-----Calc.
 //--Calc. Stuff
-var buttonInput = document.querySelectorAll(".calculator__buttons__button");
-var inputCalc = document.querySelector("#inputSum");
-var inputTitle = document.querySelector("#inputTitle");
-var buttonClear = document.querySelector("#clear");
-var buttonAddToTotal = document.querySelector("#addToTotal");
-window.onload = function () {
-    inputCalc.value = "";
-    inputTitle.value = "";
-};
-//--Calc. Events
-buttonInput.forEach(function (button) {
-    button.addEventListener("click", function () {
-        //display value of each button
-        console.log("click");
-        inputCalc.value += button.value;
-    });
+var totalAmount = document.querySelector("#total-amount");
+var userAmount = document.querySelector("#user-amount");
+var checkAmountBtn = document.querySelector("#check-amount");
+var totalAmountBtn = document.querySelector("#total-amount-button");
+var productTitle = document.querySelector("#product-title");
+var errorMsg = document.querySelector("#budget-error");
+var productTitleError = document.querySelector("#product-title-error");
+var amount = document.querySelector("#amount");
+var expenditureValue = document.querySelector("#expenditure-value");
+var balanceAmount = document.querySelector("#balance-amount");
+var list = document.querySelector("#list");
+// ------------------------------
+//--Calc. Functions
+var tempAmount = 0;
+//--Function To Set Budget
+totalAmountBtn.addEventListener("click", function () {
+    try {
+        tempAmount = Number(totalAmount.value);
+        //empty or negative input
+        if (tempAmount === null || tempAmount < 0) {
+            errorMsg.classList.remove("hide");
+        }
+        else {
+            errorMsg.classList.add("hide");
+            //Set Budget
+            amount.innerHTML = tempAmount.toString();
+            //Set Balance
+            balanceAmount.innerText = (tempAmount - Number(expenditureValue.innerText)).toString();
+            //Clear Input Box
+            totalAmount.value = "";
+        }
+    }
+    catch (error) {
+        console.error(error);
+    }
 });
-//Clear the inputs
-buttonClear.addEventListener("click", function () {
-    inputCalc.value = "";
-    inputTitle.value = "";
+//--Function To Disable 'Edit' & 'Delete' Button
+var disableButtons = function (bool) {
+    var editButtons = document.getElementsByClassName("edit");
+    Array.from(editButtons).forEach(function (element) {
+        element.disabled = bool;
+    });
+};
+//--Function To Modify List Elements
+var modifyElement = function (element, edit) {
+    if (edit === void 0) { edit = false; }
+    try {
+        var parentDiv = element.parentElement;
+        var currentBalance = balanceAmount.innerText;
+        var currentExpense = expenditureValue.innerText;
+        var parentAmount = parentDiv.querySelector(".amount").innerText;
+        if (edit) {
+            var parentText = parentDiv.querySelector(".product").innerText;
+            productTitle.value = parentText;
+            userAmount.value = parentAmount;
+            disableButtons(true);
+        }
+        balanceAmount.innerText = (parseInt(currentBalance) + parseInt(parentAmount)).toString();
+        expenditureValue.innerText = (parseInt(currentExpense) - parseInt(parentAmount)).toString();
+        parentDiv.remove();
+    }
+    catch (error) {
+        console.error(error);
+    }
+};
+//--Function To Create Expenses List
+var listCreator = function (expenseName, expenseValue) {
+    try {
+        var sublistContent = document.createElement("div");
+        sublistContent.classList.add("sublist-content", "flex-space");
+        list.appendChild(sublistContent);
+        sublistContent.innerHTML =
+            "<p class = \"product\">" + expenseName + "</p>\n            <p class = \"amount\">" + expenseValue + "</p>";
+        var editBtn_1 = document.createElement("button");
+        editBtn_1.classList.add("fa-solid", "fa-pen-to-square", "edit");
+        editBtn_1.style.fontSize = "20px";
+        editBtn_1.addEventListener("click", function () {
+            modifyElement(editBtn_1, true);
+        });
+        var deleteBtn_1 = document.createElement("button");
+        deleteBtn_1.classList.add("fa-solid", "fa-trash-can", "delete");
+        deleteBtn_1.style.fontSize = "20px";
+        deleteBtn_1.addEventListener("click", function () {
+            modifyElement(deleteBtn_1);
+        });
+        sublistContent.appendChild(editBtn_1);
+        sublistContent.appendChild(deleteBtn_1);
+        list.appendChild(sublistContent);
+    }
+    catch (error) {
+        console.error(error);
+    }
+};
+//--Function To Calculate Expensess & Balance
+checkAmountBtn.addEventListener("click", function () {
+    try {
+        //empty checks
+        if (!userAmount.value || !productTitle.value) {
+            productTitleError.classList.remove("hide");
+            return false;
+        }
+        //Enable buttons
+        disableButtons(false);
+        //Expense
+        var expenditure = parseInt(userAmount.value);
+        //Total expense (existing + new)
+        var sum = parseInt(expenditureValue.innerText) + expenditure;
+        expenditureValue.innerText = sum.toString();
+        //Total balance (budget - total expense)
+        var totalBalance = tempAmount - sum;
+        balanceAmount.innerText = totalBalance.toString();
+        //Create list
+        listCreator(productTitle.value, userAmount.value);
+        //Empty inputs
+        productTitle.value = "";
+        userAmount.value = "";
+    }
+    catch (error) {
+        console.error(error);
+    }
 });
 // ------------------------------
 //-----Memo
 //--Memo Stuff
 var memoButton = document.querySelector("#memoButton");
-
 //--Memo Events
 memoButton.addEventListener("click", runMemoTask);
 function runMemoTask(ev) {
