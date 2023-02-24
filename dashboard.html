@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!--Font Awesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -61,16 +64,16 @@
     <div class="main">
       <div class="main__show">
 
-        <!--Monitor-->
+        <!--------------------Monitor-------------------->
         <div class="showMonitor"  style="display:none;">
-          mdakhfncksdjfvkdfgvjdhgnvdhfgvkdjfvg
+          fhffkjfcjfkhldhdlddloldj
         </div>
 
         <div class="showCurrency" style="display:none;">
           342342342423442342342342342423423424
         </div>
 
-        <!-- Memo -->
+        <!--------------------Memo-------------------->
         <div class="main__show__showMemo" style="display:none;">
           <h1 class="main__show__showMemo__h1">Memo Myself</h1>
           <div class="main__show__showMemo__showMemoMain">
@@ -80,7 +83,7 @@
           </div>
         </div>
         
-        <!-- Money -->
+        <!--------------------Money-------------------->
         <div class="showMoney" style="display:none;">
           <div class="">
             adjfgakghafjkghadlkghadfklg
@@ -88,40 +91,78 @@
         </div>
 
 
-        <!--Expense Calc.-->
+        <!--------------------Expense Calc.-------------------->
         <div class="showCalculator" style="display:none;">
-          <div class="calculator">
-            <div class="calculator__display">
-                <input type="text" placeholder="0" id="inputSum" disabled>
-                <input type="text" placeholder="Add Title" id="inputTitle">
+          <div class="wrapper">
+            <div class="wrapper__container">
+                <div class="wrapper__container__sub-container">
+    
+                    <!--Budget-->
+                    <div class="wrapper__container__sub-container__total-amount-container">
+                        <h3>Budget</h3>
+                        <p class="wrapper__container__sub-container__total-amount-container__hide error" 
+                            id="budget-error">
+                            Value cannot be empty or negative
+                        </p>
+                        <input class="wrapper__container__sub-container__total-amount-container__input" 
+                            type="number" 
+                            id="total-amount" 
+                            placeholder="Enter Total Amount">
+                        <button class="wrapper__container__sub-container__total-amount-container__submit" 
+                            id="total-amount-button">
+                            Set Budget
+                        </button>
+                    </div>
+    
+                    <!--Expenditure-->
+                    <div class="wrapper__container__sub-container__user-amount-container">
+                        <h3>Expenses</h3>
+                        <p class="wrapper__container__sub-container__user-amount-container__hide error"
+                            id="product-title-error">
+                            Values cannot be empty
+                        </p>
+                        <input class="wrapper__container__sub-container__user-amount-container__product-title" 
+                            type="text" 
+                            id="product-title" 
+                            placeholder="Enter Title of Product">
+                        <input class="wrapper__container__sub-container__user-amount-container__product-cost" 
+                            type="number"
+                            id="user-amount"
+                            placeholder="Enter Cost of Product">
+                        <button class="wrapper__container__sub-container__user-amount-container__submit" 
+                            id="check-amount">
+                            Check Amount
+                        </button>
+                    </div>
+                </div>
+    
+                <!--Output-->
+                <div class="wrapper__container__sub-container__output-container">
+                    <div>
+                        <p>Total Budget</p>
+                        <span id="amount">0</span>
+                    </div>
+                    <div>
+                        <p>Expenses</p>
+                        <span id="expenditure-value">0</span>
+                    </div>
+                    <div>
+                        <p>Balance</p>
+                        <span id="balance-amount">0</span>
+                    </div>
+                </div>
             </div>
-            <div class="calculator__buttons">
     
-                <input type="button" value="7" class="calculator__buttons__button">
-                <input type="button" value="8" class="calculator__buttons__button">
-                <input type="button" value="9" class="calculator__buttons__button">
-    
-                <input type="button" value="6" class="calculator__buttons__button">
-                <input type="button" value="5" class="calculator__buttons__button">
-                <input type="button" value="4" class="calculator__buttons__button">
-    
-                <input type="button" value="1" class="calculator__buttons__button">
-                <input type="button" value="2" class="calculator__buttons__button">
-                <input type="button" value="3" class="calculator__buttons__button">
-    
-                
-                <input type="button" value="0" class="calculator__buttons__button">
-                <input type="button" value="." class="calculator__buttons__button">
-                <!--Full Erase-->
-                <input type="button" value="AC" class="calculator__buttons__button-clear" id="clear">
-    
-                <input type="button" value="Add to Total" class="calculator__buttons__button-add" id="addToTotal">
-    
+            <!--List-->
+            <div class="wrapper__container__sub-container__list">
+                <h3>Expense List</h3>
+                <div class="wrapper__container__sub-container__list__list-container" id="list"></div>
             </div>
         </div>
-        
       </div>
+    
     </div>
+  </div>
 
   </body>
 </html>

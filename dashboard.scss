@@ -141,62 +141,162 @@ body{
   }
 }
 
+
 //-----Expense Calc.
+.wrapper{
+  width: 90%;
+  font-size: 16px;
+  max-width: 43.75em;
+  margin: 1em auto;
 
-.calculator{
-  width: 400px;
-  background-color: rgb(47, 46, 46);
-  padding: 50px 30px;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 55%;
-  left: 50%;
-  border-radius: 8px;
-  box-shadow: 0 20px 50px rgba(0, 5, 24, 0.4);
-
-  &__display{
+  &__container{
       width: 100%;
 
-      input{
+      &__sub-container{
           width: 100%;
-          padding: 12px;
-          text-align: center;
-          border: none;
-          background-color: transparent;
-          font-size: 25px;
-          position: relative;
-          color: rgb(238, 213, 70);
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 3em;
 
-          &::placeholder{
-              color: rgb(238, 213, 70);
+          h3{
+              color: #363d55;
+              font-weight: 600;
+              margin-bottom: 0.6em;
           }
-      }
-  }
 
-  &__buttons{
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 20px;
-      margin-top: 40px;
+          input{
+              display: block;
+              width: 100%;
+              padding: 0.6em 0.3em;
+              border: 1px solid #d0d0d0;
+              border-radius: 0.3em;
+              color: #414a67;
+              outline: none;
+              font-weight: 400;
+              margin-bottom: 0.6em;
 
-      &__button, &__button-clear, &__button-add{
-          font-size: 20px;
-          padding: 10px;
-          border: none;
-          background-color: transparent;
-          color: #ffffff;
-          cursor: pointer;
-          border-radius: 5px;
-      }
+              &:focus{
+                  border-color: palevioletred;
+              }
+          }
 
-      &__button:hover, &__button-clear:hover, &__button-add:hover{
-          box-shadow: 0 5px 25px  #ffffff;
-      }
+          &__total-amount-container,
+          &__user-amount-container{
+              background-color: transparent;
+              padding: 1.25em 0.9em;
+              border-radius: 0.3em;
 
-      &__button-add{
-          grid-column: span 3;
+              &__submit{
+                  font-size: 1em;
+                  margin-top: 0.8em;
+                  background-color: palevioletred;
+                  border: none;
+                  outline: none;
+                  color: #ffffff;
+                  padding: 0.6em 1.2em;
+                  border-radius: 0.3em;
+                  cursor: pointer;
+              }
+
+              &__hide{
+                  display: none;
+              }
+
+              .error{
+                  color: #ff465a;
+              }
+
+              &__product-title{
+                  margin-bottom: 1em;
+              }
+
+          }
+
+          //--Output
+          &__output-container{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              background-color: palevioletred;
+              color: #ffffff;
+              border-radius: 0.3em;
+              box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+              margin: 2em 0;
+              padding: 1.2em;
+
+              p{
+                  font-weight: 500;
+                  margin-bottom: 0.6em;
+              }
+
+              span{
+                  display: block;
+                  text-align: center;
+                  font-weight: 400;
+                  color: #e5e5e5;
+              }
+          }
+
+          //--List
+          &__list{
+              background-color: #ffffff;
+              padding: 1.8em 1.2em;
+              box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+              border-radius: 0.6em;
+
+              .flex-space{
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+              }
+
+              .sublist-content{
+                  width: 100%;
+                  border-left: 0.3em solid palevioletred;
+                  margin-bottom: 0.6em;
+                  padding: 0.5em 1em;
+                  display: grid;
+                  grid-template-columns: 3fr 2fr 1fr 1fr;
+              }
+
+              .product{
+                  font-weight: 500;
+                  margin-left: 1.5em;
+                  color: #363d55;
+              }
+
+              .amount{
+                  color: #414a67;
+                  margin-left: 20%;
+              }
+
+              .edit{
+                  margin-left: auto;
+              }
+
+              .edit, .delete{
+                  background: transparent;
+                  cursor: pointer;
+                  margin-left: 1.5em;
+                  border: none;
+                  color: palevioletred;
+              }
+          }
       }
   }
 }
 
-//-----Monitoring
+@media screen and (max-width: 600px){
+  .wrapper{
+      font-size: 14px;
+
+      &__container{
+          width: 100%;
+  
+          &__sub-container{
+              grid-template-columns: 1fr;
+              gap: 1em;
+          }
+      }
+  }
+}
