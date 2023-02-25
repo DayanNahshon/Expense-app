@@ -1,19 +1,10 @@
 //-----Login Page
 var form = document.querySelector(".login");
-<<<<<<< HEAD
-var info = document.querySelector("#li-Info");
-var us = document.querySelector("#li-Us");
-var contact = document.querySelector("#li-Contact");
-var itsik_par = document.querySelector(".inFormer__showUs__itsik__par");
-var dayan_par = document.querySelector(".inFormer__showUs__dayan__par");
-var shaili_par = document.querySelector(".inFormer__showUs__shaili__par");
-=======
 var info = document.querySelector(".navbar__li-Info");
 var us = document.querySelector(".navbar__li-Us");
 var contact = document.querySelector(".navbar__li-Contact");
 var button = document.querySelector(".login__submit");
 var userName = document.querySelector(".login__userName");
->>>>>>> 992b5748971ca863e2c0d86fe0d6b90a74ecf928
 // the divs
 var showInfo = document.querySelector(".inFormer__showinfo");
 showInfo.style.display = "none";

@@ -54,8 +54,6 @@ body .inFormer__showinfo {
 }
 body .inFormer__showinfo__h3info {
   color: white;
-<<<<<<< HEAD
-=======
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -91,7 +89,6 @@ body .inFormer__mainUs__box__h3Us {
 body .inFormer__mainUs__box__parUs {
   color: white;
   padding: 15px 0px;
->>>>>>> 9901034bcab2ac94daa705e01a3604886a4a7d7a
 }
 body .inFormer__showContact {
   border-radius: 52% 48% 63% 37%/39% 45% 55% 61%;

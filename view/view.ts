@@ -1,19 +1,10 @@
 //-----Login Page
 const form = document.querySelector(".login")as HTMLFormElement;
-<<<<<<< HEAD
-const info = document.querySelector("#li-Info")as HTMLElement;
-const us = document.querySelector("#li-Us")as HTMLElement;
-const contact = document.querySelector("#li-Contact")as HTMLElement;
-const itsik_par = document.querySelector(".inFormer__showUs__itsik__par")as HTMLParagraphElement;
-const dayan_par = document.querySelector(".inFormer__showUs__dayan__par")as HTMLParagraphElement;
-const shaili_par = document.querySelector(".inFormer__showUs__shaili__par")as HTMLParagraphElement;
-=======
 const info = document.querySelector(".navbar__li-Info")as HTMLElement;
 const us = document.querySelector(".navbar__li-Us")as HTMLElement;
 const contact = document.querySelector(".navbar__li-Contact")as HTMLElement;
 const button = document.querySelector(".login__submit")as HTMLButtonElement;
 const userName = document.querySelector(".login__userName")as HTMLInputElement;
->>>>>>> 992b5748971ca863e2c0d86fe0d6b90a74ecf928
 
 
 // the divs
