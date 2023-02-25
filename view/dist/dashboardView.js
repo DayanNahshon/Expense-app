@@ -25,8 +25,8 @@ var showCurrency = document.querySelector(".showCurrency");
 var showMemo = document.querySelector(".main__show__showMemo");
 var showMoney = document.querySelector(".showMoney");
 // ------------------------------
-//-----Monitoring
-//--Monitoring Stuff
+//-----Analytics
+//--Analytics Stuff
 // ------------------------------
 //-----Calc.
 //--Calc. Stuff

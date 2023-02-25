@@ -1,4 +1,4 @@
-//-----Monitoring
+//-----Analytics
 const monitorChart = document.querySelector("#monitorChart") as HTMLCanvasElement
 const ctx = monitorChart.getContext('2d') as CanvasRenderingContext2D
 

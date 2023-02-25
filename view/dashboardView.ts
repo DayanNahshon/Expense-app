@@ -37,10 +37,10 @@ const showMemo = document.querySelector(".main__show__showMemo")as HTMLDivElemen
 const showMoney = document.querySelector(".showMoney")as HTMLDivElement;
 // ------------------------------
 
-//-----Monitoring
+//-----Analytics
 
 
-//--Monitoring Stuff
+//--Analytics Stuff
 
 // ------------------------------
 
