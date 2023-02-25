@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!--Chart.js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+
     <!--Font Awesome Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
@@ -12,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+    
     <!--Style-->
     <link rel="stylesheet" href="./dist/dashboard.css" />
 
@@ -66,7 +70,10 @@
 
         <!--------------------Monitor-------------------->
         <div class="showMonitor"  style="display:none;">
-          fhffkjfcjfkhldhdlddloldj
+          <div class="monitorContainer">
+            <h3 class="monitorContainer__h3">Summary of your expenses this month</h3>
+            <canvas class="monitorContainer__chart" id="monitorChart"></canvas>
+          </div>
         </div>
 
         <div class="showCurrency" style="display:none;">
