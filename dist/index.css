@@ -48,9 +48,9 @@ body .inFormer {
 }
 body .inFormer__showinfo {
   width: 350px;
-  height: 350px;
-  background-color: #181818;
-  border-radius: 50px 80px/20px 100px;
+  height: 450px;
+  background-color: #0f0e0e;
+  border-radius: 50px 40px/20px 100px;
 }
 body .inFormer__showinfo__h3info {
   color: white;

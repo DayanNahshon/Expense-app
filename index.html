@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expense-App</title>
-    <link rel="stylesheet" href="./dist/index.css">
+    <link rel="stylesheet" href="./dist/index.css" />
     <script src="./model/dist/model.js" defer></script>
     <script src="./view/dist/view.js" defer></script>
     <script src="./control/dist/control.js" defer></script>
@@ -13,58 +13,93 @@
   </head>
   <body>
     <div class="container">
-        <h1 class="container__logo">EXP<span class="container__logo__spanlogo">ense</span></h1>
-    <nav class="navbar">
-      <li class="navbar__li-Info">Info</li>
-      <li class="navbar__li-Us">Us</li>
-      <li class="navbar__li-Contact">Contact</li>
-    </nav>
-</div>
-
-<div class="inFormer">
-    <!-- info -->
-    <div class="inFormer__showinfo">
-       <h3 class="inFormer__showinfo__h3info">Let Expense Halp You. <br>
-        We Got You!!! <br>
-        If you often spend, You have come to the right place, Here you can track your daily expenses regularly,
-        So what are you waiting for let's get going.</h3>
-    </div>
-    
-    <!-- us -->
-   
-    <div class="inFormer__mainUs">
-        <div class="inFormer__mainUs__box">
-       <img src="./images/itsik.jpg"
-        alt="" class="inFormer__mainUs__box__img">
-         <h3 class="inFormer__mainUs__box__h3Us">ITSIK</h3>
-         <p class="inFormer__mainUs__box__parUs">FrontEnd, BackEnd Im All Over End</p>
-        </div>
-        <div class="inFormer__mainUs__box">
-       <img src="./images/Dayan.jpg"
-        alt="" class="inFormer__mainUs__box__img">
-         <h3 class="inFormer__mainUs__box__h3Us">DAYAN</h3>
-         <p class="inFormer__mainUs__box__parUs">FullStack Developer and CPA</p>
-        </div>
-        <div class="inFormer__mainUs__box">
-       <img src="./images/dayan.jpeg"
-        alt="" class="inFormer__mainUs__box__img">
-         <h3 class="inFormer__mainUs__box__h3Us">Shili</h3>
-         <p class="inFormer__mainUs__box__parUs">info</p>
-        </div>
-    </div> 
-<!-- contact -->
-    <div class="inFormer__showContact">
-       <h2 class="inFormer__showContact__h2">Contact us at:</h2>
-        <h3 class="inFormer__showContact__h3">www.expense.gmail.com</h3>  
+      <h1 class="container__logo">
+        EXP<span class="container__logo__spanlogo">ense</span>
+      </h1>
+      <nav class="navbar">
+        <li class="navbar__li-Info">Info</li>
+        <li class="navbar__li-Us">Us</li>
+        <li class="navbar__li-Contact">Contact</li>
+      </nav>
     </div>
 
-</div>
+    <div class="inFormer">
+      <!-- info -->
+      <div class="inFormer__showinfo">
+        <h3 class="inFormer__showinfo__h3info">
+          A useful tool for managing your finances.<br />
+          With us, you can easily set a budget and track your expenses to ensure
+          that you stay within your financial means. all you need to do is add
+          your budget/salary, and each expense you do... as simple as that!
+          seeing all your financial habit enables you to stick to your goals and
+          be organized in what's important.
+          <!-- Let Expense Halp You. <br />
+          We Got You!!! <br />
+          If you often spend, You have come to the right place, Here you can
+          track your daily expenses regularly, So what are you waiting for let's
+          get going. -->
+        </h3>
+      </div>
 
-    <form class="login"> 
-       <h1 class="login__h1">login</h1>
-        <input type="text" placeholder="UserName" class="login__userName" name="" required>
-        <input type="password" placeholder="Password" class="login__password" name="" required>
-        <input type="submit" value="Login" name="" class="login__submit">
+      <!-- us -->
+
+      <div class="inFormer__mainUs">
+        <div class="inFormer__mainUs__box">
+          <img
+            src="./images/itsik.jpg"
+            alt=""
+            class="inFormer__mainUs__box__img"
+          />
+          <h3 class="inFormer__mainUs__box__h3Us">ITSIK</h3>
+          <p class="inFormer__mainUs__box__parUs">
+            FrontEnd, BackEnd Im All Over End
+          </p>
+        </div>
+        <div class="inFormer__mainUs__box">
+          <img
+            src="./images/Dayan.jpg"
+            alt=""
+            class="inFormer__mainUs__box__img"
+          />
+          <h3 class="inFormer__mainUs__box__h3Us">DAYAN</h3>
+          <p class="inFormer__mainUs__box__parUs">
+            FullStack Developer and CPA
+          </p>
+        </div>
+        <div class="inFormer__mainUs__box">
+          <img
+            src="./images/shaili.jpeg"
+            alt=""
+            class="inFormer__mainUs__box__img"
+          />
+          <h3 class="inFormer__mainUs__box__h3Us">Shai-li</h3>
+          <p class="inFormer__mainUs__box__parUs">FullStack Developer</p>
+        </div>
+      </div>
+      <!-- contact -->
+      <div class="inFormer__showContact">
+        <h2 class="inFormer__showContact__h2">Contact us at:</h2>
+        <h3 class="inFormer__showContact__h3">www.expense.gmail.com</h3>
+      </div>
+    </div>
+
+    <form class="login">
+      <h1 class="login__h1">login</h1>
+      <input
+        type="text"
+        placeholder="UserName"
+        class="login__userName"
+        name=""
+        required
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        class="login__password"
+        name=""
+        required
+      />
+      <input type="submit" value="Login" name="" class="login__submit" />
     </form>
-    </body>
+  </body>
 </html>
