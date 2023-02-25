@@ -300,3 +300,33 @@ body{
       }
   }
 }
+
+//-----Monitor
+.monitorContainer{
+  width: 100%;
+  font-size: 16px;
+  max-width: 100%;
+  margin: 1em auto;
+
+  &__chart{
+      width: 100%;
+  }
+
+  &__h3{
+    color: #363d55;
+    font-weight: 600;
+    margin-bottom: 0.6em;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .monitorContainer{
+    font-size: 14px;
+    
+    &__chart{
+      width: 100%;
+    }
+  }
+}
+

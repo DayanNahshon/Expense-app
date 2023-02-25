@@ -39,6 +39,7 @@ const showMoney = document.querySelector(".showMoney")as HTMLDivElement;
 
 //-----Monitoring
 
+
 //--Monitoring Stuff
 
 // ------------------------------
