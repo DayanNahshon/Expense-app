@@ -1,3 +1,4 @@
+//-----Monitoring
 var monitorChart = document.querySelector("#monitorChart");
 var ctx = monitorChart.getContext('2d');
 var chart = new Chart(ctx, {
