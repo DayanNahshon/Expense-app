@@ -163,12 +163,6 @@ body {
   border-radius: 0.3em;
   cursor: pointer;
 }
-.wrapper__container__sub-container__total-amount-container__hide, .wrapper__container__sub-container__user-amount-container__hide {
-  display: none;
-}
-.wrapper__container__sub-container__total-amount-container .error, .wrapper__container__sub-container__user-amount-container .error {
-  color: #ff465a;
-}
 .wrapper__container__sub-container__total-amount-container__product-title, .wrapper__container__sub-container__user-amount-container__product-title {
   margin-bottom: 1em;
 }

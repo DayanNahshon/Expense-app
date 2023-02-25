@@ -52,8 +52,6 @@ const userAmount = document.querySelector("#user-amount") as HTMLInputElement
 const checkAmountBtn = document.querySelector("#check-amount") as HTMLButtonElement
 const totalAmountBtn = document.querySelector("#total-amount-button") as HTMLButtonElement
 const productTitle = document.querySelector("#product-title") as HTMLInputElement
-const errorMsg = document.querySelector("#budget-error") as HTMLElement
-const productTitleError = document.querySelector("#product-title-error") as HTMLElement
 const amount = document.querySelector("#amount") as HTMLSpanElement
 const expenditureValue = document.querySelector("#expenditure-value") as HTMLSpanElement
 const balanceAmount = document.querySelector("#balance-amount") as HTMLSpanElement
@@ -67,10 +65,9 @@ totalAmountBtn.addEventListener("click", () => {
         tempAmount = Number(totalAmount.value)
         //empty or negative input
         if(tempAmount === null || tempAmount < 0){
-            errorMsg.classList.remove("hide")
+            alert("Value cannot be empty or negative")
         }
         else{
-            errorMsg.classList.add("hide")
             //Set Budget
             amount.innerHTML = tempAmount.toString()
             //Set Balance
@@ -148,7 +145,7 @@ checkAmountBtn.addEventListener("click", () => {
     try{
         //empty checks
         if(!userAmount.value || !productTitle.value){
-            productTitleError.classList.remove("hide")
+            alert("Values cannot be empty")
             return false
         }
         //Enable buttons

@@ -35,8 +35,6 @@ var userAmount = document.querySelector("#user-amount");
 var checkAmountBtn = document.querySelector("#check-amount");
 var totalAmountBtn = document.querySelector("#total-amount-button");
 var productTitle = document.querySelector("#product-title");
-var errorMsg = document.querySelector("#budget-error");
-var productTitleError = document.querySelector("#product-title-error");
 var amount = document.querySelector("#amount");
 var expenditureValue = document.querySelector("#expenditure-value");
 var balanceAmount = document.querySelector("#balance-amount");
@@ -50,10 +48,9 @@ totalAmountBtn.addEventListener("click", function () {
         tempAmount = Number(totalAmount.value);
         //empty or negative input
         if (tempAmount === null || tempAmount < 0) {
-            errorMsg.classList.remove("hide");
+            alert("Value cannot be empty or negative");
         }
         else {
-            errorMsg.classList.add("hide");
             //Set Budget
             amount.innerHTML = tempAmount.toString();
             //Set Balance
@@ -128,7 +125,7 @@ checkAmountBtn.addEventListener("click", function () {
     try {
         //empty checks
         if (!userAmount.value || !productTitle.value) {
-            productTitleError.classList.remove("hide");
+            alert("Values cannot be empty");
             return false;
         }
         //Enable buttons
