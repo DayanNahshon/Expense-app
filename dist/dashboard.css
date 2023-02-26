@@ -84,13 +84,16 @@ body {
   height: 100vh;
 }
 .main__show__showMemo {
+  margin: 50px 0px;
   text-align: center;
   width: 100%;
   height: 100vh;
 }
 .main__show__showMemo__h1 {
   color: palevioletred;
-  margin: 35px 0px;
+}
+.main__show__showMemo__showMemoMain {
+  margin: 50px 0px;
 }
 .main__show__showMemo__showMemoMain__input {
   border-radius: 1rem;
@@ -109,32 +112,6 @@ body {
   font-size: 20px;
   border: 1px solid black;
 }
-<<<<<<< HEAD
-.main__show__showMemo__showMemoMain__wrapper {
-  margin: 40px 0px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-.main__show__showMemo__showMemoMain__wrapper__mainpar {
-  width: 400px;
-  height: 400px;
-  background-color: palevioletred;
-  border-radius: 24px 27px 25px;
-  text-align: left;
-}
-.main__show__showMemo__showMemoMain__wrapper__mainpar #newp {
-  font-size: 20px;
-  padding: 11px;
-  margin: 2px 0px;
-  border: 2px solid black;
-  border-radius: 1rem;
-  color: yellow;
-}
-.main__show__showMemo__showMemoMain__wrapper__mainpar #toilet {
-  background-image: url(./images/itsik.jpg);
-=======
 
 .wrapper {
   width: 90%;
@@ -331,5 +308,4 @@ body {
   font-weight: 400;
   margin-bottom: 0.6em;
   margin-left: 3.5rem;
->>>>>>> 4daddeef2420c1ced6ac96e5bb8f490751253cb5
 }

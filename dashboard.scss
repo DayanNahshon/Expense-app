@@ -107,94 +107,6 @@ body{
     width: 100%;
     height: 100vh;
 
-<<<<<<< HEAD
-// memo
-&__showMemo{
- text-align: center;
-width: 100%;
-height: 100vh;
-
-
-   &__h1{
- color: palevioletred;
- margin: 35px 0px;
- 
- 
-}
-
-&__showMemoMain{
-
-
-
- 
- 
-
-    &__input{
-     border-radius: 1rem;
-     font-size: 23px;
-     padding: 1px 5px;
-     margin: 0 5px;
-     color: palevioletred;
-     background-color: black;
-     outline: none;
-     
-     
-    }
-
-    &__button{
-        border-radius: 50%;
-        width: 44px;
-        height: 37px;
-        background-color: palevioletred;
-        font-size: 20px;
-        border: 1px solid black;
-    }
-
-       &__wrapper{
-        margin: 40px 0px;
-       width: 100%;
-       height: 100%;
-       display: flex;
-       justify-content: center;
-
-
-        &__mainpar{
-          width:400px;
-          height: 400px;
-          background-color: palevioletred;
-          border-radius: 24px 27px 25px;
-          text-align: left;
-         
-          #newp{
-            font-size: 20px;
-            padding:11px;
-            margin: 2px 0px;
-            border: 2px solid black;
-            border-radius: 1rem;
-            color: yellow;
-            }
-
-            #toilet{
-            
-            background-image: url(./images/itsik.jpg)
-
-
-
-
-            }
-           
-            #verified{
-
-            }
-        }
-
-        
-
-       }
-
-      
-}
-=======
       &__h1{
         color: palevioletred;
       }
@@ -227,7 +139,6 @@ height: 100vh;
       }
     }
   }
->>>>>>> 4daddeef2420c1ced6ac96e5bb8f490751253cb5
 }
 
 
