@@ -322,3 +322,57 @@ body{
   }
 }
 
+.showCurrency {
+  width: 90%;
+  font-size: 16px;
+  max-width: 40em;
+  margin: 1rem auto;
+  .currencyContainer{
+    margin-left: 8rem;
+    margin-top: 5rem;
+    h2 {
+      color: rgb(60, 56, 56);
+      margin-bottom: 3rem;
+      
+    }
+  
+    input {
+      display: block;
+      width: 50%;
+      padding: 0.6em 0.3em;
+      border: 1px solid #d0d0d0;
+      border-radius: 0.3em;
+      color: #414a67;
+      outline: none;
+      font-weight: 400;
+      margin: 2rem 0 2rem 0;
+      // margin-bottom: 0.6em;
+      // margin-top: 0.6em;
+    }
+  
+    button {
+      margin-left: 6rem;
+      font-size: 1em;
+      background-color: palevioletred;
+      border: none;
+      outline: none;
+      color: #ffffff;
+      padding: 0.6em 1.2em;
+      border-radius: 0.3em;
+      cursor: pointer;
+    }
+  
+    #chooseCurrency {
+      justify-content: center;
+      padding: 0.6em 0.3em;
+      border: 1px solid #d0d0d0;
+      border-radius: 0.3em;
+      color: #50576c;
+      outline: none;
+      font-weight: 400;
+      margin-bottom: 0.6em;
+      margin-left: 3.5rem;
+      
+    }
+  }
+}
