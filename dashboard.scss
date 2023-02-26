@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body{
  height:100%;   
-background-color: rgb(238, 213, 70);
+ background-color: rgb(238, 213, 70);
 }
 
 //-----Nav Bar - Logo
@@ -27,98 +27,87 @@ background-color: rgb(238, 213, 70);
             color: palevioletred;
         }
     }
-        &__h2Welcome{
-           display: flex;
-           justify-content: space-around;
-           padding: 20px 0px;
-           margin: 0 auto;
-           letter-spacing:0.1cm;
-           text-transform: uppercase;
 
-
-           &__spanWelcome{
-            padding: 0px 30px;
-            color: palevioletred;
-            text-transform: capitalize;
-           }
-        }
-
+    &__h2Welcome{
+      display: flex;
+      justify-content: space-around;
+      padding: 20px 0px;
+      margin: 0 auto;
+      letter-spacing:0.1cm;
+      text-transform: uppercase;   
+        
+      &__spanWelcome{
+        padding: 0px 30px;
+        color: palevioletred;
+        text-transform: capitalize;
+      }
+    }
 }
 
 
-// sidebar style
+//-----SideBar Style
 .sidebar{
-    width: 10%;
-    height: 100vh;;
-    background-color: palevioletred;
-    border: 2px solid black;
-    border-radius: 15px;
-    float: left;
-    cursor:pointer;
+  width: 10%;
+  height: 100vh;;
+  background-color: palevioletred;
+  border: 2px solid black;
+  border-radius: 0 15px 15px 0;
+  float: left;
+  cursor:pointer;
 
-    
+  &__sideicons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    &__sideicons{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &__ul{
-      
+    &__ul{
         
-
-
-       &__li{
+      &__li{
         margin:40px 0px;
         list-style: none;
         text-align: center;
         
-        
-       
         &__image{
-        width: 40px;
-        height:40px;
-        border-radius: 30%;
-        border: 2px solid black;
-         }
-         
-         
-         &__image:hover{
-            width: 48px;
-            transition: 0.5s;
-            background-color: rgb(237, 233, 17);
+          width: 40px;
+          height:40px;
+          border-radius: 30%;
+          border: 2px solid black;
         }
-
-
-
-         #infoOnBar{
-            color: white;
-         }
-       }
-
+         
+        &__image:hover{
+          width: 48px;
+          transition: 0.5s;
+          background-color: rgb(237, 233, 17);
+        }
+          
+        #infoOnBar{
+          color: white;
+        }
       }
-
-
-
-
     }
+  }
 }
 
-// dashboard style
-
+//-----Dashboard Style
 .main{
-    display: flex;
-    width: 80%;
-    height: 100vh;
-    border: 3px solid purple;
-    float: right;
-
+  display: flex;
+  width: 80%;
+  height: 100vh;
+  border: 3px solid purple;
+  float: right;
 
   &__show{
     width: 100%;
     height: 100vh;
 
+    //-----Memo
+    &__showMemo{
+    margin: 50px 0px;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
 
+<<<<<<< HEAD
 // memo
 &__showMemo{
  text-align: center;
@@ -205,12 +194,274 @@ height: 100vh;
 
       
 }
+=======
+      &__h1{
+        color: palevioletred;
+      }
+
+      &__showMemoMain{
+      margin: 50px 0px;
+      
+        &__input{
+        border-radius: 1rem;
+        font-size: 23px;
+        padding: 1px 5px;
+        margin: 0 5px;
+        color: palevioletred;
+        background-color: black;
+        outline: none;
+        }
+
+        &__button{
+            border-radius: 50%;
+            width: 44px;
+            height: 37px;
+            background-color: palevioletred;
+            font-size: 20px;
+            border: 1px solid black;
+        }
+        
+        // &__mainpar{
+
+        // }
+      }
+    }
+  }
+>>>>>>> 4daddeef2420c1ced6ac96e5bb8f490751253cb5
 }
 
 
+//-----Expense Calc.
+.wrapper{
+  width: 90%;
+  font-size: 16px;
+  max-width: 43.75em;
+  margin: 1em auto;
 
+  &__container{
+      width: 100%;
+
+      &__sub-container{
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 3em;
+
+          h3{
+              color: #363d55;
+              font-weight: 600;
+              margin-bottom: 0.6em;
+          }
+
+          input{
+              display: block;
+              width: 100%;
+              padding: 0.6em 0.3em;
+              border: 1px solid #d0d0d0;
+              border-radius: 0.3em;
+              color: #414a67;
+              outline: none;
+              font-weight: 400;
+              margin-bottom: 0.6em;
+
+              &:focus{
+                  border-color: palevioletred;
+              }
+          }
+
+          &__total-amount-container,
+          &__user-amount-container{
+              background-color: transparent;
+              padding: 1.25em 0.9em;
+              border-radius: 0.3em;
+
+              &__submit{
+                  font-size: 1em;
+                  margin-top: 0.8em;
+                  background-color: palevioletred;
+                  border: none;
+                  outline: none;
+                  color: #ffffff;
+                  padding: 0.6em 1.2em;
+                  border-radius: 0.3em;
+                  cursor: pointer;
+              }
+
+              &__product-title{
+                  margin-bottom: 1em;
+              }
+
+          }
+
+          //--Output
+          &__output-container{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              background-color: palevioletred;
+              color: #ffffff;
+              border-radius: 0.3em;
+              box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+              margin: 2em 0;
+              padding: 1.2em;
+
+              p{
+                  font-weight: 500;
+                  margin-bottom: 0.6em;
+              }
+
+              span{
+                  display: block;
+                  text-align: center;
+                  font-weight: 400;
+                  color: #e5e5e5;
+              }
+          }
+
+          //--List
+          &__list{
+              background-color: #ffffff;
+              padding: 1.8em 1.2em;
+              box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+              border-radius: 0.6em;
+
+              .flex-space{
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+              }
+
+              .sublist-content{
+                  width: 100%;
+                  border-left: 0.3em solid palevioletred;
+                  margin-bottom: 0.6em;
+                  padding: 0.5em 1em;
+                  display: grid;
+                  grid-template-columns: 3fr 2fr 1fr 1fr;
+              }
+
+              .product{
+                  font-weight: 500;
+                  margin-left: 1.5em;
+                  color: #363d55;
+              }
+
+              .amount{
+                  color: #414a67;
+                  margin-left: 20%;
+              }
+
+              .edit{
+                  margin-left: auto;
+              }
+
+              .edit, .delete{
+                  background: transparent;
+                  cursor: pointer;
+                  margin-left: 1.5em;
+                  border: none;
+                  color: palevioletred;
+              }
+          }
+      }
+  }
+}
+
+@media screen and (max-width: 600px){
+  .wrapper{
+      font-size: 14px;
+
+      &__container{
+          width: 100%;
+  
+          &__sub-container{
+              grid-template-columns: 1fr;
+              gap: 1em;
+          }
+      }
+  }
+}
+
+//-----Monitor
+.monitorContainer{
+  width: 100%;
+  font-size: 16px;
+  max-width: 100%;
+  margin: 1em auto;
+
+  &__chart{
+      width: 100%;
   }
 
+  &__h3{
+    color: #363d55;
+    font-weight: 600;
+    margin-bottom: 0.6em;
+    text-align: center;
+  }
 }
 
+@media screen and (max-width: 600px){
+  .monitorContainer{
+    font-size: 14px;
+    
+    &__chart{
+      width: 100%;
+    }
+  }
+}
 
+.showCurrency {
+  width: 90%;
+  font-size: 16px;
+  max-width: 40em;
+  margin: 1rem auto;
+  .currencyContainer{
+    margin-left: 8rem;
+    margin-top: 5rem;
+    h2 {
+      color: rgb(60, 56, 56);
+      margin-bottom: 3rem;
+      
+    }
+  
+    input {
+      display: block;
+      width: 50%;
+      padding: 0.6em 0.3em;
+      border: 1px solid #d0d0d0;
+      border-radius: 0.3em;
+      color: #414a67;
+      outline: none;
+      font-weight: 400;
+      margin: 2rem 0 2rem 0;
+      // margin-bottom: 0.6em;
+      // margin-top: 0.6em;
+    }
+  
+    button {
+      margin-left: 6rem;
+      font-size: 1em;
+      background-color: palevioletred;
+      border: none;
+      outline: none;
+      color: #ffffff;
+      padding: 0.6em 1.2em;
+      border-radius: 0.3em;
+      cursor: pointer;
+    }
+  
+    #chooseCurrency {
+      justify-content: center;
+      padding: 0.6em 0.3em;
+      border: 1px solid #d0d0d0;
+      border-radius: 0.3em;
+      color: #50576c;
+      outline: none;
+      font-weight: 400;
+      margin-bottom: 0.6em;
+      margin-left: 3.5rem;
+      
+    }
+  }
+}

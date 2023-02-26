@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!--Chart.js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+
+    <!--Font Awesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+    
     <!--Style-->
     <link rel="stylesheet" href="./dist/dashboard.css" />
 
@@ -25,16 +29,14 @@
     <title>Budget management dashboard</title>
   </head>
   <body>
+
     <!--Nav Bar - Logo-->
     <div class="container">
-      <h1 class="container__logo">
-        EXP<span class="container__logo__spanlogo">ense</span>
-      </h1>
-      <h2 class="container__h2Welcome" style="color: white">
-        welcome <span class="container__h2Welcome__spanWelcome"></span>
-      </h2>
+      <h1 class="container__logo">EXP<span class="container__logo__spanlogo">ense</span></h1>
+      <h2 class="container__h2Welcome" style="color: white">welcome <span class="container__h2Welcome__spanWelcome"></span></h2>
     </div>
 
+<<<<<<< HEAD
     <!--Dashboard-->
     <div class="main">
       <div class="main__show">
@@ -76,60 +78,149 @@
     </div>
 
     <!-- sidebar -->
+=======
+    <!-- SideBar -->
+>>>>>>> 4daddeef2420c1ced6ac96e5bb8f490751253cb5
     <div class="sidebar">
       <div class="sidebar__sideicons">
         <ul class="sidebar__sideicons__ul">
           <li class="sidebar__sideicons__ul__li">
-            <img
-              src="./images/monitoring.png"
-              alt="monitoring image"
-              class="sidebar__sideicons__ul__li__image moniTor"
-              id="sideBarMonitor"
-            />
-            <h3 id="infoOnBar">Monitoring</h3>
+            <img src="./images/monitoring.png" alt="monitoring image" class="sidebar__sideicons__ul__li__image moniTor" id="sideBarMonitor"/>
+            <h3 id="infoOnBar">Analytics</h3>
           </li>
-
           <li class="sidebar__sideicons__ul__li">
-            <img
-              src="./images/calculator.png"
-              alt="monitoring image"
-              class="sidebar__sideicons__ul__li__image calC"
-              id="sideBarCalc"
-            />
+            <img src="./images/calculator.png" alt="monitoring image" class="sidebar__sideicons__ul__li__image calC" id="sideBarCalc"/>
             <h3 id="infoOnBar">Calculate</h3>
           </li>
-
           <li class="sidebar__sideicons__ul__li">
-            <img
-              src="./images/balance.png"
-              alt="monitoring image"
-              class="sidebar__sideicons__ul__li__image balAnce"
-              id="sideBarCurrency"
-            />
+            <img src="./images/balance.png" alt="monitoring image" class="sidebar__sideicons__ul__li__image balAnce" id="sideBarCurrency"/>
             <h3 id="infoOnBar">Currency</h3>
           </li>
-
-          <li class="sidebar__sideicons__ul__li">
-            <img
-              src="./images/memo.png"
-              alt="monitoring image"
-              class="sidebar__sideicons__ul__li__image payMent"
-              id="sideBarMemo"
-            />
+          <li class="sidebar__sideicons__ul__li"> 
+            <img src="./images/memo.png" alt="monitoring image" class="sidebar__sideicons__ul__li__image payMent" id="sideBarMemo"/>
             <h3 id="infoOnBar">memo</h3>
           </li>
-
           <li class="sidebar__sideicons__ul__li">
-            <img
-              src="./images/save.png"
-              alt="monitoring image"
-              class="sidebar__sideicons__ul__li__image whatsT"
-              id="sideBarMoney"
-            />
+            <img src="./images/save.png" alt="monitoring image" class="sidebar__sideicons__ul__li__image whatsT" id="sideBarMoney"/>
             <h3 id="infoOnBar">Save Money</h3>
           </li>
         </ul>
       </div>
     </div>
+
+    <!--Dashboard-->
+    <div class="main">
+      <div class="main__show">
+
+        <!--------------------Analytics-------------------->
+        <div class="showMonitor"  style="display:none;">
+          <div class="monitorContainer">
+            <h3 class="monitorContainer__h3">Summary of your expenses this month</h3>
+            <canvas class="monitorContainer__chart" id="monitorChart"></canvas>
+          </div>
+        </div>
+        <!--------------------Currency-------------------->
+        <div class="showCurrency" style="display:none;">
+          <div class="currencyContainer">
+            <h2>Currency Converter</h2>
+            <form action="">
+              <select name="" id="chooseCurrency">
+                <option value="USD">USD (Dollar)</option>
+                <option value="EUR">EUR (Euro)</option>
+                <option value="AUD">AUD (Australia)</option>
+                <option value="CAD">CAD (Canada)</option>
+                <option value="JPY">JPY (Japan)</option>
+                <option value="INR">INR (India)</option>
+              </select>
+              <input type="number" name="" id="" placeholder="NIS" />
+              <button id="button"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
+              <input type="number" name="" id="" />
+            </form>
+          </div>
+        </div>
+
+        <!--------------------Memo-------------------->
+        <div class="main__show__showMemo" style="display:none;">
+          <h1 class="main__show__showMemo__h1">Memo Myself</h1>
+          <div class="main__show__showMemo__showMemoMain">
+            <input type="text" class="main__show__showMemo__showMemoMain__input" id="memoInput">
+            <button class="main__show__showMemo__showMemoMain__button" id="memoButton">+</button>
+            <div class="main__show__showMemo__showMemoMain__mainpar" id="memeoPar"></div>
+          </div>
+        </div>
+        
+        <!--------------------Money-------------------->
+        <div class="showMoney" style="display:none;">
+          <div class="">
+            adjfgakghafjkghadlkghadfklg
+          </div>
+        </div>
+
+
+        <!--------------------Expense Calc.-------------------->
+        <div class="showCalculator" style="display:none;">
+          <div class="wrapper">
+            <div class="wrapper__container">
+                <div class="wrapper__container__sub-container">
+    
+                    <!--Budget-->
+                    <div class="wrapper__container__sub-container__total-amount-container">
+                        <h3>Budget</h3>
+                        <input class="wrapper__container__sub-container__total-amount-container__input" 
+                            type="number" 
+                            id="total-amount" 
+                            placeholder="Enter Total Amount">
+                        <button class="wrapper__container__sub-container__total-amount-container__submit" 
+                            id="total-amount-button">
+                            Set Budget
+                        </button>
+                    </div>
+    
+                    <!--Expenditure-->
+                    <div class="wrapper__container__sub-container__user-amount-container">
+                        <h3>Expenses</h3>
+                        <input class="wrapper__container__sub-container__user-amount-container__product-title" 
+                            type="text" 
+                            id="product-title" 
+                            placeholder="Enter Title of Product">
+                        <input class="wrapper__container__sub-container__user-amount-container__product-cost" 
+                            type="number"
+                            id="user-amount"
+                            placeholder="Enter Cost of Product">
+                        <button class="wrapper__container__sub-container__user-amount-container__submit" 
+                            id="check-amount">
+                            Check Amount
+                        </button>
+                    </div>
+                </div>
+    
+                <!--Output-->
+                <div class="wrapper__container__sub-container__output-container">
+                    <div>
+                        <p>Total Budget</p>
+                        <span id="amount">0</span>
+                    </div>
+                    <div>
+                        <p>Expenses</p>
+                        <span id="expenditure-value">0</span>
+                    </div>
+                    <div>
+                        <p>Balance</p>
+                        <span id="balance-amount">0</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!--List-->
+            <div class="wrapper__container__sub-container__list">
+                <h3>Expense List</h3>
+                <div class="wrapper__container__sub-container__list__list-container" id="list"></div>
+            </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+
   </body>
 </html>

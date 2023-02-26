@@ -43,7 +43,7 @@ body {
   height: 100vh;
   background-color: palevioletred;
   border: 2px solid black;
-  border-radius: 15px;
+  border-radius: 0 15px 15px 0;
   float: left;
   cursor: pointer;
 }
@@ -109,6 +109,7 @@ body {
   font-size: 20px;
   border: 1px solid black;
 }
+<<<<<<< HEAD
 .main__show__showMemo__showMemoMain__wrapper {
   margin: 40px 0px;
   width: 100%;
@@ -133,4 +134,202 @@ body {
 }
 .main__show__showMemo__showMemoMain__wrapper__mainpar #toilet {
   background-image: url(./images/itsik.jpg);
+=======
+
+.wrapper {
+  width: 90%;
+  font-size: 16px;
+  max-width: 43.75em;
+  margin: 1em auto;
+}
+.wrapper__container {
+  width: 100%;
+}
+.wrapper__container__sub-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3em;
+}
+.wrapper__container__sub-container h3 {
+  color: #363d55;
+  font-weight: 600;
+  margin-bottom: 0.6em;
+}
+.wrapper__container__sub-container input {
+  display: block;
+  width: 100%;
+  padding: 0.6em 0.3em;
+  border: 1px solid #d0d0d0;
+  border-radius: 0.3em;
+  color: #414a67;
+  outline: none;
+  font-weight: 400;
+  margin-bottom: 0.6em;
+}
+.wrapper__container__sub-container input:focus {
+  border-color: palevioletred;
+}
+.wrapper__container__sub-container__total-amount-container, .wrapper__container__sub-container__user-amount-container {
+  background-color: transparent;
+  padding: 1.25em 0.9em;
+  border-radius: 0.3em;
+}
+.wrapper__container__sub-container__total-amount-container__submit, .wrapper__container__sub-container__user-amount-container__submit {
+  font-size: 1em;
+  margin-top: 0.8em;
+  background-color: palevioletred;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 0.6em 1.2em;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+.wrapper__container__sub-container__total-amount-container__product-title, .wrapper__container__sub-container__user-amount-container__product-title {
+  margin-bottom: 1em;
+}
+.wrapper__container__sub-container__output-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: palevioletred;
+  color: #ffffff;
+  border-radius: 0.3em;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+  margin: 2em 0;
+  padding: 1.2em;
+}
+.wrapper__container__sub-container__output-container p {
+  font-weight: 500;
+  margin-bottom: 0.6em;
+}
+.wrapper__container__sub-container__output-container span {
+  display: block;
+  text-align: center;
+  font-weight: 400;
+  color: #e5e5e5;
+}
+.wrapper__container__sub-container__list {
+  background-color: #ffffff;
+  padding: 1.8em 1.2em;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+  border-radius: 0.6em;
+}
+.wrapper__container__sub-container__list .flex-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper__container__sub-container__list .sublist-content {
+  width: 100%;
+  border-left: 0.3em solid palevioletred;
+  margin-bottom: 0.6em;
+  padding: 0.5em 1em;
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr 1fr;
+}
+.wrapper__container__sub-container__list .product {
+  font-weight: 500;
+  margin-left: 1.5em;
+  color: #363d55;
+}
+.wrapper__container__sub-container__list .amount {
+  color: #414a67;
+  margin-left: 20%;
+}
+.wrapper__container__sub-container__list .edit {
+  margin-left: auto;
+}
+.wrapper__container__sub-container__list .edit, .wrapper__container__sub-container__list .delete {
+  background: transparent;
+  cursor: pointer;
+  margin-left: 1.5em;
+  border: none;
+  color: palevioletred;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    font-size: 14px;
+  }
+  .wrapper__container {
+    width: 100%;
+  }
+  .wrapper__container__sub-container {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+}
+.monitorContainer {
+  width: 100%;
+  font-size: 16px;
+  max-width: 100%;
+  margin: 1em auto;
+}
+.monitorContainer__chart {
+  width: 100%;
+}
+.monitorContainer__h3 {
+  color: #363d55;
+  font-weight: 600;
+  margin-bottom: 0.6em;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .monitorContainer {
+    font-size: 14px;
+  }
+  .monitorContainer__chart {
+    width: 100%;
+  }
+}
+.showCurrency {
+  width: 90%;
+  font-size: 16px;
+  max-width: 40em;
+  margin: 1rem auto;
+}
+.showCurrency .currencyContainer {
+  margin-left: 8rem;
+  margin-top: 5rem;
+}
+.showCurrency .currencyContainer h2 {
+  color: #3c3838;
+  margin-bottom: 3rem;
+}
+.showCurrency .currencyContainer input {
+  display: block;
+  width: 50%;
+  padding: 0.6em 0.3em;
+  border: 1px solid #d0d0d0;
+  border-radius: 0.3em;
+  color: #414a67;
+  outline: none;
+  font-weight: 400;
+  margin: 2rem 0 2rem 0;
+}
+.showCurrency .currencyContainer button {
+  margin-left: 6rem;
+  font-size: 1em;
+  background-color: palevioletred;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 0.6em 1.2em;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+.showCurrency .currencyContainer #chooseCurrency {
+  justify-content: center;
+  padding: 0.6em 0.3em;
+  border: 1px solid #d0d0d0;
+  border-radius: 0.3em;
+  color: #50576c;
+  outline: none;
+  font-weight: 400;
+  margin-bottom: 0.6em;
+  margin-left: 3.5rem;
+>>>>>>> 4daddeef2420c1ced6ac96e5bb8f490751253cb5
 }
