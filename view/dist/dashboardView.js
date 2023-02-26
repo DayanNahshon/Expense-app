@@ -35,12 +35,20 @@ function runMemoTask(ev) {
             if (!memoPar)
                 throw new Error("couldent find memeo par");
             var newpar = document.createElement("p");
-            console.log(newpar);
+            if (!newpar)
+                throw new Error("couldent find new par");
             var toilet = document.createElement("image");
+            if (!toilet)
+                throw new Error("couldent find toilet");
             var verified = document.createElement("image");
+            if (!verified)
+                throw new Error("couldent find verified");
             memoPar.appendChild(newpar);
+            newpar.setAttribute("id", "newp");
             memoPar.appendChild(toilet);
+            toilet.setAttribute("id", "toilet");
             memoPar.appendChild(verified);
+            verified.setAttribute("id", "verified");
             newpar.innerHTML = memoInput.value;
         }
     }

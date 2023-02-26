@@ -58,16 +58,23 @@ function runMemoTask(ev) {
 
     if (memoInput.value != ""){
       const memoPar = document.querySelector("#memoPar") as HTMLDivElement; 
-      
-
       if(!memoPar) throw new Error("couldent find memeo par")
+      
       const newpar = document.createElement("p") as HTMLParagraphElement;
-        console.log(newpar)
+      if(!newpar) throw new Error("couldent find new par")
+
       const toilet = document.createElement("image") as HTMLParagraphElement;
+      if(!toilet) throw new Error("couldent find toilet")
+
       const verified = document.createElement("image") as HTMLParagraphElement;
+      if(!verified) throw new Error("couldent find verified")
+
       memoPar.appendChild(newpar);
+      newpar.setAttribute("id", "newp")
       memoPar.appendChild(toilet);
+      toilet.setAttribute("id", "toilet")
       memoPar.appendChild(verified);
+      verified.setAttribute("id", "verified")
       newpar.innerHTML = memoInput.value;
     }
   } catch (error) {
