@@ -175,17 +175,10 @@ checkAmountBtn.addEventListener("click", () => {
 
 const btn:HTMLElement|null = document.querySelector("#button");
 
-<<<<<<< HEAD
-// if(btn){
-//   btn.addEventListener("click",(event) => {
-//     event.preventDefault();
-//     const dollar = document.getElementById()
-=======
 if(btn){
-  btn.addEventListener("click",(event) => {
+  btn.addEventListener("click",(event) => }
     event.preventDefault();
     // const dollar = document.getElementById()
->>>>>>> 58948bee6e39fa69913e539d688b219e0f539cca
     
 //   } )
 
