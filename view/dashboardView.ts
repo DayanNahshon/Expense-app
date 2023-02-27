@@ -187,7 +187,21 @@ checkAmountBtn.addEventListener("click", () => {
 
 //--Currency Stuff
 
+<<<<<<< HEAD
 // const btn: HTMLElement | null = document.querySelector("#button");
+=======
+const btn:HTMLElement|null = document.querySelector("#button");
+
+if(btn){
+  btn.addEventListener("click",(event) => }
+    event.preventDefault();
+    // const dollar = document.getElementById()
+    
+//   } )
+
+// }
+
+>>>>>>> 1da6bae7af6ebde54623716135b7c96b2d958fc1
 
 //-----Memo
 //--Memo Stuff
@@ -209,7 +223,12 @@ function runMemoTask(ev) {
       if (!newpar) throw new Error("couldent find new par");
 
       const toilet = document.createElement("image") as HTMLParagraphElement;
+<<<<<<< HEAD
       if (!toilet) throw new Error("couldent find toilet");
+=======
+      toilet.innerHTML = "***"
+      if(!toilet) throw new Error("couldent find toilet")
+>>>>>>> 1da6bae7af6ebde54623716135b7c96b2d958fc1
 
       const verified = document.createElement("image") as HTMLParagraphElement;
       if (!verified) throw new Error("couldent find verified");

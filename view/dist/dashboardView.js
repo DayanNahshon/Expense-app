@@ -149,7 +149,18 @@ checkAmountBtn.addEventListener("click", function () {
 });
 // ------------------------------
 //--Currency Stuff
+<<<<<<< HEAD
 // const btn: HTMLElement | null = document.querySelector("#button");
+=======
+var btn = document.querySelector("#button");
+if (btn) {
+    btn.addEventListener("click", function (event) { return ; });
+}
+event.preventDefault();
+// const dollar = document.getElementById()
+//   } )
+// }
+>>>>>>> 1da6bae7af6ebde54623716135b7c96b2d958fc1
 //-----Memo
 //--Memo Stuff
 var memoButton = document.querySelector("#memoButton");
@@ -168,6 +179,7 @@ function runMemoTask(ev) {
             if (!newpar)
                 throw new Error("couldent find new par");
             var toilet = document.createElement("image");
+            toilet.innerHTML = "***";
             if (!toilet)
                 throw new Error("couldent find toilet");
             var verified = document.createElement("image");
