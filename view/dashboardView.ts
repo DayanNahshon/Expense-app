@@ -85,7 +85,7 @@ totalAmountBtn.addEventListener("click", () => {
 const disableButtons = (bool:boolean) => {
     let editButtons = document.getElementsByClassName("edit")
     Array.from(editButtons).forEach((element) => {
-        element.disabled = bool
+        // element.disabled = bool
     })
 }
 
@@ -178,7 +178,7 @@ const btn:HTMLElement|null = document.querySelector("#button");
 if(btn){
   btn.addEventListener("click",(event) => {
     event.preventDefault();
-    const dollar = document.getElementById()
+    // const dollar = document.getElementById()
     
   } )
 
@@ -200,7 +200,7 @@ function runMemoTask(ev) {
      if(!memoInput) throw new Error("couldent find memeo input")
 
     if (memoInput.value != ""){
-      const memoPar = document.querySelector("#memoPar") as HTMLDivElement; 
+      const memoPar = document.querySelector("#memeoPar") as HTMLDivElement; 
       if(!memoPar) throw new Error("couldent find memeo par")
       
       const newpar = document.createElement("p") as HTMLParagraphElement;
@@ -219,6 +219,7 @@ function runMemoTask(ev) {
       memoPar.appendChild(verified);
       verified.setAttribute("id", "verified")
       newpar.innerHTML = memoInput.value;
+      memoInput.value = ""
     }
   } catch (error) {
     console.error(error)

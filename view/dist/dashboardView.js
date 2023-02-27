@@ -67,7 +67,7 @@ totalAmountBtn.addEventListener("click", function () {
 var disableButtons = function (bool) {
     var editButtons = document.getElementsByClassName("edit");
     Array.from(editButtons).forEach(function (element) {
-        element.disabled = bool;
+        // element.disabled = bool
     });
 };
 //--Function To Modify List Elements
@@ -154,7 +154,7 @@ var btn = document.querySelector("#button");
 if (btn) {
     btn.addEventListener("click", function (event) {
         event.preventDefault();
-        var dollar = document.getElementById();
+        // const dollar = document.getElementById()
     });
 }
 //-----Memo
@@ -168,7 +168,7 @@ function runMemoTask(ev) {
         if (!memoInput)
             throw new Error("couldent find memeo input");
         if (memoInput.value != "") {
-            var memoPar = document.querySelector("#memoPar");
+            var memoPar = document.querySelector("#memeoPar");
             if (!memoPar)
                 throw new Error("couldent find memeo par");
             var newpar = document.createElement("p");
@@ -187,6 +187,7 @@ function runMemoTask(ev) {
             memoPar.appendChild(verified);
             verified.setAttribute("id", "verified");
             newpar.innerHTML = memoInput.value;
+            memoInput.value = "";
         }
     }
     catch (error) {

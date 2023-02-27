@@ -24,7 +24,6 @@ function runCurrency() {
     showMoney.style.display = "none";
 }
 function runMemo() {
-    console.log("Click Memo");
     showMonitor.style.display = "none";
     showCalculator.style.display = "none";
     showCurrency.style.display = "none";
