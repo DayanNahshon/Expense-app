@@ -98,8 +98,7 @@ var listCreator = function (expenseName, expenseValue) {
         var sublistContent = document.createElement("div");
         sublistContent.classList.add("sublist-content", "flex-space");
         list.appendChild(sublistContent);
-        sublistContent.innerHTML =
-            "<p class = \"product\">" + expenseName + "</p>\n            <p class = \"amount\">" + expenseValue + "</p>";
+        sublistContent.innerHTML = "<p class = \"product\">" + expenseName + "</p>\n            <p class = \"amount\">" + expenseValue + "</p>";
         var editBtn_1 = document.createElement("button");
         editBtn_1.classList.add("fa-solid", "fa-pen-to-square", "edit");
         editBtn_1.style.fontSize = "20px";
@@ -150,7 +149,6 @@ checkAmountBtn.addEventListener("click", function () {
 });
 // ------------------------------
 //--Currency Stuff
-var btn = document.querySelector("#button");
 //-----Memo
 //--Memo Stuff
 var memoButton = document.querySelector("#memoButton");
@@ -169,7 +167,6 @@ function runMemoTask(ev) {
             if (!newpar)
                 throw new Error("couldent find new par");
             var toilet = document.createElement("image");
-            toilet.innerHTML = "***";
             if (!toilet)
                 throw new Error("couldent find toilet");
             var verified = document.createElement("image");
