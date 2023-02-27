@@ -151,12 +151,12 @@ checkAmountBtn.addEventListener("click", function () {
 // ------------------------------
 //--Currency Stuff
 var btn = document.querySelector("#button");
-if (btn) {
-    btn.addEventListener("click", function (event) {
-        event.preventDefault();
-        var dollar = document.getElementById();
-    });
-}
+// if(btn){
+//   btn.addEventListener("click",(event) => {
+//     event.preventDefault();
+//     const dollar = document.getElementById()
+//   } )
+// }
 //-----Memo
 //--Memo Stuff
 var memoButton = document.querySelector("#memoButton");
