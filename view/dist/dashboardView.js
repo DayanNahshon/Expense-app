@@ -98,8 +98,7 @@ var listCreator = function (expenseName, expenseValue) {
         var sublistContent = document.createElement("div");
         sublistContent.classList.add("sublist-content", "flex-space");
         list.appendChild(sublistContent);
-        sublistContent.innerHTML =
-            "<p class = \"product\">" + expenseName + "</p>\n            <p class = \"amount\">" + expenseValue + "</p>";
+        sublistContent.innerHTML = "<p class = \"product\">" + expenseName + "</p>\n            <p class = \"amount\">" + expenseValue + "</p>";
         var editBtn_1 = document.createElement("button");
         editBtn_1.classList.add("fa-solid", "fa-pen-to-square", "edit");
         editBtn_1.style.fontSize = "20px";
@@ -151,21 +150,17 @@ checkAmountBtn.addEventListener("click", function () {
 // ------------------------------
 //--Currency Stuff
 var btn = document.querySelector("#button");
-<<<<<<< HEAD
 // if(btn){
 //   btn.addEventListener("click",(event) => {
 //     event.preventDefault();
 //     const dollar = document.getElementById()
+// if(btn){
+//   btn.addEventListener("click",(event) => {
+//     event.preventDefault();
+//     // const dollar = document.getElementById()
+// >>>>>>> 58948bee6e39fa69913e539d688b219e0f539cca
 //   } )
 // }
-=======
-if (btn) {
-    btn.addEventListener("click", function (event) {
-        event.preventDefault();
-        // const dollar = document.getElementById()
-    });
-}
->>>>>>> 58948bee6e39fa69913e539d688b219e0f539cca
 //-----Memo
 //--Memo Stuff
 var memoButton = document.querySelector("#memoButton");
