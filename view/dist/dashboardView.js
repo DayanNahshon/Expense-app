@@ -67,7 +67,7 @@ totalAmountBtn.addEventListener("click", function () {
 var disableButtons = function (bool) {
     var editButtons = document.getElementsByClassName("edit");
     Array.from(editButtons).forEach(function (element) {
-        element.disabled = bool;
+        // element.disabled = bool
     });
 };
 //--Function To Modify List Elements
@@ -151,12 +151,21 @@ checkAmountBtn.addEventListener("click", function () {
 // ------------------------------
 //--Currency Stuff
 var btn = document.querySelector("#button");
+<<<<<<< HEAD
 // if(btn){
 //   btn.addEventListener("click",(event) => {
 //     event.preventDefault();
 //     const dollar = document.getElementById()
 //   } )
 // }
+=======
+if (btn) {
+    btn.addEventListener("click", function (event) {
+        event.preventDefault();
+        // const dollar = document.getElementById()
+    });
+}
+>>>>>>> 58948bee6e39fa69913e539d688b219e0f539cca
 //-----Memo
 //--Memo Stuff
 var memoButton = document.querySelector("#memoButton");
@@ -168,17 +177,26 @@ function runMemoTask(ev) {
         if (!memoInput)
             throw new Error("couldent find memeo input");
         if (memoInput.value != "") {
-            var memoPar = document.querySelector("#memoPar");
+            var memoPar = document.querySelector("#memeoPar");
             if (!memoPar)
                 throw new Error("couldent find memeo par");
             var newpar = document.createElement("p");
-            console.log(newpar);
+            if (!newpar)
+                throw new Error("couldent find new par");
             var toilet = document.createElement("image");
+            if (!toilet)
+                throw new Error("couldent find toilet");
             var verified = document.createElement("image");
+            if (!verified)
+                throw new Error("couldent find verified");
             memoPar.appendChild(newpar);
+            newpar.setAttribute("id", "newp");
             memoPar.appendChild(toilet);
+            toilet.setAttribute("id", "toilet");
             memoPar.appendChild(verified);
+            verified.setAttribute("id", "verified");
             newpar.innerHTML = memoInput.value;
+            memoInput.value = "";
         }
     }
     catch (error) {

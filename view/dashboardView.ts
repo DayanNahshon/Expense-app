@@ -85,7 +85,7 @@ totalAmountBtn.addEventListener("click", () => {
 const disableButtons = (bool:boolean) => {
     let editButtons = document.getElementsByClassName("edit")
     Array.from(editButtons).forEach((element) => {
-        element.disabled = bool
+        // element.disabled = bool
     })
 }
 
@@ -175,10 +175,17 @@ checkAmountBtn.addEventListener("click", () => {
 
 const btn:HTMLElement|null = document.querySelector("#button");
 
+<<<<<<< HEAD
 // if(btn){
 //   btn.addEventListener("click",(event) => {
 //     event.preventDefault();
 //     const dollar = document.getElementById()
+=======
+if(btn){
+  btn.addEventListener("click",(event) => {
+    event.preventDefault();
+    // const dollar = document.getElementById()
+>>>>>>> 58948bee6e39fa69913e539d688b219e0f539cca
     
 //   } )
 
@@ -200,18 +207,26 @@ function runMemoTask(ev) {
      if(!memoInput) throw new Error("couldent find memeo input")
 
     if (memoInput.value != ""){
-      const memoPar = document.querySelector("#memoPar") as HTMLDivElement; 
-      
-
+      const memoPar = document.querySelector("#memeoPar") as HTMLDivElement; 
       if(!memoPar) throw new Error("couldent find memeo par")
+      
       const newpar = document.createElement("p") as HTMLParagraphElement;
-        console.log(newpar)
+      if(!newpar) throw new Error("couldent find new par")
+
       const toilet = document.createElement("image") as HTMLParagraphElement;
+      if(!toilet) throw new Error("couldent find toilet")
+
       const verified = document.createElement("image") as HTMLParagraphElement;
+      if(!verified) throw new Error("couldent find verified")
+
       memoPar.appendChild(newpar);
+      newpar.setAttribute("id", "newp")
       memoPar.appendChild(toilet);
+      toilet.setAttribute("id", "toilet")
       memoPar.appendChild(verified);
+      verified.setAttribute("id", "verified")
       newpar.innerHTML = memoInput.value;
+      memoInput.value = ""
     }
   } catch (error) {
     console.error(error)
