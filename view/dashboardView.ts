@@ -207,6 +207,7 @@ function runMemoTask(ev) {
       if(!newpar) throw new Error("couldent find new par")
 
       const toilet = document.createElement("image") as HTMLParagraphElement;
+      toilet.innerHTML = "***"
       if(!toilet) throw new Error("couldent find toilet")
 
       const verified = document.createElement("image") as HTMLParagraphElement;

@@ -175,6 +175,7 @@ function runMemoTask(ev) {
             if (!newpar)
                 throw new Error("couldent find new par");
             var toilet = document.createElement("image");
+            toilet.innerHTML = "***";
             if (!toilet)
                 throw new Error("couldent find toilet");
             var verified = document.createElement("image");
