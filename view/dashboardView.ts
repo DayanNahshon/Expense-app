@@ -187,22 +187,7 @@ checkAmountBtn.addEventListener("click", () => {
 
 //--Currency Stuff
 
-const btn: HTMLElement | null = document.querySelector("#button");
-
-// if(btn){
-//   btn.addEventListener("click",(event) => {
-//     event.preventDefault();
-//     const dollar = document.getElementById()
-
-// if(btn){
-//   btn.addEventListener("click",(event) => {
-//     event.preventDefault();
-//     // const dollar = document.getElementById()
-// >>>>>>> 58948bee6e39fa69913e539d688b219e0f539cca
-
-//   } )
-
-// }
+// const btn: HTMLElement | null = document.querySelector("#button");
 
 //-----Memo
 //--Memo Stuff
