@@ -1,7 +1,7 @@
 //-----RunSideBar Function
 
 function runMonitoring(){
-    console.log("Click Monitoring")
+    
     showMonitor.style.display = "block"  
     showCalculator.style.display = "none"
     showCurrency.style.display = "none"
@@ -10,7 +10,7 @@ function runMonitoring(){
 }
 
 function runCalculator(){
-    console.log("Click Calculator")
+    
     showMonitor.style.display = "none"  
     showCalculator.style.display = "block"
     showCurrency.style.display = "none"
@@ -19,7 +19,7 @@ function runCalculator(){
 }
 
 function runCurrency(){
-    console.log("Click Currency")
+    
     showMonitor.style.display = "none"  
     showCalculator.style.display = "none"
     showCurrency.style.display = "block"
@@ -36,8 +36,7 @@ function runMemo(){
 }
 
 function runMoney(){
-    console.log("Click Money")
-    showMonitor.style.display = "none"  
+  showMonitor.style.display = "none"  
     showCalculator.style.display = "none"
     showCurrency.style.display = "none"
     showMemo.style.display = "none"
