@@ -136,7 +136,7 @@ const listCreator = (expenseName, expenseValue) => {
     list.appendChild(sublistContent);
     sublistContent.innerHTML = `<p class = "product">${expenseName}</p>
             <p class = "amount">${expenseValue}</p>`;
-    let editBtn = document.createElement("button");
+    const editBtn = document.createElement("button");
     editBtn.classList.add("fa-solid", "fa-pen-to-square", "edit");
     editBtn.style.fontSize = "20px";
     editBtn.addEventListener("click", () => {
@@ -209,6 +209,9 @@ function runMemoTask(ev) {
       if (!newpar) throw new Error("couldent find new par");
 
       const edbtn = document.createElement("button");
+      edbtn.innerHTML=`<p>${}`
+      
+      
       edbtn.classList.add("fa-solid", "fa-pen-to-square", "edit");
       edbtn.style.fontSize = "20px";
       

@@ -167,6 +167,7 @@ function runMemoTask(ev) {
             if (!newpar)
                 throw new Error("couldent find new par");
             var edbtn = document.createElement("button");
+            edbtn.innerHTML = "<p>" + ;
             edbtn.classList.add("fa-solid", "fa-pen-to-square", "edit");
             edbtn.style.fontSize = "20px";
             var delbtn = document.createElement("button");
