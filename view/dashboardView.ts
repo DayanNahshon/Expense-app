@@ -208,23 +208,21 @@ function runMemoTask(ev) {
       const newpar = document.createElement("p") as HTMLParagraphElement;
       if (!newpar) throw new Error("couldent find new par");
 
-      const toilet = document.createElement("image") as HTMLParagraphElement;
-<<<<<<< HEAD
-      if (!toilet) throw new Error("couldent find toilet");
-=======
-      toilet.innerHTML = "***"
-      if(!toilet) throw new Error("couldent find toilet")
->>>>>>> 1da6bae7af6ebde54623716135b7c96b2d958fc1
+      const edbtn = document.createElement("button");
+      edbtn.classList.add("fa-solid", "fa-pen-to-square", "edit");
+      edbtn.style.fontSize = "20px";
+      
 
-      const verified = document.createElement("image") as HTMLParagraphElement;
-      if (!verified) throw new Error("couldent find verified");
-
+      const delbtn = document.createElement("button");
+    delbtn.classList.add("fa-solid", "fa-trash-can", "delete");
+    delbtn.style.fontSize = "20px";
+     
       memoPar.appendChild(newpar);
       newpar.setAttribute("id", "newp");
-      memoPar.appendChild(toilet);
-      toilet.setAttribute("id", "toilet");
-      memoPar.appendChild(verified);
-      verified.setAttribute("id", "verified");
+      newpar.appendChild(delbtn);
+      newpar.appendChild(edbtn)
+      
+    
       newpar.innerHTML = memoInput.value;
       memoInput.value = "";
     }

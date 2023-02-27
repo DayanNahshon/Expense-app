@@ -166,18 +166,16 @@ function runMemoTask(ev) {
             var newpar = document.createElement("p");
             if (!newpar)
                 throw new Error("couldent find new par");
-            var toilet = document.createElement("image");
-            if (!toilet)
-                throw new Error("couldent find toilet");
-            var verified = document.createElement("image");
-            if (!verified)
-                throw new Error("couldent find verified");
+            var edbtn = document.createElement("button");
+            edbtn.classList.add("fa-solid", "fa-pen-to-square", "edit");
+            edbtn.style.fontSize = "20px";
+            var delbtn = document.createElement("button");
+            delbtn.classList.add("fa-solid", "fa-trash-can", "delete");
+            delbtn.style.fontSize = "20px";
             memoPar.appendChild(newpar);
             newpar.setAttribute("id", "newp");
-            memoPar.appendChild(toilet);
-            toilet.setAttribute("id", "toilet");
-            memoPar.appendChild(verified);
-            verified.setAttribute("id", "verified");
+            newpar.appendChild(delbtn);
+            newpar.appendChild(edbtn);
             newpar.innerHTML = memoInput.value;
             memoInput.value = "";
         }

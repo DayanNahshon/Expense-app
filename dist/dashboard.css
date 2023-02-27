@@ -123,7 +123,6 @@ body {
   height: 300px;
 }
 .main__show__showMemo__showMemoMain__footer__mainpar #newp {
-  position: relative;
   font-size: 20px;
   border: 3px solid #414a67;
   background-color: palevioletred;
@@ -131,13 +130,6 @@ body {
   padding: 4px;
   margin: 6px 0px;
   text-align: left;
-}
-.main__show__showMemo__showMemoMain__footer__mainpar img {
-  width: 50px;
-  height: 50px;
-}
-.main__show__showMemo__showMemoMain__footer__mainpar #toilet {
-  position: absolute;
 }
 
 .wrapper {
