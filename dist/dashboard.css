@@ -122,7 +122,7 @@ body {
   width: 300px;
   height: 300px;
 }
-.main__show__showMemo__showMemoMain__footer__mainpar #newp {
+.main__show__showMemo__showMemoMain__footer__mainpar .newp {
   font-size: 20px;
   border: 3px solid #414a67;
   background-color: palevioletred;

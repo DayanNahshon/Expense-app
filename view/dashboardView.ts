@@ -187,8 +187,6 @@ checkAmountBtn.addEventListener("click", () => {
 
 //--Currency Stuff
 
-
-
 //-----Memo
 //--Memo Stuff
 const memoButton = document.querySelector("#memoButton") as HTMLButtonElement;
@@ -202,31 +200,17 @@ function runMemoTask(ev) {
     if (!memoInput) throw new Error("couldent find memeo input");
 
     if (memoInput.value != "") {
+      const inputValue:string = memoInput.value;
       const memoPar = document.querySelector("#memeoPar") as HTMLDivElement;
       if (!memoPar) throw new Error("couldent find memeo par");
 
       const newpar = document.createElement("p") as HTMLParagraphElement;
       if (!newpar) throw new Error("couldent find new par");
 
-      const edbtn = document.createElement("button");
-      edbtn.innerHTML=`<p>${}`
-      
-      
-      edbtn.classList.add("fa-solid", "fa-pen-to-square", "edit");
-      edbtn.style.fontSize = "20px";
-      
-
-      const delbtn = document.createElement("button");
-    delbtn.classList.add("fa-solid", "fa-trash-can", "delete");
-    delbtn.style.fontSize = "20px";
+      newpar.innerHTML = `<p id='id-${Math.random()}' class="newp someClass">${inputValue} <span>trash</span></p>`;
      
       memoPar.appendChild(newpar);
-      newpar.setAttribute("id", "newp");
-      newpar.appendChild(delbtn);
-      newpar.appendChild(edbtn)
-      
-    
-      newpar.innerHTML = memoInput.value;
+   
       memoInput.value = "";
     }
   } catch (error) {

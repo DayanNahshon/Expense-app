@@ -160,24 +160,15 @@ function runMemoTask(ev) {
         if (!memoInput)
             throw new Error("couldent find memeo input");
         if (memoInput.value != "") {
+            var inputValue = memoInput.value;
             var memoPar = document.querySelector("#memeoPar");
             if (!memoPar)
                 throw new Error("couldent find memeo par");
             var newpar = document.createElement("p");
             if (!newpar)
                 throw new Error("couldent find new par");
-            var edbtn = document.createElement("button");
-            edbtn.innerHTML = "<p>" + ;
-            edbtn.classList.add("fa-solid", "fa-pen-to-square", "edit");
-            edbtn.style.fontSize = "20px";
-            var delbtn = document.createElement("button");
-            delbtn.classList.add("fa-solid", "fa-trash-can", "delete");
-            delbtn.style.fontSize = "20px";
+            newpar.innerHTML = "<p id='id-" + Math.random() + "' class=\"newp someClass\">" + inputValue + " <span>trash</span></p>";
             memoPar.appendChild(newpar);
-            newpar.setAttribute("id", "newp");
-            newpar.appendChild(delbtn);
-            newpar.appendChild(edbtn);
-            newpar.innerHTML = memoInput.value;
             memoInput.value = "";
         }
     }
