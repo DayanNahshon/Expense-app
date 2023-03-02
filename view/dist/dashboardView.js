@@ -167,7 +167,9 @@ function runMemoTask(ev) {
             var newpar = document.createElement("p");
             if (!newpar)
                 throw new Error("couldent find new par");
-            newpar.innerHTML = "<p id='id-" + Math.random() + "' class=\"newp someClass\">" + inputValue + " <span>trash</span></p>";
+            newpar.innerHTML = "<p id='id-" + Math.random() + "' class=\"newp\">" + inputValue + " <span class=\"fa-solid fa-pen-to-square\" id=\"finish\"></span>\n      <span class=\"fa-solid fa-trash-can\" id=\"delete\"></span>\n      </p>";
+            var marker = document.querySelector("#finish");
+            marker.style.textDecoration = "line-through";
             memoPar.appendChild(newpar);
             memoInput.value = "";
         }

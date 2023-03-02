@@ -207,8 +207,11 @@ function runMemoTask(ev) {
       const newpar = document.createElement("p") as HTMLParagraphElement;
       if (!newpar) throw new Error("couldent find new par");
 
-      newpar.innerHTML = `<p id='id-${Math.random()}' class="newp someClass">${inputValue} <span>trash</span></p>`;
-     
+      newpar.innerHTML = `<p id='id-${Math.random()}' class="newp">${inputValue} <span class="fa-solid fa-pen-to-square" id="finish"></span>
+      <span class="fa-solid fa-trash-can" id="delete"></span>
+      </p>`;
+       const marker = document.querySelector("#finish")as HTMLSpanElement;
+       marker.style.textDecoration = "line-through";
       memoPar.appendChild(newpar);
    
       memoInput.value = "";
