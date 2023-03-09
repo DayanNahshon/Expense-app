@@ -165,7 +165,7 @@ function renderTasks(tasks, domElement) {
         var html = tasks
             .map(function (task) {
             if (!task.finished) {
-                return "<p class=\"newp\">" + task.text + " <span onclick=\"handleDone('" + task.id + "')\" class=\"fa-solid fa-pen-to-square\"></span>\n      <span class=\"fa-solid fa-trash-can\" id=\"delete\"></span>\n      </p>";
+                return "<p class=\"newp\">" + task.text + " <span onclick=\"handleDone('" + task.id + "')\" class=\"fa-solid fa-pen-to-square\"></span>\n      <span onclick=\"handleDelete('" + task.id + "')\" class=\"fa-solid fa-trash-can\" id=\"delete\"></span>\n      </p>";
             }
             else {
                 return "<p class=\"newp newp--finished\">" + task.text + " <span onclick=\"handleDone('" + task.id + "')\" class=\"fa-solid fa-pen-to-square\"></span>\n      <span class=\"fa-solid fa-trash-can\" id=\"delete\"></span>\n      </p>";
@@ -173,6 +173,21 @@ function renderTasks(tasks, domElement) {
         })
             .join(" ");
         domElement.innerHTML = html;
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+function handleDelete(taskId) {
+    try {
+        //find from tasks
+        var index = tasks.findIndex(function (task) { return task.id === taskId; });
+        if (index === -1)
+            throw new Error("couldnt found tasks in array of tasks");
+        var memoPar = document.querySelector("#memeoPar");
+        if (!memoPar)
+            throw new Error("couldent find memeo par");
+        memoPar.remove();
     }
     catch (error) {
         console.error(error);
@@ -189,6 +204,13 @@ function handleDone(taskId) {
         if (!memoPar)
             throw new Error("couldent find memeo par");
         renderTasks(tasks, memoPar);
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+function handleDel() {
+    try {
     }
     catch (error) {
         console.error(error);
