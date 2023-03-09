@@ -183,7 +183,7 @@ function handleDone(taskId) {
         //find from tasks
         var index = tasks.findIndex(function (task) { return task.id === taskId; });
         if (index === -1)
-            throw new Error("couldnt fond taks in array of tasks");
+            throw new Error("couldnt found tasks in array of tasks");
         tasks[index].finished = !tasks[index].finished;
         var memoPar = document.querySelector("#memeoPar");
         if (!memoPar)

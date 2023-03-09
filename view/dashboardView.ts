@@ -214,7 +214,7 @@ function handleDone(taskId: string) {
     //find from tasks
     const index: number = tasks.findIndex((task) => task.id === taskId);
 
-    if (index === -1) throw new Error("couldnt fond taks in array of tasks");
+    if (index === -1) throw new Error("couldnt found tasks in array of tasks");
 
     tasks[index].finished = !tasks[index].finished;
 
