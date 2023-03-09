@@ -254,7 +254,19 @@ function handleDel(){
     console.error(error)
   }
 }
-// ----------------------------------
+// -----------user tool-----------------------
+const poalim = document.querySelector("#poalim")!.addEventListener("click", runPoalim)
+const leumi = document.querySelector("#leumi")!.addEventListener("click", runLeumi)
+const mizrahi = document.querySelector("#mizrahi")!.addEventListener("click", runMizrahi)
+const discount = document.querySelector("#discount")!.addEventListener("click", runDiscount)
+
+
+
+
+
+
+
+
 
 //-----Get LocalStorage.
 function spanWelcome() {

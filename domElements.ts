@@ -81,3 +81,20 @@ function runMoney(){
 }
 
 
+// user tool function
+
+function runPoalim(){
+  window.open( "https://www.bankhapoalim.co.il/he", '_blank')
+}
+
+function runLeumi(){
+  window.open( "https://www.leumi.co.il/", '_blank')
+}
+
+function runMizrahi(){
+  window.open( "https://www.mizrahi-tefahot.co.il/", '_blank')
+}
+
+function runDiscount(){
+  window.open( "https://www.leumi.co.il/", '_blank')
+}

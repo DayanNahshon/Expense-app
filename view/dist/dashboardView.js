@@ -216,7 +216,11 @@ function handleDel() {
         console.error(error);
     }
 }
-// ----------------------------------
+// -----------user tool-----------------------
+var poalim = document.querySelector("#poalim").addEventListener("click", runPoalim);
+var leumi = document.querySelector("#leumi").addEventListener("click", runLeumi);
+var mizrahi = document.querySelector("#mizrahi").addEventListener("click", runMizrahi);
+var discount = document.querySelector("#discount").addEventListener("click", runDiscount);
 //-----Get LocalStorage.
 function spanWelcome() {
     var newUser = localStorage.getItem("user");

@@ -182,8 +182,32 @@ body {
   padding: 6px;
   border-radius: 25%;
 }
+.main__show .showUserTool__insurance__phoenix {
+  background-color: #ff5a23;
+  color: white;
+  padding: 6px;
+  border-radius: 25%;
+}
 .main__show .showUserTool__insurance__harel {
   background-color: #003c7f;
+  color: white;
+  padding: 6px;
+  border-radius: 25%;
+  color: white;
+  padding: 6px;
+  border-radius: 25%;
+}
+.main__show .showUserTool__insurance__clal {
+  background-color: #0097ff;
+  color: white;
+  padding: 6px;
+  border-radius: 25%;
+  color: white;
+  padding: 6px;
+  border-radius: 25%;
+}
+.main__show .showUserTool__insurance__menora {
+  background-color: #37374e;
   color: white;
   padding: 6px;
   border-radius: 25%;
