@@ -3,28 +3,7 @@ window.onload = spanWelcome;
 var spanWel = document.querySelector(".container__h2Welcome__spanWelcome");
 // ------------------------------
 //-----SideBar
-//--SideBar Stuff
-var sideMonitoring = document.querySelector("#sideBarMonitor");
-var sidecalc = document.querySelector("#sideBarCalc");
-var sideCurrency = document.querySelector("#sideBarCurrency");
-var sideMemo = document.querySelector("#sideBarMemo");
-var sideMoney = document.querySelector("#sideBarMoney");
-// ------------------------------
-//--Sidebar Button Events
-sideMonitoring.addEventListener("click", runMonitoring);
-sidecalc.addEventListener("click", runCalculator);
-sideCurrency.addEventListener("click", runCurrency);
-sideMemo.addEventListener("click", runMemo);
-sideMoney.addEventListener("click", runMoney);
-// ------------------------------
 //-----Main
-//--Main Dashboard Stuff
-var showMonitor = document.querySelector(".showMonitor");
-var showCalculator = document.querySelector(".showCalculator");
-var showCurrency = document.querySelector(".showCurrency");
-var showMemo = document.querySelector(".main__show__showMemo");
-var showMoney = document.querySelector(".showMoney");
-// ------------------------------
 //-----Analytics
 //--Analytics Stuff
 // ------------------------------
@@ -154,25 +133,62 @@ checkAmountBtn.addEventListener("click", function () {
 var memoButton = document.querySelector("#memoButton");
 //--Memo Events
 memoButton.addEventListener("click", runMemoTask);
+var Task = /** @class */ (function () {
+    function Task(text, finished) {
+        this.text = text;
+        this.finished = finished;
+        this.id = "id-" + Math.random();
+    }
+    return Task;
+}());
+var tasks = [];
 function runMemoTask(ev) {
     try {
         var memoInput = document.querySelector("#memoInput");
         if (!memoInput)
             throw new Error("couldent find memeo input");
         if (memoInput.value != "") {
-            var inputValue = memoInput.value;
+            tasks.push(new Task(memoInput.value, false));
             var memoPar = document.querySelector("#memeoPar");
             if (!memoPar)
                 throw new Error("couldent find memeo par");
-            var newpar = document.createElement("p");
-            if (!newpar)
-                throw new Error("couldent find new par");
-            newpar.innerHTML = "<p id='id-" + Math.random() + "' class=\"newp\">" + inputValue + " <span class=\"fa-solid fa-pen-to-square\" id=\"finish\"></span>\n      <span class=\"fa-solid fa-trash-can\" id=\"delete\"></span>\n      </p>";
-            var marker = document.querySelector("#finish");
-            marker.style.textDecoration = "line-through";
-            memoPar.appendChild(newpar);
+            renderTasks(tasks, memoPar);
             memoInput.value = "";
         }
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+function renderTasks(tasks, domElement) {
+    try {
+        var html = tasks
+            .map(function (task) {
+            if (!task.finished) {
+                return "<p class=\"newp\">" + task.text + " <span onclick=\"handleDone('" + task.id + "')\" class=\"fa-solid fa-pen-to-square\"></span>\n      <span class=\"fa-solid fa-trash-can\" id=\"delete\"></span>\n      </p>";
+            }
+            else {
+                return "<p class=\"newp newp--finished\">" + task.text + " <span onclick=\"handleDone('" + task.id + "')\" class=\"fa-solid fa-pen-to-square\"></span>\n      <span class=\"fa-solid fa-trash-can\" id=\"delete\"></span>\n      </p>";
+            }
+        })
+            .join(" ");
+        domElement.innerHTML = html;
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+function handleDone(taskId) {
+    try {
+        //find from tasks
+        var index = tasks.findIndex(function (task) { return task.id === taskId; });
+        if (index === -1)
+            throw new Error("couldnt fond taks in array of tasks");
+        tasks[index].finished = !tasks[index].finished;
+        var memoPar = document.querySelector("#memeoPar");
+        if (!memoPar)
+            throw new Error("couldent find memeo par");
+        renderTasks(tasks, memoPar);
     }
     catch (error) {
         console.error(error);

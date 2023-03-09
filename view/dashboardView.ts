@@ -8,39 +8,7 @@ const spanWel = document.querySelector(
 
 //-----SideBar
 
-//--SideBar Stuff
-const sideMonitoring = document.querySelector(
-  "#sideBarMonitor"
-) as HTMLImageElement;
-const sidecalc = document.querySelector("#sideBarCalc") as HTMLImageElement;
-const sideCurrency = document.querySelector(
-  "#sideBarCurrency"
-) as HTMLImageElement;
-const sideMemo = document.querySelector("#sideBarMemo") as HTMLImageElement;
-const sideMoney = document.querySelector("#sideBarMoney") as HTMLImageElement;
-// ------------------------------
-
-//--Sidebar Button Events
-sideMonitoring.addEventListener("click", runMonitoring);
-sidecalc.addEventListener("click", runCalculator);
-sideCurrency.addEventListener("click", runCurrency);
-sideMemo.addEventListener("click", runMemo);
-sideMoney.addEventListener("click", runMoney);
-// ------------------------------
-
 //-----Main
-
-//--Main Dashboard Stuff
-const showMonitor = document.querySelector(".showMonitor") as HTMLDivElement;
-const showCalculator = document.querySelector(
-  ".showCalculator"
-) as HTMLDivElement;
-const showCurrency = document.querySelector(".showCurrency") as HTMLDivElement;
-const showMemo = document.querySelector(
-  ".main__show__showMemo"
-) as HTMLDivElement;
-const showMoney = document.querySelector(".showMoney") as HTMLDivElement;
-// ------------------------------
 
 //-----Analytics
 
@@ -193,6 +161,11 @@ const memoButton = document.querySelector("#memoButton") as HTMLButtonElement;
 
 //--Memo Events
 memoButton.addEventListener("click", runMemoTask);
+class Task {
+  id: string = `id-${Math.random()}`;
+  constructor(public text: string, public finished: boolean) {}
+}
+const tasks: Task[] = [];
 
 function runMemoTask(ev) {
   try {
@@ -200,22 +173,55 @@ function runMemoTask(ev) {
     if (!memoInput) throw new Error("couldent find memeo input");
 
     if (memoInput.value != "") {
-      const inputValue:string = memoInput.value;
+      tasks.push(new Task(memoInput.value, false));
+
       const memoPar = document.querySelector("#memeoPar") as HTMLDivElement;
       if (!memoPar) throw new Error("couldent find memeo par");
 
-      const newpar = document.createElement("p") as HTMLParagraphElement;
-      if (!newpar) throw new Error("couldent find new par");
+      renderTasks(tasks, memoPar);
 
-      newpar.innerHTML = `<p id='id-${Math.random()}' class="newp">${inputValue} <span class="fa-solid fa-pen-to-square" id="finish"></span>
-      <span class="fa-solid fa-trash-can" id="delete"></span>
-      </p>`;
-       const marker = document.querySelector("#finish")as HTMLSpanElement;
-       marker.style.textDecoration = "line-through";
-      memoPar.appendChild(newpar);
-   
       memoInput.value = "";
     }
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function renderTasks(tasks: Task[], domElement: Element) {
+  try {
+    const html: string = tasks
+      .map((task) => {
+        if (!task.finished) {
+          return `<p class="newp">${task.text} <span onclick="handleDone('${task.id}')" class="fa-solid fa-pen-to-square"></span>
+      <span class="fa-solid fa-trash-can" id="delete"></span>
+      </p>`;
+        } else {
+          return `<p class="newp newp--finished">${task.text} <span onclick="handleDone('${task.id}')" class="fa-solid fa-pen-to-square"></span>
+      <span class="fa-solid fa-trash-can" id="delete"></span>
+      </p>`;
+        }
+      })
+      .join(" ");
+    domElement.innerHTML = html;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function handleDone(taskId: string) {
+  try {
+    
+    //find from tasks
+    const index: number = tasks.findIndex((task) => task.id === taskId);
+
+    if (index === -1) throw new Error("couldnt fond taks in array of tasks");
+
+    tasks[index].finished = !tasks[index].finished;
+
+    const memoPar = document.querySelector("#memeoPar") as HTMLDivElement;
+    if (!memoPar) throw new Error("couldent find memeo par");
+
+    renderTasks(tasks, memoPar);
   } catch (error) {
     console.error(error);
   }

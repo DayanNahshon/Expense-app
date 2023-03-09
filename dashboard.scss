@@ -155,6 +155,10 @@ body{
               margin: 6px 0px;
               text-align: left;
 
+              &--finished{
+                text-decoration: line-through;
+              }
+
               #delete  {
                padding-right: 4px;
                      }

@@ -134,6 +134,9 @@ body {
   margin: 6px 0px;
   text-align: left;
 }
+.main__show__showMemo__showMemoMain__footer__mainpar .newp--finished {
+  text-decoration: line-through;
+}
 .main__show__showMemo__showMemoMain__footer__mainpar .newp #delete {
   padding-right: 4px;
 }
