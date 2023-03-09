@@ -154,6 +154,9 @@ checkAmountBtn.addEventListener("click", () => {
 // ------------------------------
 
 //--Currency Stuff
+const api = 
+const fromDropDown = document.querySelector("#from-currency-select")
+const toDropDown = document.querySelector("#to-currency-select")
 
 //-----Memo
 //--Memo Stuff

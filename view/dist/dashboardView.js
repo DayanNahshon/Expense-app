@@ -128,6 +128,9 @@ checkAmountBtn.addEventListener("click", function () {
 });
 // ------------------------------
 //--Currency Stuff
+var api = ;
+var fromDropDown = document.querySelector("#from-currency-select");
+var toDropDown = document.querySelector("#to-currency-select");
 //-----Memo
 //--Memo Stuff
 var memoButton = document.querySelector("#memoButton");

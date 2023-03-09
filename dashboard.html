@@ -82,20 +82,18 @@
         <!--------------------Currency-------------------->
         <div class="showCurrency" style="display:none;">
           <div class="currencyContainer">
-            <h2>Currency Converter</h2>
-            <form action="">
-              <select name="" id="chooseCurrency">
-                <option value="USD">USD (Dollar)</option>
-                <option value="EUR">EUR (Euro)</option>
-                <option value="AUD">AUD (Australia)</option>
-                <option value="CAD">CAD (Canada)</option>
-                <option value="JPY">JPY (Japan)</option>
-                <option value="INR">INR (India)</option>
-              </select>
-              <input type="number" name="" id="" placeholder="NIS" />
-              <button id="button"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
-              <input type="number" name="" id="" />
-            </form>
+            <div class="currencyContainer__appDetails">
+              <img class="currencyContainer__appDetails__img" src="https://img.freepik.com/free-vector/tree-money-logo-design-vector_474888-2070.jpg?w=740&t=st=1678384630~exp=1678385230~hmac=f3360c85a6d37e7b00754d0c187bcccf98c068f34ec1a2c0e8885626483162ad">
+              <h1 class="currencyContainer__appDetails__appTitle">Currency Converter</h1>
+            </div>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" value="100">
+            <div class="currencyContainer__dropdowns">
+              <select id="from-currency-select"></select>
+              <select id="to-currency-select"></select>
+            </div>
+            <button class="currencyContainer__convertBtn" id="convertBtn">Convert</button>
+            <p id="result"></p>
           </div>
         </div>
 
