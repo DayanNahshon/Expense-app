@@ -193,7 +193,7 @@ function renderTasks(tasks: Task[], domElement: Element) {
       .map((task) => {
         if (!task.finished) {
           return `<p class="newp">${task.text} <span onclick="handleDone('${task.id}')" class="fa-solid fa-pen-to-square"></span>
-      <span class="fa-solid fa-trash-can" id="delete"></span>
+      <span onclick="handleDelete('${task.id}')" class="fa-solid fa-trash-can" id="delete"></span>
       </p>`;
         } else {
           return `<p class="newp newp--finished">${task.text} <span onclick="handleDone('${task.id}')" class="fa-solid fa-pen-to-square"></span>
@@ -205,6 +205,24 @@ function renderTasks(tasks: Task[], domElement: Element) {
     domElement.innerHTML = html;
   } catch (error) {
     console.error(error);
+  }
+}
+
+function handleDelete(taskId: string) {
+  try{
+    //find from tasks
+    const index: number = tasks.findIndex((task) => task.id === taskId);
+
+    if (index === -1) throw new Error("couldnt found tasks in array of tasks");
+
+    const memoPar = document.querySelector("#memeoPar") as HTMLDivElement;
+    if (!memoPar) throw new Error("couldent find memeo par");
+
+    memoPar.remove()
+    
+
+  }catch (error) {
+    console.error(error)
   }
 }
 
@@ -224,6 +242,16 @@ function handleDone(taskId: string) {
     renderTasks(tasks, memoPar);
   } catch (error) {
     console.error(error);
+  }
+}
+
+function handleDel(){
+  try{
+
+
+
+  }catch(error){
+    console.error(error)
   }
 }
 // ----------------------------------
