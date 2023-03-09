@@ -176,8 +176,74 @@ body{
       }
     }
           .showUserTool{
+            
+            height: 100vh;
+            &__banks{
+              
 
+              &__h2banks{
+                margin: 20px 0px;
+              }
+
+               &__poalim{
+                font-size: 16px;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color:#dc3545;
+                color: white;
+                padding:6px;
+                border-radius: 25%;
+               }
+               &__leumi{
+                background-color:#0097f0;
+                color: white;
+                padding:6px;
+                border-radius: 25%;
+               }
+               &__mizrahi{
+                background-color:#ff780b;
+                color: white;
+                padding:6px;
+                border-radius: 25%;
+               }
+               &__discount{
+                background-color:#3a880f;
+                color: white;
+                padding:6px;
+                border-radius: 25%;
+               }
+              }
+          
+             &__insurance{
+
+
+                &__h2ins{
+
+                }
+                 
+                &__migdal{
+                  background-color:#0e2d6d;
+                color: white;
+                padding:6px;
+                border-radius: 25%;
+                }
+
+                &__harel{
+                  background-color:#003c7f;
+                  color: white;
+                  padding:6px;
+                  border-radius: 25%;;
+                  color: white;
+                  padding:6px;
+                  border-radius: 25%;
+                }
+
+             }
+          
+          
+          
+          
           }
+
 
   }
 }
