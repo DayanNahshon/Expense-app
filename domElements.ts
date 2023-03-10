@@ -96,5 +96,5 @@ function runMizrahi(){
 }
 
 function runDiscount(){
-  window.open( "https://www.leumi.co.il/", '_blank')
+  window.open( "https://www.discountbank.co.il/DB/private", '_blank')
 }

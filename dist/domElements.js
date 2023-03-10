@@ -67,5 +67,5 @@ function runMizrahi() {
     window.open("https://www.mizrahi-tefahot.co.il/", '_blank');
 }
 function runDiscount() {
-    window.open("https://www.leumi.co.il/", '_blank');
+    window.open("https://www.discountbank.co.il/DB/private", '_blank');
 }
