@@ -81,20 +81,34 @@
         </div>
         <!--------------------Currency-------------------->
         <div class="showCurrency" style="display:none;">
-          <div class="currencyContainer">
-            <h2>Currency Converter</h2>
-            <form action="">
-              <select name="" id="chooseCurrency">
-                <option value="USD">USD (Dollar)</option>
-                <option value="EUR">EUR (Euro)</option>
-                <option value="AUD">AUD (Australia)</option>
-                <option value="CAD">CAD (Canada)</option>
-                <option value="JPY">JPY (Japan)</option>
-                <option value="INR">INR (India)</option>
-              </select>
-              <input type="number" name="" id="" placeholder="NIS" />
-              <button id="button"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
-              <input type="number" name="" id="" />
+          <div class="currencyConverter">
+            <header class="currencyConverter__header">Currency Converter</header>
+            <form class="currencyConverter__form" action="#">
+                <div class="currencyConverter__form__amount">
+                    <p class="currencyConverter__form__amount__p">Enter Amount</p>
+                    <input class="currencyConverter__form__amount__input" type="text" value="1">
+                </div>
+                <div class="currencyConverter__form__drop-list">
+                    <div class="currencyConverter__form__drop-list__from">
+                        <p class="currencyConverter__form__drop-list__from__p">From</p>
+                        <div class="currencyConverter__form__drop-list__from__select-box">
+                            <img class="currencyConverter__form__drop-list__from__select-box__img" src="https://flagcdn.com/48x36/us.png" alt="flag">
+                            <select class="currencyConverter__form__drop-list__from__select-box__select">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="currencyConverter__form__drop-list__icon"><i class="fas fa-exchange-alt"></i></div>
+                    <div class="currencyConverter__form__drop-list__to">
+                        <p>To</p>
+                        <div class="currencyConverter__form__drop-list__to__select-box">
+                            <img class="currencyConverter__form__drop-list__to__select-box__img" src="https://flagcdn.com/48x36/np.png" alt="flag">
+                            <select class="currencyConverter__form__drop-list__to__select-box__select">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="currencyConverter__form__exchange-rate"></div>
+                <button class="currencyConverter__form__btn">Get Exchange Rate</button>
             </form>
           </div>
         </div>

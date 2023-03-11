@@ -509,3 +509,128 @@ body{
     }
   }
 }
+
+//-----Currency
+.currencyConverter{
+  margin: 5em auto;
+  width: 370px;
+  padding: 30px;
+  border-radius: 7px;
+  background: #FFF;
+
+  &__header{
+      font-size: 28px;
+      font-weight: 500;
+      text-align: center;
+  }
+
+  &__form{
+      margin: 40px 0 20px 0;
+
+      &__amount{
+
+          &__p{
+              font-size: 18px;
+              margin-bottom: 5px;
+          }
+
+          &__input{
+              width: 100%;
+              outline: none;
+              height: 50px;
+              font-size: 17px;
+              padding: 0 15px;
+              border: 1px solid #999;
+              border-radius: 5px;
+
+              &:focus{
+                  padding: 0 14px;
+                  border: 2px solid #6258d3;
+              }
+          }
+      }
+
+      &__drop-list{
+          display: flex;
+          margin-top: 20px;
+          align-items: center;
+          justify-content: space-between;
+
+          &__from{
+
+              &__select-box{
+                  display: flex;
+                  height: 45px;
+                  width: 115px;
+                  border-radius: 5px;
+                  align-items: center;
+                  justify-content: center;
+                  border: 1px solid #999;
+
+                  &__img{
+                      max-width: 25px;
+                  }
+
+                  &__select{
+                      width: auto;
+                      outline: none;
+                      border-radius: 5px;
+                      border: none;
+                      font-size: 16px;
+                      margin: 0 -5px 0 5px;
+                  }
+              }
+          }
+
+          &__to{
+
+              &__select-box{
+                  display: flex;
+                  height: 45px;
+                  width: 115px;
+                  border-radius: 5px;
+                  align-items: center;
+                  justify-content: center;
+                  border: 1px solid #999;
+
+                  &__img{
+                      max-width: 25px;
+                  }
+
+                  &__select{
+                      width: auto;
+                      outline: none;
+                      border-radius: 5px;
+                      border: none;
+                      font-size: 16px;
+                      margin: 0 -5px 0 5px;
+                  }
+              }
+          }
+
+          &__icon{
+              cursor: pointer;
+              font-size: 22px;
+              margin-top: 25px;
+          }
+      }
+
+      &__exchange-rate{
+          font-size: 17px;
+          margin: 20px 0 30px;
+      }
+
+      &__btn{
+          width: 100%;
+          height: 52px;
+          outline: none;
+          border-radius: 5px;
+          border: none;
+          font-size: 17px;
+          color: #fff;
+          background: palevioletred;
+          cursor: pointer;
+      }
+  }
+}
+
