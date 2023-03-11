@@ -72,6 +72,7 @@ body {
   margin: 40px 0px;
   list-style: none;
   text-align: center;
+  font-size: 15px;
 }
 .sidebar__sideicons__ul__li__image {
   width: 40px;
@@ -88,6 +89,21 @@ body {
   color: white;
 }
 
+@media screen and (max-width: 600px) {
+  .sidebar {
+    width: 80px;
+  }
+  .sidebar__sideicons__ul__li {
+    font-size: 11px;
+  }
+  .sidebar__sideicons__ul__li__image {
+    width: 30px;
+    height: 30px;
+  }
+  .sidebar__sideicons__ul__li__image:hover {
+    width: 38px;
+  }
+}
 .main {
   display: flex;
   width: 80%;

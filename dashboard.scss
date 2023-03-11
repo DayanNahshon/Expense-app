@@ -87,6 +87,7 @@ body{
         margin:40px 0px;
         list-style: none;
         text-align: center;
+        font-size: 15px;
         
         &__image{
           width: 40px;
@@ -103,6 +104,31 @@ body{
           
         #infoOnBar{
           color: white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+  .sidebar{
+    width: 80px;
+  
+    &__sideicons{
+  
+      &__ul{
+          
+        &__li{
+          font-size: 11px;
+          
+          &__image{
+            width: 30px;
+            height: 30px;
+          }
+           
+          &__image:hover{
+            width: 38px;
+          }
         }
       }
     }
