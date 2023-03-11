@@ -81,19 +81,35 @@
         </div>
         <!--------------------Currency-------------------->
         <div class="showCurrency" style="display:none;">
-          <div class="currencyContainer">
-            <div class="currencyContainer__appDetails">
-              <img class="currencyContainer__appDetails__img" src="https://img.freepik.com/free-vector/tree-money-logo-design-vector_474888-2070.jpg?w=740&t=st=1678384630~exp=1678385230~hmac=f3360c85a6d37e7b00754d0c187bcccf98c068f34ec1a2c0e8885626483162ad">
-              <h1 class="currencyContainer__appDetails__appTitle">Currency Converter</h1>
-            </div>
-            <label for="amount">Amount:</label>
-            <input type="number" id="amount" value="100">
-            <div class="currencyContainer__dropdowns">
-              <select id="from-currency-select"></select>
-              <select id="to-currency-select"></select>
-            </div>
-            <button class="currencyContainer__convertBtn" id="convertBtn">Convert</button>
-            <p id="result"></p>
+          <div class="currencyConverter">
+            <header class="currencyConverter__header">Currency Converter</header>
+            <form class="currencyConverter__form" action="#">
+                <div class="currencyConverter__form__amount">
+                    <p class="currencyConverter__form__amount__p">Enter Amount</p>
+                    <input class="currencyConverter__form__amount__input" type="text" value="1">
+                </div>
+                <div class="currencyConverter__form__drop-list">
+                    <div class="currencyConverter__form__drop-list__from">
+                        <p class="currencyConverter__form__drop-list__from__p">From</p>
+                        <div class="currencyConverter__form__drop-list__from__select-box">
+                            <img class="currencyConverter__form__drop-list__from__select-box__img" src="https://flagcdn.com/48x36/us.png" alt="flag">
+                            <select class="currencyConverter__form__drop-list__from__select-box__select">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="currencyConverter__form__drop-list__icon"><i class="fas fa-exchange-alt"></i></div>
+                    <div class="currencyConverter__form__drop-list__to">
+                        <p>To</p>
+                        <div class="currencyConverter__form__drop-list__to__select-box">
+                            <img class="currencyConverter__form__drop-list__to__select-box__img" src="https://flagcdn.com/48x36/np.png" alt="flag">
+                            <select class="currencyConverter__form__drop-list__to__select-box__select">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="currencyConverter__form__exchange-rate"></div>
+                <button class="currencyConverter__form__btn">Get Exchange Rate</button>
+            </form>
           </div>
         </div>
 
@@ -118,7 +134,7 @@
 
 
         <!--------------------Expense Calc.-------------------->
-        <div class="showCalculator" style="display:block;">
+        <div class="showCalculator" style="display:none;">
           <div class="wrapper">
             <div class="wrapper__container">
                 <div class="wrapper__container__sub-container">

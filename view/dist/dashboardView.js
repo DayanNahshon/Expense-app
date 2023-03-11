@@ -127,10 +127,239 @@ checkAmountBtn.addEventListener("click", function () {
     }
 });
 // ------------------------------
+//-----Currency
 //--Currency Stuff
-var api = ;
-var fromDropDown = document.querySelector("#from-currency-select");
-var toDropDown = document.querySelector("#to-currency-select");
+var dropList = document.querySelectorAll("select");
+var fromCurrency = document.querySelector(".currencyConverter__form__drop-list__from__select-box__select");
+var toCurrency = document.querySelector(".currencyConverter__form__drop-list__to__select-box__select");
+var btn = document.querySelector("button");
+//--Country List
+var countryList = {
+    "AED": "AE",
+    "AFN": "AF",
+    "XCD": "AG",
+    "ALL": "AL",
+    "AMD": "AM",
+    "ANG": "AN",
+    "AOA": "AO",
+    "AQD": "AQ",
+    "ARS": "AR",
+    "AUD": "AU",
+    "AZN": "AZ",
+    "BAM": "BA",
+    "BBD": "BB",
+    "BDT": "BD",
+    "XOF": "BE",
+    "BGN": "BG",
+    "BHD": "BH",
+    "BIF": "BI",
+    "BMD": "BM",
+    "BND": "BN",
+    "BOB": "BO",
+    "BRL": "BR",
+    "BSD": "BS",
+    "NOK": "BV",
+    "BWP": "BW",
+    "BYR": "BY",
+    "BZD": "BZ",
+    "CAD": "CA",
+    "CDF": "CD",
+    "XAF": "CF",
+    "CHF": "CH",
+    "CLP": "CL",
+    "CNY": "CN",
+    "COP": "CO",
+    "CRC": "CR",
+    "CUP": "CU",
+    "CVE": "CV",
+    "CYP": "CY",
+    "CZK": "CZ",
+    "DJF": "DJ",
+    "DKK": "DK",
+    "DOP": "DO",
+    "DZD": "DZ",
+    "ECS": "EC",
+    "EEK": "EE",
+    "EGP": "EG",
+    "ETB": "ET",
+    "EUR": "FR",
+    "FJD": "FJ",
+    "FKP": "FK",
+    "GBP": "GB",
+    "GEL": "GE",
+    "GGP": "GG",
+    "GHS": "GH",
+    "GIP": "GI",
+    "GMD": "GM",
+    "GNF": "GN",
+    "GTQ": "GT",
+    "GYD": "GY",
+    "HKD": "HK",
+    "HNL": "HN",
+    "HRK": "HR",
+    "HTG": "HT",
+    "HUF": "HU",
+    "IDR": "ID",
+    "ILS": "IL",
+    "INR": "IN",
+    "IQD": "IQ",
+    "IRR": "IR",
+    "ISK": "IS",
+    "JMD": "JM",
+    "JOD": "JO",
+    "JPY": "JP",
+    "KES": "KE",
+    "KGS": "KG",
+    "KHR": "KH",
+    "KMF": "KM",
+    "KPW": "KP",
+    "KRW": "KR",
+    "KWD": "KW",
+    "KYD": "KY",
+    "KZT": "KZ",
+    "LAK": "LA",
+    "LBP": "LB",
+    "LKR": "LK",
+    "LRD": "LR",
+    "LSL": "LS",
+    "LTL": "LT",
+    "LVL": "LV",
+    "LYD": "LY",
+    "MAD": "MA",
+    "MDL": "MD",
+    "MGA": "MG",
+    "MKD": "MK",
+    "MMK": "MM",
+    "MNT": "MN",
+    "MOP": "MO",
+    "MRO": "MR",
+    "MTL": "MT",
+    "MUR": "MU",
+    "MVR": "MV",
+    "MWK": "MW",
+    "MXN": "MX",
+    "MYR": "MY",
+    "MZN": "MZ",
+    "NAD": "NA",
+    "XPF": "NC",
+    "NGN": "NG",
+    "NIO": "NI",
+    "NPR": "NP",
+    "NZD": "NZ",
+    "OMR": "OM",
+    "PAB": "PA",
+    "PEN": "PE",
+    "PGK": "PG",
+    "PHP": "PH",
+    "PKR": "PK",
+    "PLN": "PL",
+    "PYG": "PY",
+    "QAR": "QA",
+    "RON": "RO",
+    "RSD": "RS",
+    "RUB": "RU",
+    "RWF": "RW",
+    "SAR": "SA",
+    "SBD": "SB",
+    "SCR": "SC",
+    "SDG": "SD",
+    "SEK": "SE",
+    "SGD": "SG",
+    "SKK": "SK",
+    "SLL": "SL",
+    "SOS": "SO",
+    "SRD": "SR",
+    "STD": "ST",
+    "SVC": "SV",
+    "SYP": "SY",
+    "SZL": "SZ",
+    "THB": "TH",
+    "TJS": "TJ",
+    "TMT": "TM",
+    "TND": "TN",
+    "TOP": "TO",
+    "TRY": "TR",
+    "TTD": "TT",
+    "TWD": "TW",
+    "TZS": "TZ",
+    "UAH": "UA",
+    "UGX": "UG",
+    "USD": "US",
+    "UYU": "UY",
+    "UZS": "UZ",
+    "VEF": "VE",
+    "VND": "VN",
+    "VUV": "VU",
+    "YER": "YE",
+    "ZAR": "ZA",
+    "ZMK": "ZM",
+    "ZWD": "ZW"
+};
+//--Currency Events
+for (var i = 0; i < dropList.length; i++) {
+    for (var currency_code in countryList) {
+        //Creating option tag with passing currency code as a text and value
+        var selected = i == 0 ? currency_code == "USD" ? "selected" : "" : currency_code == "NPR" ? "selected" : "";
+        var optionTag = "<option value=\"" + currency_code + "\" " + selected + ">" + currency_code + "</option>";
+        //Inserting option tag inside select tag
+        dropList[i].insertAdjacentHTML("beforeend", optionTag);
+    }
+    //Calling loadFlag with passing target element as an argument
+    dropList[i].addEventListener("change", function (e) {
+        loadFlag(e.target);
+    });
+}
+var loadFlag = function (element) {
+    try {
+        for (var code in countryList) {
+            //If currency code of country list is equal to option value
+            if (code == element.value) {
+                var imgTag = element.parentElement.querySelector("img");
+                //Selecting img tag
+                imgTag.src = "https://flagcdn.com/48x36/" + countryList[code].toLowerCase() + ".png";
+            }
+        }
+    }
+    catch (error) {
+        console.error(error);
+    }
+};
+var exchangeIcon = document.querySelector(".currencyConverter__form__drop-list__icon");
+exchangeIcon.addEventListener("click", function () {
+    var tempCode = fromCurrency.value;
+    fromCurrency.value = toCurrency.value;
+    toCurrency.value = tempCode;
+    loadFlag(fromCurrency);
+    loadFlag(toCurrency);
+    getExchangeRate();
+});
+btn.addEventListener("click", function (e) {
+    e.preventDefault(); //Preventing form from submitting
+    getExchangeRate();
+});
+var getExchangeRate = function () {
+    try {
+        var amount_1 = document.querySelector("input");
+        var amountValue_1 = Number(amount_1.value);
+        //If user don't enter any value or enter 0 then we'll put 1 value by default in the input field
+        if (amountValue_1 == null || amountValue_1 == 0) {
+            amount_1.value = "1";
+            amountValue_1 = 1;
+        }
+        var url = "https://v6.exchangerate-api.com/v6/42f37d829156a40ca2d79f43/latest/" + fromCurrency.value;
+        //Fetching api response and returning it with parsing into json object and in another then method receiving that object
+        fetch(url).then(function (response) { return response.json(); }).then(function (result) {
+            var exchangeRate = result.conversion_rates[toCurrency.value];
+            var totalExchangeRate = (amountValue_1 * exchangeRate).toFixed(2);
+            var exchangeRateText = document.querySelector(".currencyConverter__form__exchange-rate");
+            exchangeRateText.innerText = amountValue_1 + " " + fromCurrency.value + " = " + totalExchangeRate + " " + toCurrency.value;
+        });
+    }
+    catch (error) {
+        console.error(error);
+    }
+};
+// ------------------------------
 //-----Memo
 //--Memo Stuff
 var memoButton = document.querySelector("#memoButton");

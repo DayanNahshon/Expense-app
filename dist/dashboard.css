@@ -341,27 +341,101 @@ body {
   margin-left: 3.5rem;
 }
 
-.currencyContainer {
-  width: 90%;
-  max-width: 25em;
-  background-color: #ffffff;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  padding: 2em;
-  border-radius: 0.8em;
+.currencyConverter {
+  margin: 5em auto;
+  width: 370px;
+  padding: 30px;
+  border-radius: 7px;
+  background: #FFF;
 }
-.currencyContainer__appDetails {
+.currencyConverter__header {
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+.currencyConverter__form {
+  margin: 40px 0 20px 0;
+}
+.currencyConverter__form__amount__p {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.currencyConverter__form__amount__input {
+  width: 100%;
+  outline: none;
+  height: 50px;
+  font-size: 17px;
+  padding: 0 15px;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+.currencyConverter__form__amount__input:focus {
+  padding: 0 14px;
+  border: 2px solid #6258d3;
+}
+.currencyConverter__form__drop-list {
   display: flex;
+  margin-top: 20px;
   align-items: center;
-  flex-direction: column;
+  justify-content: space-between;
 }
-.currencyContainer__appDetails__img {
-  width: 9.37em;
+.currencyConverter__form__drop-list__from__select-box {
+  display: flex;
+  height: 45px;
+  width: 115px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #999;
 }
-.currencyContainer__appDetails__appTitle {
-  font-size: 1.6em;
-  text-transform: uppercase;
-  margin-bottom: 1em;
+.currencyConverter__form__drop-list__from__select-box__img {
+  max-width: 25px;
+}
+.currencyConverter__form__drop-list__from__select-box__select {
+  width: auto;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  margin: 0 -5px 0 5px;
+}
+.currencyConverter__form__drop-list__to__select-box {
+  display: flex;
+  height: 45px;
+  width: 115px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #999;
+}
+.currencyConverter__form__drop-list__to__select-box__img {
+  max-width: 25px;
+}
+.currencyConverter__form__drop-list__to__select-box__select {
+  width: auto;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  margin: 0 -5px 0 5px;
+}
+.currencyConverter__form__drop-list__icon {
+  cursor: pointer;
+  font-size: 22px;
+  margin-top: 25px;
+}
+.currencyConverter__form__exchange-rate {
+  font-size: 17px;
+  margin: 20px 0 30px;
+}
+.currencyConverter__form__btn {
+  width: 100%;
+  height: 52px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  background: palevioletred;
+  cursor: pointer;
 }
