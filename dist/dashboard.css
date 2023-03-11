@@ -510,3 +510,10 @@ body {
   background: palevioletred;
   cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+  .currencyConverter {
+    font-size: 14px;
+    width: 100%;
+  }
+}
