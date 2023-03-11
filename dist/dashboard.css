@@ -176,6 +176,8 @@ body {
   padding-right: 14px;
 }
 .main__show .showUserTool {
+  text-align: center;
+  width: 100%;
   height: 100vh;
 }
 .main__show .showUserTool__banks__h2banks {
@@ -207,6 +209,9 @@ body {
   padding: 6px;
   border-radius: 25%;
 }
+.main__show .showUserTool__insurance__h2ins {
+  margin: 20px 0;
+}
 .main__show .showUserTool__insurance__migdal {
   background-color: #0e2d6d;
   color: white;
@@ -224,24 +229,15 @@ body {
   color: white;
   padding: 6px;
   border-radius: 25%;
-  color: white;
-  padding: 6px;
-  border-radius: 25%;
 }
 .main__show .showUserTool__insurance__clal {
   background-color: #0097ff;
   color: white;
   padding: 6px;
   border-radius: 25%;
-  color: white;
-  padding: 6px;
-  border-radius: 25%;
 }
 .main__show .showUserTool__insurance__menora {
   background-color: #37374e;
-  color: white;
-  padding: 6px;
-  border-radius: 25%;
   color: white;
   padding: 6px;
   border-radius: 25%;

@@ -222,71 +222,73 @@ body{
       }
     }
           .showUserTool{
-            
+            text-align: center;
+            width: 100%;
             height: 100vh;
+        
             &__banks{
               
               &__h2banks{
                 margin: 20px 0px;
               }
-
-               &__poalim{
+              
+              &__poalim{
                 font-size: 16px;
                 font-family: Arial, Helvetica, sans-serif;
                 background-color:#dc3545;
                 color: white;
                 padding:6px;
                 border-radius: 25%;
-               }
-               &__leumi{
+              }
+
+              &__leumi{
                 background-color:#0097f0;
                 color: white;
                 padding:6px;
                 border-radius: 25%;
-               }
-               &__mizrahi{
+              }
+
+              &__mizrahi{
                 background-color:#ff780b;
                 color: white;
                 padding:6px;
                 border-radius: 25%;
-               }
-               &__discount{
+              }
+
+               
+              &__discount{
                 background-color:#3a880f;
                 color: white;
                 padding:6px;
                 border-radius: 25%;
-               }
               }
+            }
           
-             &__insurance{
-
+            &__insurance{
 
                 &__h2ins{
-
+                  margin: 20px 0;
                 }
                  
                 &__migdal{
                   background-color:#0e2d6d;
-                color: white;
-                padding:6px;
-                border-radius: 25%;
+                  color: white;
+                  padding:6px;
+                  border-radius: 25%;
                 }
 
                 &__phoenix{
                   background-color:#ff5a23;
-                color: white;
-                padding:6px;
-                border-radius: 25%;
+                  color: white;
+                  padding:6px;
+                  border-radius: 25%;
                 }
                 
-                  &__harel{
+                &__harel{
                   background-color:#003c7f;
                   color: white;
                   padding:6px;
                   border-radius: 25%;;
-                  color: white;
-                  padding:6px;
-                  border-radius: 25%;
                 }
 
                 &__clal{
@@ -294,25 +296,16 @@ body{
                   color: white;
                   padding:6px;
                   border-radius: 25%;;
-                  color: white;
-                  padding:6px;
-                  border-radius: 25%;
                 }
+
                 &__menora{
                   background-color:#37374e;
                   color: white;
                   padding:6px;
                   border-radius: 25%;;
-                  color: white;
-                  padding:6px;
-                  border-radius: 25%;
                 }
 
              }
-          
-          
-          
-          
           }
 
 
