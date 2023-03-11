@@ -41,6 +41,17 @@ body {
   text-transform: capitalize;
 }
 
+@media screen and (max-width: 600px) {
+  .container__logo {
+    font-size: 30px;
+  }
+  .container__h2Welcome {
+    font-size: 20px;
+  }
+  .container__h2Welcome__spanWelcome {
+    padding: 0px 10px;
+  }
+}
 .sidebar {
   position: fixed;
   left: 0;

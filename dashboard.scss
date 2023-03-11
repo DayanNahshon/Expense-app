@@ -47,6 +47,22 @@ body{
     }
 }
 
+@media screen and (max-width: 600px){
+
+  .container{
+    &__logo{
+      font-size: 30px;
+    }
+
+    &__h2Welcome{
+      font-size: 20px;
+
+      &__spanWelcome{
+        padding: 0px 10px;
+      }
+    }
+  }
+}
 
 //-----SideBar Style
 .sidebar{
@@ -277,7 +293,6 @@ body{
 
   }
 }
-
 
 //-----Expense Calc.
 .wrapper{
